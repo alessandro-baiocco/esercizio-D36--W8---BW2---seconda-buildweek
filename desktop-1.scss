@@ -1,0 +1,63 @@
+.sections-padding-inline {
+    padding-inline: 2rem
+}
+
+.p-no-margin-block {
+    p {
+        margin-block: auto;
+    }
+}
+
+.text-my-grey {
+    color: #8f8f8f;
+}
+
+.badge-85 {
+    top: 85%;
+    left: 85%;
+}
+
+body {
+    font-family: "Circular";
+    color: white;
+
+    main {
+        background-color: black;
+
+        #artista-banner {
+            background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
+            padding-top: 15em;
+        }
+
+        #artista-tracce {
+            background: linear-gradient(180deg, rgba(24, 24, 24, 1) 0%, rgba(20, 20, 20, 1) 50%, rgba(24, 24, 24, 1) 100%);
+
+            #popolari {
+                flex-grow: 3;
+            }
+
+            #brani-che-piacciono {
+                flex-grow: 2;
+            }
+
+            .btn-dark {
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+        }
+
+        #about {
+            .row {
+                div {
+                    &:first-of-type {
+                        background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
+
+                        height: 400px;
+                    }
+                }
+            }
+
+        }
+    }
+}
