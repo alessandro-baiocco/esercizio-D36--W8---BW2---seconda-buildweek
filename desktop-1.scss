@@ -9,7 +9,7 @@ $bg-gradient-terziario: linear-gradient(180deg,
 
 .p-no-margin-block {
     p {
-        margin-block: auto;
+        margin-block: 0;
     }
 }
 
@@ -74,4 +74,17 @@ body {
             }
         }
     }
+}
+
+#player {
+    background-color: #1f1f1f;
+
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.volume-bar {
+    width: 5rem
 }

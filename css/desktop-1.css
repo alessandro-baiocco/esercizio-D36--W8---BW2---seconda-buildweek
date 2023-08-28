@@ -3,7 +3,7 @@
 }
 
 .p-no-margin-block p {
-  margin-block: auto;
+  margin-block: 0;
 }
 
 .text-my-grey {
@@ -46,4 +46,16 @@ body main #about .row div:first-of-type {
 }
 body main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+}
+
+#player {
+  background-color: #1f1f1f;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.volume-bar {
+  width: 5rem;
 }/*# sourceMappingURL=desktop-1.css.map */
