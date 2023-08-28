@@ -23,6 +23,11 @@ main .canzoneOra div .btn {
 main div .consigliati div .row {
   background-color: #2d2d2d;
 }
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  main div .consigliati div .row {
+    background-color: #131313;
+  }
+}
 main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
 }

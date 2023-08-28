@@ -41,6 +41,9 @@ main {
       div {
         .row {
           background-color: $bg-terziario;
+          @media screen and (min-width: 0px) and (max-width: 768px) {
+            background-color: #131313;
+          }
         }
       }
     }
@@ -58,4 +61,7 @@ main {
   &::after {
     color: #00000000;
   }
+}
+
+.consigliatiCard {
 }
