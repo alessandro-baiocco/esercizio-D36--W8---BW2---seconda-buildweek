@@ -20,7 +20,8 @@ body {
   color: white;
 }
 body main {
-  background-color: black;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
 }
 body main #artista-banner {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
@@ -42,4 +43,7 @@ body main #artista-tracce .btn-dark {
 body main #about .row div:first-of-type {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 600px;
+}
+body main .piace .row .card {
+  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
 }/*# sourceMappingURL=desktop-1.css.map */
