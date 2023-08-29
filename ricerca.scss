@@ -19,14 +19,22 @@ body {
   nav {
     min-width: 200px;
     height: calc(100vh - 80px);
+    background-color: #121212;
   }
   main {
     height: calc(100vh - 80px);
     background-color: #121212;
     header {
       button {
+        background-color: #121212;
+        &:hover {
+          background-color: #121212;
+        }
         input {
+          background-color: #121212;
+          &:focus,
           &:hover {
+            background-color: #121212;
             outline: none;
           }
         }

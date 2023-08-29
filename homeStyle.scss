@@ -12,6 +12,7 @@ $bg-gradient-quarto: linear-gradient(36deg, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10
 $color-gray: #6a6a6a;
 $success2: #1ed760;
 $color-black: black;
+$color-lGray: #727272;
 // --------------------------classi create------------------------
 .btn-success2 {
   background-color: $success2;
@@ -54,6 +55,22 @@ main {
     .row {
       .card {
         background: $bg-gradient-terziario;
+      }
+    }
+  }
+  footer {
+    .row {
+      i {
+        background-color: $color-lGray;
+      }
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        &:not(:first-of-type) {
+          // margin-left: 10px;
+        }
       }
     }
   }

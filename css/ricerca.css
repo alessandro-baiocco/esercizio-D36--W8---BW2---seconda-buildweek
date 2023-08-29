@@ -10771,12 +10771,23 @@ body {
 body nav {
   min-width: 200px;
   height: calc(100vh - 80px);
+  background-color: #121212;
 }
 body main {
   height: calc(100vh - 80px);
   background-color: #121212;
 }
-body main header button input:hover {
+body main header button {
+  background-color: #121212;
+}
+body main header button:hover {
+  background-color: #121212;
+}
+body main header button input {
+  background-color: #121212;
+}
+body main header button input:focus, body main header button input:hover {
+  background-color: #121212;
   outline: none;
 }
 body main div .row .casellaRicerca {
