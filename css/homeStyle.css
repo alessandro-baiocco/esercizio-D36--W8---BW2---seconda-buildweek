@@ -10956,4 +10956,9 @@ main footer ul {
 aside div {
   max-height: calc(100vh - 109px);
   overflow-y: auto;
+}
+
+#player {
+  background-color: #1f1f1f;
+  color: white;
 }/*# sourceMappingURL=homeStyle.css.map */
