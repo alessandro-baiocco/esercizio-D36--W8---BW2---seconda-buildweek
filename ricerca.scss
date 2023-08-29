@@ -1,0 +1,62 @@
+//import bootstrap
+@import "assets/bootstrap-5.2.3/scss/bootstrap";
+// variabili globali
+$bg-terziario: #2d2d2d;
+$bg-gradient-terziario: linear-gradient(
+  180deg,
+  rgba(24, 24, 24, 1) 0%,
+  rgba(20, 20, 20, 1) 50%,
+  rgba(24, 24, 24, 1) 100%
+);
+$bg-gradient-quarto: linear-gradient(36deg, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 1) 29%, rgba(32, 32, 32, 1) 100%);
+$color-gray: #6a6a6a;
+$success2: #1ed760;
+$color-black: black;
+//-----------------------classi applicate
+
+body {
+  background-color: $color-black;
+  nav {
+    min-width: 200px;
+    height: calc(100vh - 80px);
+  }
+  main {
+    height: calc(100vh - 80px);
+    background-color: #121212;
+    header {
+      button {
+        input {
+          &:hover {
+            outline: none;
+          }
+        }
+      }
+    }
+    div {
+      .row {
+        .casellaRicerca {
+          height: fit-content;
+          span {
+            color: white;
+          }
+          .row {
+            background-color: #121212;
+            .col-11 {
+              overflow: hidden;
+              height: 156px;
+              .imgRicerca {
+                position: relative;
+                img {
+                  transform: rotateZ(41deg);
+                  position: absolute;
+                  right: -62px;
+                  bottom: -147px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
