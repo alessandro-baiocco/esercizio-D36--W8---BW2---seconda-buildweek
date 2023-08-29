@@ -1,3 +1,5 @@
+//import bootstrap
+@import "assets/bootstrap-5.2.3/scss/bootstrap";
 // variabili globali
 $bg-terziario: #2d2d2d;
 $bg-gradient-terziario: linear-gradient(
@@ -41,6 +43,9 @@ main {
       div {
         .row {
           background-color: $bg-terziario;
+          @media screen and (min-width: 0px) and (max-width: 768px) {
+            background-color: #131313;
+          }
         }
       }
     }
