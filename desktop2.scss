@@ -1,3 +1,4 @@
+@import "assets/bootstrap-5.2.3/scss/bootstrap";
 /*content div*/
 body {
     font-size: x-large;
@@ -17,6 +18,25 @@ body {
     height: 52vh;
 }
 
+/*width*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/*track*/
+::-webkit-scrollbar-track {
+    background: #262626;
+}
+
+/*handle*/
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/*handle on hover*/
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 /*navbar*/
 #first {
     background-color: black;
@@ -180,4 +200,111 @@ body {
 }
 .dots {
     font-size: 1.5vh;
+}
+
+/*table*/
+tbody tr:hover {
+    background-color: #191919;
+}
+td > div > a {
+    cursor: pointer;
+}
+.links {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.links:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+    font-weight: 100;
+}
+.thMinWidth {
+    width: 1%;
+}
+.theadBorderBottom {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.235);
+}
+.tableTitle {
+    font-weight: bold;
+    font-size: 2vh;
+}
+.tableArtist {
+    font-size: 1.5vh;
+    color: rgba(255, 255, 255, 0.743);
+}
+
+/*music player bottom*/
+.musicPlayer {
+    min-height: 101px;
+    flex-grow: 0;
+    width: auto;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+.playerSongImageDiv {
+    min-width: 71px;
+    max-height: 71px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.playerSongImage {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+.playerSongTitle {
+    font-size: 0.9vh;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.playerSongArtist {
+    font-size: 0.8vh;
+}
+.iconsDivPlayer {
+    font-size: 1vh;
+}
+.iconPlay {
+    height: 2vh;
+    aspect-ratio: 1/1;
+    background-color: white;
+    color: black;
+    font-size: 1.2vh;
+}
+i {
+    cursor: pointer;
+}
+#music {
+    display: none;
+}
+
+/*siebar friends*/
+#friendsPicture {
+    width: 15%;
+    height: 15%;
+    background-color: white;
+}
+#friendsActivity {
+    background-color: #000;
+}
+.friendsInfo {
+    line-height: 0.3rem;
+}
+main {
+    display: flex;
+}
+.para {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2vh;
 }
