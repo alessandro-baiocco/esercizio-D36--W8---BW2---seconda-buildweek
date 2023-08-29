@@ -292,11 +292,18 @@ i {
 #friendsPicture {
     width: 15%;
     height: 15%;
+    background-color: white;
 }
 #friendsActivity {
-    background-color: $dark;
-    padding-bottom: 10rem;
+    background-color: #000;
 }
 .friendsInfo {
     line-height: 0.3rem;
+}
+main {
+    display: flex;
+}
+.para {
+    font-size: 22px;
+    font-weight: bold;
 }
