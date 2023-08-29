@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cerca</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="dist/css/ricerca.min.css" />
+  </head>
+  <body class="d-flex">
+    <nav class="me-2 d-none d-lg-block"></nav>
+    <main class="d-flex">
+      <div>
+        <div>
+          <header>
+            <h2 class="d-flex d-lg-none text-light my-3">Cerca</h2>
+            <div class="container d-md-flex">
+              <div class="d-none d-lg-flex">
+                <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
+                <div><i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i></div>
+              </div>
+              <form class="ms-2">
+                <div>
+                  <button class="btn btn-dark" onclick="noDef(event)">
+                    <i class="bi bi-search me-0"></i>
+                    <input type="text" placeholder="Cosa vuoi cercare?" class="ms-0 bg-dark" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </header>
+        </div>
+        <h1 class="text-light">sfoglia tutto</h1>
+        <div>
+          <div class="row gy-2 ps-3"></div>
+        </div>
+      </div>
+      <script src="assets/js/obj.js"></script>
+      <script src="assets/js/ricerca.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+  </body>
+</html>
