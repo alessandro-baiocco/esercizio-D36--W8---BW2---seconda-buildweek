@@ -10775,8 +10775,12 @@ textarea.form-control-lg {
 
 main {
   background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 69%, rgb(24, 24, 24) 100%);
-  max-height: calc(100vh - 80px);
   overflow-y: auto;
+}
+@media (min-width: 768px) {
+  main {
+    max-height: calc(100vh - 92px);
+  }
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);

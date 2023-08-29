@@ -10792,8 +10792,13 @@ body {
 }
 @media (min-width: 768px) {
   body main {
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 92px);
     overflow-y: auto;
+  }
+}
+@media (max-width: 768px) {
+  body main {
+    padding-bottom: 10rem;
   }
 }
 body main #artista-banner {

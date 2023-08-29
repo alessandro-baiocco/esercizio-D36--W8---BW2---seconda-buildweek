@@ -25,7 +25,11 @@ $color-lGray: #727272;
 
 main {
   background: linear-gradient(190deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 69%, rgba(24, 24, 24, 1) 100%);
-  max-height: calc(100vh - 80px);
+
+  @media (min-width: 768px) {
+    max-height: calc(100vh - 92px);
+  }
+
   overflow-y: auto;
 
   .canzoneOra {
