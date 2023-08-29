@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/dist/css/desktop2.min.css" />
-    <link rel="stylesheet" href="/assets/css/circular-font.css" />
+    <link rel="stylesheet" href="/assets/css/BW2-Spotify-assets/assets/css/circular-font.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   </head>
   <body>
@@ -158,6 +158,9 @@
             <!--ARROWS-->
             <div class="col-1 d-flex justify-content-between align-items-start mt-2">
               <div class="leftArrow rounded-circle text-white d-flex justify-content-center align-items-center">
+                <i class="bi bi-chevron-left fa-3x"></i>
+              </div>
+              <div class="rightArrow rounded-circle text-white d-flex justify-content-center align-items-center">
                 <i class="bi bi-chevron-right fa-3x align-self-center"></i>
               </div>
             </div>
@@ -179,6 +182,57 @@
             </div>
           </div>
           <!--ALBUM COVER + INFO-->
+          <div class="row d-flex my-3">
+            <div class="col-2 mt-2 d-flex align-items-end">
+              <img
+                src="/assets/css/BW2-Spotify-assets/assets/imgs/search/image-5.jpg"
+                alt="Album cover"
+                class="albumCover"
+              />
+            </div>
+            <div class="col-10 d-flex align-items-end mt-2 text-white">
+              <div class="d-flex flex-column">
+                <div class="recordType text-uppercase">Album</div>
+                <h2 class="albumTitle">Viva Latino</h2>
+                <div class="d-flex artistFullDiv">
+                  <div class="artistImageDiv rounded-circle d-flex align-items-center justify-content-center">
+                    <img
+                      src="https://images.unsplash.com/photo-1526572325823-979526bc9a13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      alt="Foto Profilo"
+                      class="artistImg"
+                    />
+                  </div>
+                  <div class="albumInfo d-flex align-items-center ml-1">
+                    <div class="artist">
+                      <a href="#" class="links">Artista</a>
+                    </div>
+                    <div class="separaterDot"><i class="bi bi-dot"></i></div>
+                    <div class="releaseYear">2023</div>
+                    <div class="separaterDot"><i class="bi bi-dot"></i></div>
+                    <div class="quantityDuration pr-4">4 songs, 3 hr 14 min</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--PLAY, HEART, DOTS-->
+          <div class="row bgBlackTransparent">
+            <div class="col-12 d-flex align-items-center my-3">
+              <div
+                id="change-button"
+                class="playButton mr-3 rounded-circle text-white d-flex justify-content-center align-items-center"
+              >
+                <i class="bi bi-play-fill" onclick="buttonChange(), document.getElementById(`sound1`).play()"></i>
+              </div>
+              <div id="change-heart" class="heart mx-3 text-white">
+                <i onclick="heartChange()" class="bi bi-heart"></i>
+              </div>
+              <div class="dots text-white mx-3">
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+          </div>
+          <!--TABLE-->
         </div>
       </div>
     </div>
