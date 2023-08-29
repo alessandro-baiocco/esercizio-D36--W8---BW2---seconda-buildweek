@@ -10765,46 +10765,51 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.btn-success2 {
-  background-color: #1ed760;
-}
-
-.bg-black {
+body {
   background-color: black;
 }
-
-main {
-  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 69%, rgb(24, 24, 24) 100%);
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
+body nav {
+  min-width: 200px;
+  height: calc(100vh - 80px);
+  background-color: #121212;
 }
-main .canzoneOra {
-  background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);
+body main {
+  height: calc(100vh - 80px);
+  background-color: #121212;
 }
-main .canzoneOra .nomeCanzone {
-  font-size: 50px;
+body main header button {
+  background-color: #121212;
 }
-main .canzoneOra div .btn {
-  color: #6a6a6a;
+body main header button:hover {
+  background-color: #121212;
 }
-main div .consigliati div .row {
-  background-color: #2d2d2d;
+body main header button input {
+  background-color: #121212;
 }
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  main div .consigliati div .row {
-    background-color: #131313;
-  }
+body main header button input:focus, body main header button input:hover {
+  background-color: #121212;
+  outline: none;
 }
-main .piace .row .card {
-  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+body main div .row .casellaRicerca {
+  height: -moz-fit-content;
+  height: fit-content;
 }
-main footer .row i {
-  background-color: #727272;
+body main div .row .casellaRicerca span {
+  color: white;
 }
-main footer ul {
-  padding: 0;
-  list-style: none;
+body main div .row .casellaRicerca .row {
+  background-color: #121212;
 }
-.dropdown-toggle::after {
-  color: rgba(0, 0, 0, 0);
-}/*# sourceMappingURL=homeStyle.css.map */
+body main div .row .casellaRicerca .row .col-11 {
+  overflow: hidden;
+  height: 156px;
+}
+body main div .row .casellaRicerca .row .col-11 .imgRicerca {
+  position: relative;
+}
+body main div .row .casellaRicerca .row .col-11 .imgRicerca img {
+  transform: rotateZ(41deg);
+  position: absolute;
+  right: -62px;
+  bottom: -147px;
+}/*# sourceMappingURL=ricerca.css.map */
