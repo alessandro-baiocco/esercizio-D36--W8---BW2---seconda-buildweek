@@ -15,11 +15,13 @@
         id="artista-banner"
         class="d-flex justify-content-between flex-column justify-content-between px-3 px-md-4 pb-md-4"
       >
-        <div class="container my-2">
-          <div class="container d-flex">
+        <div class="container-fluid container-md my-2">
+          <div class="d-flex">
             <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
-            <div><i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i></div>
-            <div class="d-flex ms-auto rounded-pill bg-black">
+            <div class="d-none d-md-block">
+              <i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i>
+            </div>
+            <div class="ms-auto rounded-pill bg-black d-none d-md-flex">
               <ul class="m-0 p-0">
                 <li class="nav-item dropdown d-flex p-0 m-0">
                   <a
@@ -96,7 +98,7 @@
               </div>
               <div class="d-none d-md-block">
                 <p class="fw-bold">Hai messo Mi piace a 11 brani</p>
-                <p class="small mt-1 text-my-grey">Di Yellowcard</p>
+                <p class="small mt-1 text-my-grey">Di <a href="#" class="link-artista">Yellowcard</a></p>
               </div>
               <div class="d-md-none">
                 <h3 class="fs-6 fw-normal d-md-none mb-0">Brani che ti Piacciono</h3>
@@ -395,7 +397,7 @@
         </section>
         <section class="about container ms-0 rounded d-none d-md-block">
           <div class="row">
-            <div class="col-9 rounded d-flex flex-column justify-content-end p-4">
+            <div class="col-12 col-xl-9 rounded d-flex flex-column justify-content-end p-4">
               <p class="fw-bold mb-2">1,542,666 Monthly Listeners</p>
               <p class="mb-0">
                 Sweepz is a producer based in the Netherlands. He is an absolute master of the heavier music genres. He
@@ -404,7 +406,7 @@
                 Phonk genre.
               </p>
             </div>
-            <!-- <div class="col-3"></div> -->
+            <div class="col-3"></div>
           </div>
         </section>
       </section>
