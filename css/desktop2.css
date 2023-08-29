@@ -11121,6 +11121,7 @@ main {
 }
 
 .para {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
+  line-height: 2vh;
 }/*# sourceMappingURL=desktop2.css.map */
