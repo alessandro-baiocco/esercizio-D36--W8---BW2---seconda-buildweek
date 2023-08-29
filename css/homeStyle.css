@@ -10778,6 +10778,11 @@ main {
   max-height: calc(100vh - 80px);
   overflow-y: auto;
 }
+main .centrale {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  flex-grow: 1;
+}
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);
 }
@@ -10805,14 +10810,21 @@ main footer ul {
   padding: 0;
   list-style: none;
 }
+
 .dropdown-toggle::after {
   color: rgba(0, 0, 0, 0);
+}
+
+.all {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
 }
 
 #first {
   background-color: black;
   font-size: 2vh;
   max-height: calc(100vh - 80px);
+  overflow-y: auto;
 }
 
 #logo {
@@ -10851,7 +10863,6 @@ main footer ul {
   overflow-y: scroll;
   text-overflow: ellipsis;
   white-space: nowrap;
-  height: 30vh;
   list-style: none;
   margin-left: 0;
   padding-left: 0;
@@ -10926,7 +10937,6 @@ main footer ul {
 .profileImg,
 .artistImg {
   width: auto;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -10941,4 +10951,9 @@ main footer ul {
 
 .profileArrowDown {
   font-size: 1.5vh;
+}
+
+aside div {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
 }/*# sourceMappingURL=homeStyle.css.map */
