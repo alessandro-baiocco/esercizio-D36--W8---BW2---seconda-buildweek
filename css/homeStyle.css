@@ -10798,7 +10798,13 @@ main div .consigliati div .row {
 main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
 }
-
+main footer .row i {
+  background-color: #727272;
+}
+main footer ul {
+  padding: 0;
+  list-style: none;
+}
 .dropdown-toggle::after {
   color: rgba(0, 0, 0, 0);
 }/*# sourceMappingURL=homeStyle.css.map */
