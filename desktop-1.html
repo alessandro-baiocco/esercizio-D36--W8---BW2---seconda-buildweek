@@ -11,117 +11,36 @@
   </head>
   <body>
     <main>
-      <section id="artista-banner" class="d-flex flex-column justify-content-end sections-padding-inline pb-2">
+      <section id="artista-banner" class="d-flex flex-column justify-content-end px-3 px-md-4 pb-md-4">
         <div class="d-flex p-no-margin-block gap-2">
           <i class="bi bi-patch-check-fill fs-3 text-primary"></i>
           <p class="small">Artista verificato</p>
         </div>
-        <h1 class="display-1 fw-bolder mb-4">Yellowcard</h1>
-        <p>3.433.158 ascoltatori mensili</p>
+        <h1 class="display-1 fw-bolder">Yellowcard</h1>
+        <p class="d-none d-md-block ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
       </section>
-      <section id="artista-tracce" class="sections-padding-inline py-3">
-        <div class="d-flex align-items-center gap-4 mb-3">
+      <section id="artista-tracce" class="px-3 px-md-4 py-3">
+        <p class="d-block d-md-none ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div class="d-flex align-items-center gap-5">
+            <button type="button" class="btn btn-dark btn-sm fw-md-bold">Seguiti</button>
+            <i class="bi bi-three-dots-vertical fs-4 text-my-grey"></i>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <i class="bi bi-shuffle"></i>
+            <i class="bi bi-play-circle-fill display-4 text-success"></i>
+          </div>
+        </div>
+        <div class="d-none d-md-flex align-items-center gap-4 mb-3">
+          <i class="bi bi-play-circle-fill display-4 text-success"></i>
           <i class="bi bi-play-circle-fill display-4 text-success"></i>
           <button type="button" class="btn btn-outline-light btn-sm fw-bold px-3">FOLLOWING</button>
           <i class="bi bi-three-dots fs-4 text-my-grey"></i>
         </div>
-        <div class="d-flex">
-          <article id="popolari" class="p-no-margin-block">
-            <div class="container">
-              <h2 class="h4 fw-bold">Popolari</h2>
-              <div class="d-flex flex-column gap-3 mt-4 mb-3">
-                <div class="row px-3">
-                  <div class="col-6">
-                    <div class="row align-items-center">
-                      <div class="col-1"><p>1</p></div>
-                      <div class="col d-flex gap-3">
-                        <img
-                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
-                          width="35"
-                          alt="Album cover"
-                        />
-                        <p>Ocean Avenue</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">276.616.912</div>
-                  <div class="col-3 text-end">3:18</div>
-                </div>
-                <div class="row px-3">
-                  <div class="col-6">
-                    <div class="row align-items-center">
-                      <div class="col-1"><p>2</p></div>
-                      <div class="col d-flex gap-3">
-                        <img
-                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
-                          width="35"
-                          alt="Album cover"
-                        />
-                        <p>Only One</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">98.000.000</div>
-                  <div class="col-3 text-end">11:18</div>
-                </div>
-                <div class="row px-3">
-                  <div class="col-6">
-                    <div class="row align-items-center">
-                      <div class="col-1"><p>3</p></div>
-                      <div class="col d-flex gap-3">
-                        <img
-                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
-                          width="35"
-                          alt="Album cover"
-                        />
-                        <p>Breathing</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">52.000.000</div>
-                  <div class="col-3 text-end">3:18</div>
-                </div>
-                <div class="row px-3">
-                  <div class="col-6">
-                    <div class="row align-items-center">
-                      <div class="col-1"><p>4</p></div>
-                      <div class="col d-flex gap-3">
-                        <img
-                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
-                          width="35"
-                          alt="Album cover"
-                        />
-                        <p>Lights And Sounds</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">48.000.000</div>
-                  <div class="col-3 text-end">3:18</div>
-                </div>
-                <div class="row px-3">
-                  <div class="col-6">
-                    <div class="row align-items-center">
-                      <div class="col-1"><p>5</p></div>
-                      <div class="col d-flex gap-3">
-                        <img
-                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
-                          width="35"
-                          alt="Album cover"
-                        />
-                        <p>Way Away</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3 text-end">43.000.000</div>
-                  <div class="col-3 text-end">3:18</div>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn btn-dark btn-sm fw-bold text-my-grey">VISUALIZZA ALTRO</button>
-          </article>
-          <div id="brani-che-piacciono" class="ps-5 p-no-margin-block">
-            <h3 class="h4 fw-bold">Brani che ti Piacciono</h3>
-            <div class="d-flex align-items-center mt-4 gap-3">
+        <div class="d-md-flex">
+          <div class="brani-che-piacciono ps-md-5 p-no-margin-block">
+            <h3 class="h4 fw-bold d-none d-md-block">Brani che ti Piacciono</h3>
+            <div class="d-flex align-items-center mt-4 gap-3 pb-5 pb-md-0">
               <div class="position-relative">
                 <img
                   src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
@@ -136,90 +55,306 @@
                   <span class="visually-hidden">Liked song</span>
                 </span>
               </div>
-              <div>
+              <div class="d-none d-md-block">
                 <p class="fw-bold">Hai messo Mi piace a 11 brani</p>
                 <p class="small mt-1 text-my-grey">Di Yellowcard</p>
               </div>
+              <div class="d-md-none">
+                <h3 class="fs-6 fw-normal d-md-none mb-0">Brani che ti Piacciono</h3>
+                <p class="small text-my-grey">8 brani di Pinguini Tattici Nuclear</p>
+              </div>
             </div>
           </div>
+          <article class="popolari p-no-margin-block order-md-first">
+            <div class="container">
+              <h2 class="h4 fw-bold">Popolari</h2>
+              <div class="d-flex flex-column gap-3 mt-4 mb-3">
+                <div class="row px-3 justify-content-md-start justify-content-between">
+                  <div class="col col-md-6">
+                    <div class="row align-items-center">
+                      <div class="col-1"><p>1</p></div>
+                      <div class="col d-flex gap-3">
+                        <img
+                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
+                          width="35"
+                          alt="Album cover"
+                        />
+                        <p>Ocean Avenue</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-md-none col-1">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                </div>
+                <div class="row px-3 justify-content-md-start justify-content-between">
+                  <div class="col col-md-6">
+                    <div class="row align-items-center">
+                      <div class="col-1"><p>1</p></div>
+                      <div class="col d-flex gap-3">
+                        <img
+                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
+                          width="35"
+                          alt="Album cover"
+                        />
+                        <p>Ocean Avenue</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-md-none col-1">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                </div>
+                <div class="row px-3 justify-content-md-start justify-content-between">
+                  <div class="col col-md-6">
+                    <div class="row align-items-center">
+                      <div class="col-1"><p>1</p></div>
+                      <div class="col d-flex gap-3">
+                        <img
+                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
+                          width="35"
+                          alt="Album cover"
+                        />
+                        <p>Ocean Avenue</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-md-none col-1">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                </div>
+                <div class="row px-3 justify-content-md-start justify-content-between">
+                  <div class="col col-md-6">
+                    <div class="row align-items-center">
+                      <div class="col-1"><p>1</p></div>
+                      <div class="col d-flex gap-3">
+                        <img
+                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
+                          width="35"
+                          alt="Album cover"
+                        />
+                        <p>Ocean Avenue</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-md-none col-1">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                </div>
+                <div class="row px-3 justify-content-md-start justify-content-between">
+                  <div class="col col-md-6">
+                    <div class="row align-items-center">
+                      <div class="col-1"><p>1</p></div>
+                      <div class="col d-flex gap-3">
+                        <img
+                          src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-22.jpg"
+                          width="35"
+                          alt="Album cover"
+                        />
+                        <p>Ocean Avenue</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-md-none col-1">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-dark btn-sm fw-bold text-my-grey">VISUALIZZA ALTRO</button>
+          </article>
         </div>
-        <div class="container piace text-light">
-          <div class="container d-flex my-4">
-            <h2 class="me-auto fs-3 fw-bold">Discografia</h2>
-            <h2 class="fs-6 text-muted mt-2">VISUALIZZA TUTTO</h2>
+        <section class="my-5">
+          <div class="popular-releases d-md-none">
+            <h3 class="h4">Popular releases</h3>
+            <div>
+              <div class="d-flex mt-3">
+                <img
+                  src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
+                  class="me-3"
+                  width="60"
+                  alt="Artist image"
+                />
+                <div class="p-no-margin-block me-4">
+                  <p class="">Fat Funny Friend</p>
+                  <p class="small mt-1 text-my-grey">Maddie Zahm</p>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <img
+                  src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
+                  class="me-3"
+                  width="60"
+                  alt="Artist image"
+                />
+                <div class="p-no-margin-block me-4">
+                  <p class="">Fat Funny Friend</p>
+                  <p class="small mt-1 text-my-grey">Maddie Zahm</p>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <img
+                  src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
+                  class="me-3"
+                  width="60"
+                  alt="Artist image"
+                />
+                <div class="p-no-margin-block me-4">
+                  <p class="">Fat Funny Friend</p>
+                  <p class="small mt-1 text-my-grey">Maddie Zahm</p>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <img
+                  src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
+                  class="me-3"
+                  width="60"
+                  alt="Artist image"
+                />
+                <div class="p-no-margin-block me-4">
+                  <p class="">Fat Funny Friend</p>
+                  <p class="small mt-1 text-my-grey">Maddie Zahm</p>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <img
+                  src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
+                  class="me-3"
+                  width="60"
+                  alt="Artist image"
+                />
+                <div class="p-no-margin-block me-4">
+                  <p class="">Fat Funny Friend</p>
+                  <p class="small mt-1 text-my-grey">Maddie Zahm</p>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <img
+                  src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
+                  class="me-3"
+                  width="60"
+                  alt="Artist image"
+                />
+                <div class="p-no-margin-block me-4">
+                  <p class="">Fat Funny Friend</p>
+                  <p class="small mt-1 text-my-grey">Maddie Zahm</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <button type="button" class="btn btn-light rounded-pill">Popular releases</button>
-            <button type="button" class="btn btn-dark rounded-pill">Singles and EPs</button>
+          <div class="container piace text-light d-none d-md-block">
+            <div class="container d-flex my-4">
+              <h2 class="me-auto my-0 fs-3 fw-bold">Discografia</h2>
+              <h2 class="fs-6 text-muted mt-2">VISUALIZZA TUTTO</h2>
+            </div>
+            <div class="mb-4">
+              <button type="button" class="btn btn-sm btn-light rounded-pill">Popular releases</button>
+              <button type="button" class="btn btn-sm btn-dark rounded-pill">Singles and EPs</button>
+            </div>
+            <div class="row g-3">
+              <div class="card col p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col d-none d-sm-flex p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col d-none d-md-flex p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col d-none d-lg-flex p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col d-none d-xl-flex p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+              <div class="card col d-none d-xl-flex p-2">
+                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                <div class="card-body">
+                  <h4>VAPO VAPO</h4>
+                  <p>Latest Release · Single</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row g-3">
-            <div class="card col p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
+        </section>
+        <section class="about d-md-none">
+          <h4 class="mb-1">About</h4>
+          <p class="mb-0 fw-bold">1,542,666 Monthly Listeners</p>
+          <p class="mb-0 fw-normal text-my-grey">
+            Sweepz is a producer based in the Netherlands. He is an absolute master of the heavier music genres. He
+            broke through in the electronic music scene with his song Confession and now has more than 40 million
+            streams across all platforms. After dominating the Trap scene for many years, he decided to embrace the
+            Phonk genre.
+          </p>
+          <div class="px-3 pt-5 pb-4">
+            <div>
+              <p class="h1 mb-0">16,105</p>
+              <p>Followers</p>
             </div>
-            <div class="card col p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
+            <div class="pt-5">
+              <div class="d-flex gap-3 align-items-baseline">
+                <i class="bi bi-facebook"></i>
+                <p class="small">Facebook</p>
               </div>
-            </div>
-            <div class="card col p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
-            </div>
-            <div class="card col p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
-            </div>
-            <div class="card col d-none d-sm-flex p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
-            </div>
-            <div class="card col d-none d-md-flex p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
-            </div>
-            <div class="card col d-none d-lg-flex p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
-            </div>
-            <div class="card col d-none d-xl-flex p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
-              </div>
-            </div>
-            <div class="card col d-none d-xl-flex p-2">
-              <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-              <div class="card-body">
-                <h4>VAPO VAPO</h4>
-                <p>Latest Release · Single</p>
+              <div class="d-flex gap-3 align-items-baseline">
+                <i class="bi bi-instagram"></i>
+                <p class="small">Instagram</p>
               </div>
             </div>
           </div>
-        </div>
-        <h3 class="h4">About</h3>
-        <section class="container ms-0 rounded" id="about">
+        </section>
+        <section class="about container ms-0 rounded d-none d-md-block">
           <div class="row">
             <div class="col-9 rounded d-flex flex-column justify-content-end p-4">
               <p class="fw-bold mb-2">1,542,666 Monthly Listeners</p>
@@ -235,7 +370,7 @@
         </section>
       </section>
     </main>
-    <section id="player" class="d-flex justify-content-between align-items-center py-3 ps-2 pe-3">
+    <section id="player" class="d-none d-md-flex justify-content-between align-items-center py-3 ps-2 pe-3">
       <div class="d-flex align-items-center flex-1">
         <img
           src="./assets/css/BW2-Spotify-assets/assets/imgs/search/image-41.jpg"
@@ -249,14 +384,13 @@
         </div>
         <i class="bi bi-heart"></i>
       </div>
-
       <div class="d-flex flex-1 flex-column">
-        <div class="align-self-center d-flex gap-2">
+        <div class="align-self-center d-flex gap-2 align-items-center mb-1">
           <i class="bi bi-shuffle"></i>
-          <i class="bi bi-skip-start-fill"></i>
-          <i class="bi bi-play-circle-fill"></i>
-          <i class="bi bi-skip-end-fill"></i>
-          <i class="bi bi-arrow-clockwise"></i>
+          <i class="bi bi-skip-start-fill fs-4"></i>
+          <i class="bi bi-play-circle-fill fs-3"></i>
+          <i class="bi bi-skip-end-fill fs-4"></i>
+          <i class="bi bi-arrow-clockwise fs-5"></i>
         </div>
         <div
           class="progress"
@@ -265,22 +399,24 @@
           aria-valuenow="33"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 3.5px"
         >
           <div class="progress-bar" style="width: 33%"></div>
         </div>
       </div>
-      <div class="flex-1 d-flex justify-content-end gap-2">
+      <div class="flex-1 d-flex justify-content-end gap-2 align-items-center">
         <i class="bi bi-mic"></i>
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list fs-5"></i>
         <i class="bi bi-speaker"></i>
-        <i class="bi bi-volume-up"></i>
+        <i class="bi bi-volume-up fs-5"></i>
         <div
-          class="progress volume-bar"
+          class="progress volume-bar align-self-center"
           role="progressbar"
           aria-label="Basic example"
           aria-valuenow="100"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 3.5px"
         >
           <div class="progress-bar" style="width: 100%"></div>
         </div>

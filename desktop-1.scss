@@ -3,9 +3,9 @@ $bg-gradient-terziario: linear-gradient(180deg,
         rgba(20, 20, 20, 1) 50%,
         rgba(24, 24, 24, 1) 100%);
 
-.sections-padding-inline {
-    padding-inline: 2rem
-}
+// .sections-padding-inline {
+//     padding-inline: 2rem
+// }
 
 .p-no-margin-block {
     p {
@@ -27,8 +27,11 @@ body {
     color: white;
 
     main {
-        max-height: calc(100vh - 80px);
-        overflow-y: auto;
+        @media (min-width: 768px) {
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+
+        }
 
         #artista-banner {
             background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
@@ -38,11 +41,11 @@ body {
         #artista-tracce {
             background: linear-gradient(180deg, rgba(24, 24, 24, 1) 0%, rgba(20, 20, 20, 1) 50%, rgba(24, 24, 24, 1) 100%);
 
-            #popolari {
+            .popolari {
                 flex-grow: 3;
             }
 
-            #brani-che-piacciono {
+            .brani-che-piacciono {
                 flex-grow: 2;
             }
 
@@ -59,7 +62,7 @@ body {
                     &:first-of-type {
                         background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
 
-                        height: 600px;
+                        height: 500px;
                     }
                 }
             }

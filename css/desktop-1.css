@@ -1,7 +1,3 @@
-.sections-padding-inline {
-  padding-inline: 2rem;
-}
-
 .p-no-margin-block p {
   margin-block: 0;
 }
@@ -19,9 +15,11 @@ body {
   font-family: "Circular";
   color: white;
 }
-body main {
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
+@media (min-width: 768px) {
+  body main {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
 }
 body main #artista-banner {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
@@ -30,10 +28,10 @@ body main #artista-banner {
 body main #artista-tracce {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
 }
-body main #artista-tracce #popolari {
+body main #artista-tracce .popolari {
   flex-grow: 3;
 }
-body main #artista-tracce #brani-che-piacciono {
+body main #artista-tracce .brani-che-piacciono {
   flex-grow: 2;
 }
 body main #artista-tracce .btn-dark {
@@ -42,7 +40,7 @@ body main #artista-tracce .btn-dark {
 }
 body main #about .row div:first-of-type {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
-  height: 600px;
+  height: 500px;
 }
 body main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
