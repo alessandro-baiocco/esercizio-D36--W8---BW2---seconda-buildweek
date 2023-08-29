@@ -10775,11 +10775,11 @@ textarea.form-control-lg {
 
 main {
   background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 69%, rgb(24, 24, 24) 100%);
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
 }
 main .centrale {
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
   flex-grow: 1;
 }
@@ -10816,14 +10816,14 @@ main footer ul {
 }
 
 .all {
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
 }
 
 #first {
   background-color: black;
   font-size: 2vh;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
 }
 
@@ -10954,6 +10954,6 @@ main footer ul {
 }
 
 aside div {
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
 }/*# sourceMappingURL=homeStyle.css.map */

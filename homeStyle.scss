@@ -26,12 +26,12 @@ $color-lGray: #727272;
 
 main {
   .centrale {
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 109px);
     overflow-y: auto;
     flex-grow: 1;
   }
   background: linear-gradient(190deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 69%, rgba(24, 24, 24, 1) 100%);
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
   .canzoneOra {
     background: $bg-gradient-quarto;
@@ -83,14 +83,14 @@ main {
 }
 
 .all {
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
 }
 //-------------------nav
 #first {
   background-color: black;
   font-size: 2vh;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 109px);
   overflow-y: auto;
 }
 #logo {
@@ -204,7 +204,7 @@ main {
 
 aside {
   div {
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 109px);
     overflow-y: auto;
   }
 }
