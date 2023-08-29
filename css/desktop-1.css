@@ -10801,7 +10801,7 @@ body {
     padding-bottom: 10rem;
   }
 }
-body main a {
+body main .link-artista {
   text-decoration: none;
   color: inherit;
 }
