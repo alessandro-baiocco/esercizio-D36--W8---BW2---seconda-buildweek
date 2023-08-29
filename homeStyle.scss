@@ -2,17 +2,16 @@
 @import "assets/bootstrap-5.2.3/scss/bootstrap";
 // variabili globali
 $bg-terziario: #2d2d2d;
-$bg-gradient-terziario: linear-gradient(
-  180deg,
-  rgba(24, 24, 24, 1) 0%,
-  rgba(20, 20, 20, 1) 50%,
-  rgba(24, 24, 24, 1) 100%
-);
+$bg-gradient-terziario: linear-gradient(180deg,
+    rgba(24, 24, 24, 1) 0%,
+    rgba(20, 20, 20, 1) 50%,
+    rgba(24, 24, 24, 1) 100%);
 $bg-gradient-quarto: linear-gradient(36deg, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 1) 29%, rgba(32, 32, 32, 1) 100%);
 $color-gray: #6a6a6a;
 $success2: #1ed760;
 $color-black: black;
 $color-lGray: #727272;
+
 // --------------------------classi create------------------------
 .btn-success2 {
   background-color: $success2;
@@ -28,22 +27,27 @@ main {
   background: linear-gradient(190deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 69%, rgba(24, 24, 24, 1) 100%);
   max-height: calc(100vh - 80px);
   overflow-y: auto;
+
   .canzoneOra {
     background: $bg-gradient-quarto;
+
     .nomeCanzone {
       font-size: 50px;
     }
+
     div {
       .btn {
         color: $color-gray;
       }
     }
   }
+
   div {
     .consigliati {
       div {
         .row {
           background-color: $bg-terziario;
+
           @media screen and (min-width: 0px) and (max-width: 768px) {
             background-color: #131313;
           }
@@ -51,6 +55,7 @@ main {
       }
     }
   }
+
   .piace {
     .row {
       .card {
@@ -58,15 +63,18 @@ main {
       }
     }
   }
+
   footer {
     .row {
       i {
         background-color: $color-lGray;
       }
     }
+
     ul {
       padding: 0;
       list-style: none;
+
       li {
         &:not(:first-of-type) {
           // margin-left: 10px;
