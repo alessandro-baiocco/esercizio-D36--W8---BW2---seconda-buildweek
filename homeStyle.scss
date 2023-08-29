@@ -1,3 +1,5 @@
+//import bootstrap
+@import "assets/bootstrap-5.2.3/scss/bootstrap";
 // variabili globali
 $bg-terziario: #2d2d2d;
 $bg-gradient-terziario: linear-gradient(
@@ -61,7 +63,4 @@ main {
   &::after {
     color: #00000000;
   }
-}
-
-.consigliatiCard {
 }
