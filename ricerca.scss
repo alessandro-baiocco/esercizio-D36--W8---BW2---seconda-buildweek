@@ -193,7 +193,108 @@ aside {
 }
 
 // -----------------------------player
+
+.small-p {
+  font-size: 0.8rem;
+}
+
+.p-no-margin-block {
+  p {
+    margin-block: 0;
+  }
+}
+
+.text-my-grey {
+  color: #8f8f8f;
+}
+
+.badge-85 {
+  top: 85%;
+  left: 85%;
+}
+
+.bg-shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 26%, rgba(0, 0, 0, 1) 100%);
+}
+
+body {
+  font-family: "Circular";
+  color: white;
+
+  main {
+    @media (min-width: 768px) {
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+
+    #artista-banner {
+      background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
+      height: 500px;
+    }
+
+    #artista-tracce {
+      background: linear-gradient(180deg, rgba(24, 24, 24, 1) 0%, rgba(20, 20, 20, 1) 50%, rgba(24, 24, 24, 1) 100%);
+
+      .popolari {
+        flex-grow: 3;
+      }
+
+      .brani-che-piacciono {
+        flex-grow: 2;
+      }
+
+      .btn-dark {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+
+    .about {
+      .row {
+        div {
+          &:first-of-type {
+            background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
+
+            height: 500px;
+          }
+        }
+      }
+    }
+
+    .piace {
+      .row {
+        .card {
+          background: $bg-gradient-terziario;
+        }
+      }
+    }
+  }
+}
+
 #player {
   background-color: #1f1f1f;
-  color: white;
+  margin-top: 17px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.volume-bar {
+  width: 5rem;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 0px;
+  border: 0px solid #000000;
 }
