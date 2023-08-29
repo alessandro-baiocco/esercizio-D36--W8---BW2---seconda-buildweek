@@ -1,3 +1,7 @@
+.small-p {
+  font-size: 0.8rem;
+}
+
 .p-no-margin-block p {
   margin-block: 0;
 }
@@ -9,6 +13,10 @@
 .badge-85 {
   top: 85%;
   left: 85%;
+}
+
+.bg-shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 26%, rgb(0, 0, 0) 100%);
 }
 
 body {
@@ -23,7 +31,7 @@ body {
 }
 body main #artista-banner {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
-  padding-top: 15em;
+  height: 500px;
 }
 body main #artista-tracce {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);

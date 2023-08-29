@@ -11,17 +11,57 @@
   </head>
   <body>
     <main>
-      <section id="artista-banner" class="d-flex flex-column justify-content-end px-3 px-md-4 pb-md-4">
-        <div class="d-flex p-no-margin-block gap-2">
-          <i class="bi bi-patch-check-fill fs-3 text-primary"></i>
-          <p class="small">Artista verificato</p>
+      <section
+        id="artista-banner"
+        class="d-flex justify-content-between flex-column justify-content-between px-3 px-md-4 pb-md-4"
+      >
+        <div class="container my-2">
+          <div class="container d-flex">
+            <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
+            <div><i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i></div>
+            <div class="d-flex ms-auto rounded-pill bg-black">
+              <ul class="m-0 p-0">
+                <li class="nav-item dropdown d-flex p-0 m-0">
+                  <a
+                    class="nav-link dropdown-toggle d-flex p-0 m-0"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-2.jpg"
+                      alt=""
+                      width="30px"
+                      height="30px"
+                      style="border-radius: 50%"
+                      class="me-2"
+                    />
+                    <p class="mb-0 text-light">Lidia nautilus ...</p>
+                    <i class="bi bi-caret-down-fill text-light"></i>
+                  </a>
+                  <ul class="dropdown-menu m-0">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <h1 class="display-1 fw-bolder">Yellowcard</h1>
-        <p class="d-none d-md-block ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
+        <div>
+          <div class="d-flex p-no-margin-block gap-2 align-items-center">
+            <i class="bi bi-patch-check-fill fs-3 text-primary"></i>
+            <p class="small">Artista verificato</p>
+          </div>
+          <h1 class="display-1 fw-bolder">Yellowcard</h1>
+          <p class="d-none d-md-block ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
+        </div>
       </section>
       <section id="artista-tracce" class="px-3 px-md-4 py-3">
         <p class="d-block d-md-none ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
-        <div class="d-flex align-items-center justify-content-between mb-4">
+        <div class="d-flex align-items-center justify-content-between mb-4 d-md-none">
           <div class="d-flex align-items-center gap-5">
             <button type="button" class="btn btn-dark btn-sm fw-md-bold">Seguiti</button>
             <i class="bi bi-three-dots-vertical fs-4 text-my-grey"></i>
@@ -32,7 +72,6 @@
           </div>
         </div>
         <div class="d-none d-md-flex align-items-center gap-4 mb-3">
-          <i class="bi bi-play-circle-fill display-4 text-success"></i>
           <i class="bi bi-play-circle-fill display-4 text-success"></i>
           <button type="button" class="btn btn-outline-light btn-sm fw-bold px-3">FOLLOWING</button>
           <i class="bi bi-three-dots fs-4 text-my-grey"></i>
@@ -421,6 +460,34 @@
           <div class="progress-bar" style="width: 100%"></div>
         </div>
         <i class="bi bi-arrows-angle-expand"></i>
+      </div>
+    </section>
+    <section class="mobile-stick d-md-none fixed-bottom">
+      <div class="px-2">
+        <div style="background: #282828" class="container-fluid p-2 rounded">
+          <div class="row align-items-center">
+            <div class="col"><p class="mb-0">Titolo canzone</p></div>
+            <div class="col-3 d-flex justify-content-end gap-3 me-2">
+              <i class="bi bi-heart fs-1"></i>
+              <i class="bi bi-speaker fs-1"></i>
+              <i class="bi bi-play-fill fs-1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex px-5 py-2 bg-shadow">
+        <div class="d-flex flex-column align-items-center flex-1">
+          <i class="bi bi-house-door-fill fs-1"></i>
+          <p class="my-0 small-p">Home</p>
+        </div>
+        <div class="d-flex flex-column align-items-center flex-1">
+          <i class="bi bi-search fs-1"></i>
+          <p class="my-0 small-p">Cerca</p>
+        </div>
+        <div class="d-flex flex-column align-items-center flex-1">
+          <i class="bi bi-collection fs-1"></i>
+          <p class="my-0 small-p">La tua libreria</p>
+        </div>
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
