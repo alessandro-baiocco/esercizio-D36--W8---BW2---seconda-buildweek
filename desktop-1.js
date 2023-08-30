@@ -73,7 +73,6 @@ window.onload = async () => {
   const trackListRe = await re.json();
   const trackList = trackListRe.data;
   trackList.forEach((track, index) => {
-    // console.log(titoliCanzone);
     titoliCanzone[index].innerText = track.title_short ? track.title_short : track.title;
     albumCanzoniPopolari[index].src = track.album.cover_small;
     albumCanzoniPopolari[index].src = track.album.cover_small;
@@ -84,7 +83,8 @@ window.onload = async () => {
     const durataMS = `${minuti}:${secondi}`;
     durateCanzoni[index].innerText = durataMS;
   });
-  const albumsUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=18`;
+  const albumsUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=100`;
+  //   const albumsUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=18`;
   re = await fetch(albumsUrl, {
     method: "GET",
     // headers: {
@@ -97,7 +97,26 @@ window.onload = async () => {
   }
   const albumListRe = await re.json();
   const albumList = albumListRe.data;
-  albumList.forEach((album, index) => {
+  const trueAlbumList = [];
+  try {
+    albumList.forEach(album => {
+      let found = false;
+      for (let i = 0; i < trueAlbumList.length; i++) {
+        if (album.album.title === trueAlbumList[i].album.title) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        trueAlbumList.push(album);
+      }
+      if (trueAlbumList.length === 18) {
+        throw new Error("Break the loop.");
+      }
+    });
+  } catch (error) {}
+
+  trueAlbumList.forEach((album, index) => {
     if (index < 5) {
       albumsMobile[index].querySelector("img").src = album.album.cover;
       albumsMobile[index].querySelector("h4").innerText = album.album.title;
@@ -110,7 +129,6 @@ window.onload = async () => {
     albums[index].querySelector(".album-id").innerText = album.album.id;
   });
   const artistBigImg = artist.picture_xl;
-  console.log(artistBigImg);
   artistaBanner.style.backgroundImage = `url(${artistBigImg})`;
   aboutImg.style.backgroundImage = `url(${artistBigImg})`;
 
