@@ -1,5 +1,6 @@
 @import "assets/bootstrap-5.2.3/scss/bootstrap";
 
+$my-grey: #8f8f8f;
 $bg-gradient-terziario: linear-gradient(180deg,
         rgba(24, 24, 24, 1) 0%,
         rgba(20, 20, 20, 1) 50%,
@@ -20,7 +21,7 @@ $bg-gradient-terziario: linear-gradient(180deg,
 }
 
 .text-my-grey {
-    color: #8f8f8f;
+    color: $my-grey;
 }
 
 .badge-85 {
@@ -32,21 +33,77 @@ $bg-gradient-terziario: linear-gradient(180deg,
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 26%, rgba(0, 0, 0, 1) 100%);
 }
 
+.all {
+
+    // max-height: calc(100vh - 109px);
+    // overflow-y: auto;
+    @media (min-width: 768px) {
+        max-height: calc(100vh - 92px);
+        overflow-y: auto;
+    }
+
+    // @media (min-width: 768px) {
+    //     max-height: calc(100vh - 76px);
+    //     overflow-y: auto;
+    // }
+
+    @media (max-width: 768px) {
+        padding-bottom: 10rem;
+    }
+}
+
 body {
     font-family: "Circular";
     color: white;
 
     main {
 
+        .canzone {
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
-        @media (min-width: 768px) {
-            max-height: calc(100vh - 80px);
-            overflow-y: auto;
+        // @media (min-width: 768px) {
+        //     max-height: calc(100vh - 92px);
+        //     overflow-y: auto;
+        // }
+
+        // @media (max-width: 768px) {
+        //     padding-bottom: 10rem;
+        // }
+
+        .link-artista {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card {
+            cursor: pointer;
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $my-grey;
+                margin-bottom: 0;
+            }
+        }
+
+        .clipped {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
         }
 
         #artista-banner {
             background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
             height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         #artista-tracce {
@@ -67,6 +124,15 @@ body {
 
         }
 
+        .real-main {
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .titolo-canzone {
+            line-height: 1.2;
+        }
+
         .about {
             .row {
                 div {
@@ -74,6 +140,8 @@ body {
                         background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
 
                         height: 500px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
                     }
                 }
             }

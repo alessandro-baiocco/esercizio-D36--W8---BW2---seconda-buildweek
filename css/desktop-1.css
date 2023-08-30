@@ -10786,19 +10786,51 @@ textarea.form-control-lg {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 26%, rgb(0, 0, 0) 100%);
 }
 
+@media (min-width: 768px) {
+  .all {
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+  }
+}
+@media (max-width: 768px) {
+  .all {
+    padding-bottom: 10rem;
+  }
+}
+
 body {
   font-family: "Circular";
   color: white;
 }
-@media (min-width: 768px) {
-  body main {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+body main .canzone:hover {
+  cursor: pointer;
+}
+body main .link-artista {
+  text-decoration: none;
+  color: inherit;
+}
+body main .card {
+  cursor: pointer;
+}
+body main .card h4, body main .card .h4 {
+  font-size: 1rem;
+}
+body main .card p {
+  font-size: 0.8rem;
+  color: #8f8f8f;
+  margin-bottom: 0;
+}
+body main .clipped {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 body main #artista-banner {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body main #artista-tracce {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
@@ -10813,9 +10845,18 @@ body main #artista-tracce .btn-dark {
   background-color: transparent;
   border-color: transparent;
 }
+body main .real-main {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+body main .titolo-canzone {
+  line-height: 1.2;
+}
 body main .about .row div:first-of-type {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
