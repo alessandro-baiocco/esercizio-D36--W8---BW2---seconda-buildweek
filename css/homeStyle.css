@@ -10773,15 +10773,41 @@ textarea.form-control-lg {
   background-color: black;
 }
 
+.albumSU,
+.albumGiu,
+.albumCentro {
+  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+}
+.albumSU a,
+.albumGiu a,
+.albumCentro a {
+  text-decoration: none;
+}
+.albumSU img,
+.albumGiu img,
+.albumCentro img {
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+  padding-bottom: 5px;
+}
+
+.cardSeiSu a {
+  text-decoration: none;
+}
+.cardSeiSu a p {
+  font-size: 14px;
+}
+
 main {
-  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 69%, rgb(24, 24, 24) 100%);
-  max-height: calc(100vh - 109px);
+  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
+  max-height: calc(100vh - 92px);
   overflow-y: auto;
 }
 main .centrale {
-  max-height: calc(100vh - 109px);
+  max-height: calc(100vh - 92px);
   overflow-y: auto;
   flex-grow: 1;
+  padding-left: 3px;
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);
@@ -10816,15 +10842,16 @@ main footer ul {
 }
 
 .all {
-  max-height: calc(100vh - 109px);
+  max-height: calc(100vh - 92pxx);
   overflow-y: auto;
 }
 
 #first {
   background-color: black;
   font-size: 2vh;
-  max-height: calc(100vh - 109px);
+  max-height: calc(100vh - 92px);
   overflow-y: auto;
+  max-width: 300px;
 }
 
 #logo {
@@ -10953,14 +10980,86 @@ main footer ul {
   font-size: 1.5vh;
 }
 
+aside {
+  background-color: #000000;
+  max-width: 300px;
+}
 aside div {
-  max-height: calc(100vh - 109px);
+  max-height: calc(100vh - 92px);
   overflow-y: auto;
 }
 
 #player {
   background-color: #1f1f1f;
   color: white;
+}
+
+.small-p {
+  font-size: 0.8rem;
+}
+
+.p-no-margin-block p {
+  margin-block: 0;
+}
+
+.text-my-grey {
+  color: #8f8f8f;
+}
+
+.badge-85 {
+  top: 85%;
+  left: 85%;
+}
+
+.bg-shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 26%, rgb(0, 0, 0) 100%);
+}
+
+body {
+  font-family: "Circular";
+  color: white;
+}
+@media (min-width: 768px) {
+  body main {
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+  }
+}
+body main #artista-banner {
+  background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
+  height: 500px;
+}
+body main #artista-tracce {
+  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+}
+body main #artista-tracce .popolari {
+  flex-grow: 3;
+}
+body main #artista-tracce .brani-che-piacciono {
+  flex-grow: 2;
+}
+body main #artista-tracce .btn-dark {
+  background-color: transparent;
+  border-color: transparent;
+}
+body main .about .row div:first-of-type {
+  background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
+  height: 500px;
+}
+body main .piace .row .card {
+  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+}
+
+#player {
+  background-color: #1f1f1f;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.volume-bar {
+  width: 5rem;
 }
 
 *::-webkit-scrollbar {

@@ -1,4 +1,7 @@
 let riga = document.querySelector(".row");
+let carteRicerca = [];
+let scrittaRicerca = [];
+let inputRicerca = document.querySelector("input");
 
 window.onload = () => {
   for (let i = 0; i < ricercaObj.length; i++) {

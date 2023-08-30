@@ -30,19 +30,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center" href="#">
+              <a class="nav-link d-flex align-items-center" href="home.html">
                 <div class="navHomeDiv d-flex justify-content-center align-items-center">
                   <i class="bi bi-house-door"></i>
                 </div>
-                <span class="pl-2 navSpans">Home</span>
+                <span class="ps-2 navSpans">Home</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center" href="#">
                 <div class="navHomeDiv d-flex justify-content-center align-items-center">
-                  <i class="bi bi-search"></i>
+                  <i class="bi bi-search-heart"></i>
                 </div>
-                <span class="pl-2 navSpans">Cerca</span>
+                <span class="ps-2 navSpans">Cerca</span>
               </a>
             </li>
             <li class="nav-item">
@@ -50,7 +50,7 @@
                 <div class="navIconDivs d-flex justify-content-center align-items-center">
                   <i class="bi bi-layout-three-columns"></i>
                 </div>
-                <span class="pl-2 navSpans">La tua libreria</span>
+                <span class="ps-2 navSpans">La tua libreria</span>
               </a>
             </li>
           </ul>
@@ -61,7 +61,7 @@
                 <div class="creaPlaylistDiv d-flex justify-content-center align-items-center">
                   <i class="bi bi-plus"></i>
                 </div>
-                <span class="pl-2 navSpans">Crea playlist</span>
+                <span class="ps-2 navSpans">Crea playlist</span>
               </a>
             </li>
             <li class="nav-item">
@@ -69,7 +69,7 @@
                 <div class="navHeartDiv d-flex justify-content-center align-items-center">
                   <i class="bi bi-heart-fill"></i>
                 </div>
-                <span class="pl-2 navSpans">Brani che ti piacciono</span>
+                <span class="ps-2 navSpans">Brani che ti piacciono</span>
               </a>
             </li>
             <li class="nav-item">
@@ -77,7 +77,7 @@
                 <div class="navHeartDiv d-flex justify-content-center align-items-center">
                   <i class="bi bi-bookmark"></i>
                 </div>
-                <span class="pl-2 navSpans">I tuoi episodi</span>
+                <span class="ps-2 navSpans">I tuoi episodi</span>
               </a>
             </li>
           </ul>
@@ -151,27 +151,25 @@
           </ul>
         </div>
       </nav>
-      <main class="d-flex">
-        <div>
-          <div>
-            <header>
-              <h2 class="d-flex d-lg-none text-light my-3">Cerca</h2>
-              <div class="container d-md-flex">
-                <div class="d-none d-lg-flex">
-                  <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
-                  <div><i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i></div>
-                </div>
-                <form class="ms-2">
-                  <div>
-                    <button class="btn btn-dark" onclick="noDef(event)">
-                      <i class="bi bi-search me-0"></i>
-                      <input type="text" placeholder="Cosa vuoi cercare?" class="ms-0 bg-dark" />
-                    </button>
-                  </div>
-                </form>
+      <main class="d-flex flex-grow-1">
+        <div class="flex-grow-1">
+          <header>
+            <h2 class="d-flex d-lg-none text-light my-3">Cerca</h2>
+            <div class="container d-md-flex">
+              <div class="d-none d-lg-flex">
+                <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
+                <div><i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i></div>
               </div>
-            </header>
-          </div>
+              <form class="ms-2">
+                <div>
+                  <button class="btn text-light" onclick="noDef(event)">
+                    <i class="bi bi-search me-0"></i>
+                    <input type="text" placeholder="Cosa vuoi cercare?" class="ms-0 border-0 text-light" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </header>
           <h1 class="text-light">sfoglia tutto</h1>
           <div class="container-fluid">
             <div class="row gy-2"></div>
