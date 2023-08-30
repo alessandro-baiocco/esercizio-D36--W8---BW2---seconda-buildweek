@@ -10805,6 +10805,19 @@ body {
 body main .canzone:hover {
   cursor: pointer;
 }
+body main .dettagli-canzone {
+  width: 20rem;
+}
+body main .numero-popolari {
+  min-width: 1.5rem;
+  text-align: end;
+}
+body main .numero-riproduzioni {
+  width: 5rem;
+}
+body main .durata-canzone {
+  width: 3rem;
+}
 body main .link-artista {
   text-decoration: none;
   color: inherit;
