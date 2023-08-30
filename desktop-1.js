@@ -113,17 +113,17 @@ window.onload = async () => {
   console.log(artistBigImg);
   artistaBanner.style.backgroundImage = `url(${artistBigImg})`;
   aboutImg.style.backgroundImage = `url(${artistBigImg})`;
-};
 
-const canzone = document.querySelectorAll(".canzone");
-const player = document.getElementById("player");
+  const canzone = document.querySelectorAll(".dettagli-canzone");
+  const player = document.querySelector("#player");
+  const playerMobile = document.querySelector("#player-mobile");
 
-const artistId = "";
-
-canzone.forEach(canzone => {
-  canzone.addEventListener("click", () => {
-    player.querySelector("p").innerText = canzone.querySelector("p").innerText;
-    player.querySelector("p+p").innerText = document.querySelector("h1").innerText;
-    player.querySelector("img").src = canzone.querySelector("img").src;
+  canzone.forEach(canzone => {
+    canzone.addEventListener("click", () => {
+      player.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
+      playerMobile.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
+      player.querySelector("p+p").innerText = document.querySelector("h1").innerText;
+      player.querySelector("img").src = canzone.querySelector("img").src;
+    });
   });
-});
+};
