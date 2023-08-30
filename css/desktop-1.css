@@ -10809,9 +10809,25 @@ body main .link-artista {
   text-decoration: none;
   color: inherit;
 }
+body main .card h4, body main .card .h4 {
+  font-size: 1rem;
+}
+body main .card p {
+  font-size: 0.8rem;
+  color: #8f8f8f;
+  margin-bottom: 0;
+}
+body main .clipped {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
 body main #artista-banner {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body main #artista-tracce {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
@@ -10830,9 +10846,14 @@ body main .real-main {
   overflow-y: auto;
   flex-grow: 1;
 }
+body main .titolo-canzone {
+  line-height: 1.2;
+}
 body main .about .row div:first-of-type {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);

@@ -1,5 +1,6 @@
 @import "assets/bootstrap-5.2.3/scss/bootstrap";
 
+$my-grey: #8f8f8f;
 $bg-gradient-terziario: linear-gradient(180deg,
         rgba(24, 24, 24, 1) 0%,
         rgba(20, 20, 20, 1) 50%,
@@ -20,7 +21,7 @@ $bg-gradient-terziario: linear-gradient(180deg,
 }
 
 .text-my-grey {
-    color: #8f8f8f;
+    color: $my-grey;
 }
 
 .badge-85 {
@@ -77,9 +78,30 @@ body {
             color: inherit;
         }
 
+        .card {
+            h4 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $my-grey;
+                margin-bottom: 0;
+            }
+        }
+
+        .clipped {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
         #artista-banner {
             background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
             height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         #artista-tracce {
@@ -105,6 +127,10 @@ body {
             flex-grow: 1;
         }
 
+        .titolo-canzone {
+            line-height: 1.2;
+        }
+
         .about {
             .row {
                 div {
@@ -112,6 +138,8 @@ body {
                         background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
 
                         height: 500px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
                     }
                 }
             }
