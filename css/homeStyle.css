@@ -10773,8 +10773,28 @@ textarea.form-control-lg {
   background-color: black;
 }
 
+.albumSU,
+.albumGiu,
+.albumCentro {
+  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+}
+.albumSU img,
+.albumGiu img,
+.albumCentro img {
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+  padding-bottom: 5px;
+}
+
+.cardSeiSu a {
+  text-decoration: none;
+}
+.cardSeiSu a p {
+  font-size: 14px;
+}
+
 main {
-  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 69%, rgb(24, 24, 24) 100%);
+  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
   max-height: calc(100vh - 92px);
   overflow-y: auto;
 }
@@ -10782,6 +10802,7 @@ main .centrale {
   max-height: calc(100vh - 92px);
   overflow-y: auto;
   flex-grow: 1;
+  padding-left: 3px;
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);
@@ -10825,6 +10846,7 @@ main footer ul {
   font-size: 2vh;
   max-height: calc(100vh - 92px);
   overflow-y: auto;
+  max-width: 300px;
 }
 
 #logo {
@@ -10953,6 +10975,10 @@ main footer ul {
   font-size: 1.5vh;
 }
 
+aside {
+  background-color: #000000;
+  max-width: 300px;
+}
 aside div {
   max-height: calc(100vh - 92px);
   overflow-y: auto;
@@ -11021,7 +11047,6 @@ body main .piace .row .card {
 
 #player {
   background-color: #1f1f1f;
-  margin-top: 17px;
 }
 
 .flex-1 {
