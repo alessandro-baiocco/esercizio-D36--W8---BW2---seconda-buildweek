@@ -10809,6 +10809,9 @@ body main .link-artista {
   text-decoration: none;
   color: inherit;
 }
+body main .card {
+  cursor: pointer;
+}
 body main .card h4, body main .card .h4 {
   font-size: 1rem;
 }

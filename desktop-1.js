@@ -9,6 +9,13 @@ const albums = document.querySelectorAll(".album");
 const artistaBanner = document.querySelector("#artista-banner");
 const aboutImg = document.querySelector(".about-inner");
 
+albums.forEach(album => [
+  album.addEventListener("click", () => {
+    const id = album.querySelector(".album-id").innerText;
+    window.location.assign("./desktop.html" + "?id=" + id);
+  }),
+]);
+
 window.onload = async () => {
   // const artistId = new URLSearchParams(window.location.search).get("artistId");
   // const re = await fetch(serverUrl + "/" + productId, {
@@ -21,7 +28,7 @@ window.onload = async () => {
   //     throw new Error("error");
   // }
   // const product = await re.json();
-  const artistId = 411;
+  const artistId = 412;
   //   const fetchUrl = `https://api.deezer.com/artist/${artistId}/top?limit=6`;
   const fetchUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`;
   let re = await fetch(fetchUrl, {
@@ -86,6 +93,7 @@ window.onload = async () => {
     albums[index].querySelector("img").src = album.album.cover;
     albums[index].querySelector("h4").innerText = album.album.title;
     albums[index].querySelector("h4+p").innerText = "Album";
+    albums[index].querySelector(".album-id").innerText = album.album.id;
   });
   const artistBigImg = artist.picture_xl;
   console.log(artistBigImg);
