@@ -18,7 +18,7 @@ albums.forEach(album => [
 
 window.onload = async () => {
   // const artistId = new URLSearchParams(window.location.search).get("artistId");
-  // const re = await fetch(serverUrl + "/" + productId, {
+  // const re = await fetch(serverUrl + "/" + artistId, {
   //     method: "GET",
   //     headers: {
   //     Authorization: apiValue,
@@ -28,8 +28,8 @@ window.onload = async () => {
   //     throw new Error("error");
   // }
   // const product = await re.json();
-  //   const artistId = 412;
-  const artistId = 847;
+  const artistId = 412;
+  //   const artistId = 847;
   //   const fetchUrl = `https://api.deezer.com/artist/${artistId}/top?limit=6`;
   const fetchUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`;
   let re = await fetch(fetchUrl, {
