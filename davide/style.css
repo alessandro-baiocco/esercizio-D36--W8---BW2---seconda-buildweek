@@ -106,6 +106,8 @@ footer .volume i:hover {
   width: 18%;
   padding-left: 20px;
   padding-top: 10px;
+  height: calc(100 - 84);
+  overflow-y: auto;
 }
 .left ul {
   padding-left: 0;
