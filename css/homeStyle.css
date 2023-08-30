@@ -10779,6 +10779,11 @@ textarea.form-control-lg {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
   border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
 }
+.albumSU a,
+.albumGiu a,
+.albumCentro a {
+  text-decoration: none;
+}
 .albumSU img,
 .albumGiu img,
 .albumCentro img {

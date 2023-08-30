@@ -1,4 +1,4 @@
-const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=ita";
+const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=Queen";
 
 fetch(url, {
   headers: {
@@ -35,14 +35,20 @@ fetch(url, {
 
       for (let j = 0; j < leCardSU.length; j++) {
         leCardSU[j].innerHTML = `
-                    <a href = ""<div class="d-flex flex-md-column">
+                    </a><div class="d-flex flex-md-column">
                     <div>       
-                    <img src="${albumObj.data[j].artist.picture_medium}" alt="" class="img-fluid"  />
+                    <a href = "desktop-1.html?idArtist=${albumObj.data[j].artist.id}"><img src="${
+          albumObj.data[j].artist.picture_medium
+        }" alt="" class="img-fluid"  /></a>
                     </div>
                     <div class="card-body ps-2">
                     <p class="d-block d-md-none">Playlist</p>
-                    <h4 class = "fs-3">${albumObj.data[j].artist.name}</h4>
-                    <p>il meglio di ${albumObj.data[j].artist.name}</p>
+                    <a href = "desktop-1.html?idArtist=${albumObj.data[j].artist.id}"><h4 class = "fs-3">${
+          albumObj.data[j].artist.name
+        }</h4></a>
+                    <a href = "desktop-1.html?idArtist=${albumObj.data[j].artist.id}"><p>il meglio di ${
+          albumObj.data[j].artist.name
+        }</p></a>
                     </div>
                     </div>
                     <div class="d-flex d-md-none">
@@ -60,12 +66,18 @@ fetch(url, {
         leCardCentro[n - 6].innerHTML = `
             <div class="d-flex flex-md-column">
             <div>
-            <img src="${albumObj.data[n].album.cover_medium}" alt="" class="img-fluid"  />
+            <a href = "desktop-1.html?idArtist=${albumObj.data[n].album.id}"><img src="${
+          albumObj.data[n].album.cover_medium
+        }" alt="" class="img-fluid"  /></a>
             </div>
               <div class="card-body  ps-2">
               <p class="d-block d-md-none">Playlist</p>
-              <h4 class = "fs-3">${albumObj.data[n].album.title}</h4>
-              <p>il meglio di ${albumObj.data[n].album.title}</p>
+              <a href = "desktop-1.html?idArtist=${albumObj.data[n].album.id}"><h4 class = "fs-3">${
+          albumObj.data[n].album.title
+        }</h4></a>
+              <a href = "desktop-1.html?idArtist=${albumObj.data[n].album.id}"><p>il meglio di ${
+          albumObj.data[n].album.title
+        }</p></a>
               </div>
               </div>
               <div class="d-flex d-md-none">
@@ -84,12 +96,18 @@ fetch(url, {
         leCardGiu[m - 8].innerHTML = `
             <div class="d-flex flex-md-column">
             <div>
-            <img src="${albumObj.data[m].album.cover_medium}" alt="" class="img-fluid"  />
+            <a href = "desktop-1.html?idArtist=${albumObj.data[m].album.id}"><img src="${
+          albumObj.data[m].album.cover_medium
+        }" alt="" class="img-fluid"  /></a>
             </div>
               <div class="card-body ps-2">
               <p class="d-block d-md-none">Playlist</p>
-              <h4 class = "fs-3">${albumObj.data[m].album.title}</h4>
-              <p>il meglio di ${albumObj.data[m].album.title}</p>
+              <a href = "desktop-1.html?idArtist=${albumObj.data[m].album.id}"><h4 class = "fs-3">${
+          albumObj.data[m].album.title
+        }</h4></a>
+              <a href = "desktop-1.html?idArtist=${albumObj.data[m].album.id}"><p>il meglio di ${
+          albumObj.data[m].album.title
+        }</p></a>
               </div>
               </div>
               <div class="d-flex d-md-none">

@@ -29,6 +29,9 @@ $color-lGray: #727272;
 .albumCentro {
   background: $bg-gradient-terziario;
   border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  a {
+    text-decoration: none;
+  }
   img {
     border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
     padding-bottom: 5px;
