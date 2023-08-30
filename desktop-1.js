@@ -16,6 +16,12 @@ albums.forEach(album => [
     window.location.assign("./desktop.html" + "?id=" + id);
   }),
 ]);
+albumsMobile.forEach(album => [
+  album.addEventListener("click", () => {
+    const id = album.querySelector(".album-id").innerText;
+    window.location.assign("./desktop.html" + "?id=" + id);
+  }),
+]);
 
 window.onload = async () => {
   // const artistId = new URLSearchParams(window.location.search).get("artistId");
