@@ -28,7 +28,8 @@ window.onload = async () => {
   //     throw new Error("error");
   // }
   // const product = await re.json();
-  const artistId = 412;
+  //   const artistId = 412;
+  const artistId = 847;
   //   const fetchUrl = `https://api.deezer.com/artist/${artistId}/top?limit=6`;
   const fetchUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`;
   let re = await fetch(fetchUrl, {
@@ -66,7 +67,7 @@ window.onload = async () => {
   const trackList = trackListRe.data;
   trackList.forEach((track, index) => {
     // console.log(titoliCanzone);
-    titoliCanzone[index].innerText = track.title;
+    titoliCanzone[index].innerText = track.title_short ? track.title_short : track.title;
     albumCanzoniPopolari[index].src = track.album.cover_small;
     albumCanzoniPopolari[index].src = track.album.cover_small;
     riproduzioni[index].innerText = track.rank;
