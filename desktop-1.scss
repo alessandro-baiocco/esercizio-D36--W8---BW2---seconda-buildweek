@@ -100,6 +100,11 @@ body {
 
         }
 
+        .real-main {
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
         .about {
             .row {
                 div {

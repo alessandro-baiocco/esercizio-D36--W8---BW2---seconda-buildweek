@@ -10826,6 +10826,10 @@ body main #artista-tracce .btn-dark {
   background-color: transparent;
   border-color: transparent;
 }
+body main .real-main {
+  overflow-y: auto;
+  flex-grow: 1;
+}
 body main .about .row div:first-of-type {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 500px;
