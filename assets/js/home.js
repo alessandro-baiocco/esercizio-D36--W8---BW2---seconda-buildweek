@@ -37,16 +37,16 @@ fetch(url, {
         leCardSU[j].innerHTML = `
                     </a><div class="d-flex flex-md-column">
                     <div>       
-                    <a href = "desktop-1.html?idArtist=${albumObj.data[j].artist.id}"><img src="${
+                    <a href = "album.html?idAlbum=${albumObj.data[j].artist.id}"><img src="${
           albumObj.data[j].artist.picture_medium
         }" alt="" class="img-fluid"  /></a>
                     </div>
                     <div class="card-body ps-2">
                     <p class="d-block d-md-none">Playlist</p>
-                    <a href = "desktop-1.html?idArtist=${albumObj.data[j].artist.id}"><h4 class = "fs-3">${
+                    <a href = "album.html?idAlbum=${albumObj.data[j].artist.id}"><h4 class = "fs-3">${
           albumObj.data[j].artist.name
         }</h4></a>
-                    <a href = "desktop-1.html?idArtist=${albumObj.data[j].artist.id}"><p>il meglio di ${
+                    <a href = "album.html?idAlbum=${albumObj.data[j].artist.id}"><p>il meglio di ${
           albumObj.data[j].artist.name
         }</p></a>
                     </div>
@@ -66,16 +66,16 @@ fetch(url, {
         leCardCentro[n - 6].innerHTML = `
             <div class="d-flex flex-md-column">
             <div>
-            <a href = "desktop-1.html?idArtist=${albumObj.data[n].album.id}"><img src="${
+            <a href = "album.html?idAlbum=${albumObj.data[n].album.id}"><img src="${
           albumObj.data[n].album.cover_medium
         }" alt="" class="img-fluid"  /></a>
             </div>
               <div class="card-body  ps-2">
               <p class="d-block d-md-none">Playlist</p>
-              <a href = "desktop-1.html?idArtist=${albumObj.data[n].album.id}"><h4 class = "fs-3">${
+              <a href = "album.html?idAlbum=${albumObj.data[n].album.id}"><h4 class = "fs-3">${
           albumObj.data[n].album.title
         }</h4></a>
-              <a href = "desktop-1.html?idArtist=${albumObj.data[n].album.id}"><p>il meglio di ${
+              <a href = "album.html?idAlbum=${albumObj.data[n].album.id}"><p>il meglio di ${
           albumObj.data[n].album.title
         }</p></a>
               </div>
