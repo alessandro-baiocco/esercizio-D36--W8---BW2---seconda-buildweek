@@ -15,7 +15,7 @@
         id="artista-banner"
         class="d-flex justify-content-between flex-column justify-content-between px-3 px-md-4 pb-md-4"
       >
-        <div class="container-fluid container-md my-2">
+        <div class="container-fluid my-2">
           <div class="d-flex">
             <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
             <div class="d-none d-md-block">
@@ -58,7 +58,7 @@
             <p class="small">Artista verificato</p>
           </div>
           <h1 class="display-1 fw-bolder">Yellowcard</h1>
-          <p class="d-none d-md-block ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
+          <p class="d-none d-md-block mb-0 ascoltatori-mensili">3.433.158 ascoltatori mensili</p>
         </div>
       </section>
       <section id="artista-tracce" class="px-3 px-md-4 py-3">
@@ -120,12 +120,12 @@
                           width="35"
                           alt="Album cover"
                         />
-                        <p>Ocean Avenue</p>
+                        <p class="my-auto">Ocean Avenue</p>
                       </div>
                     </div>
                   </div>
-                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
-                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">3:18</div>
                   <div class="d-md-none col-1">
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
@@ -140,12 +140,12 @@
                           width="35"
                           alt="Album cover"
                         />
-                        <p>Ocean Avenue</p>
+                        <p class="my-auto">Ocean Avenue</p>
                       </div>
                     </div>
                   </div>
-                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
-                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">3:18</div>
                   <div class="d-md-none col-1">
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
@@ -160,12 +160,12 @@
                           width="35"
                           alt="Album cover"
                         />
-                        <p>Ocean Avenue</p>
+                        <p class="my-auto">Ocean Avenue</p>
                       </div>
                     </div>
                   </div>
-                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
-                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">3:18</div>
                   <div class="d-md-none col-1">
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
@@ -180,12 +180,12 @@
                           width="35"
                           alt="Album cover"
                         />
-                        <p>Ocean Avenue</p>
+                        <p class="my-auto">Ocean Avenue</p>
                       </div>
                     </div>
                   </div>
-                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
-                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">3:18</div>
                   <div class="d-md-none col-1">
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
@@ -200,12 +200,12 @@
                           width="35"
                           alt="Album cover"
                         />
-                        <p>Ocean Avenue</p>
+                        <p class="my-auto">Ocean Avenue</p>
                       </div>
                     </div>
                   </div>
-                  <div class="d-none d-md-block col-md-3 text-end">276.616.912</div>
-                  <div class="d-none d-md-block col-md-3 text-end">3:18</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">276.616.912</div>
+                  <div class="d-none d-md-block col-md-3 text-end my-auto">3:18</div>
                   <div class="d-md-none col-1">
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
@@ -293,77 +293,68 @@
               </div>
             </div>
           </div>
-          <div class="container piace text-light d-none d-md-block">
-            <div class="container d-flex my-4">
+          <div class="container-fluid piace text-light d-none d-md-block">
+            <div class="d-flex my-4">
               <h2 class="me-auto my-0 fs-3 fw-bold">Discografia</h2>
-              <h2 class="fs-6 text-muted mt-2">VISUALIZZA TUTTO</h2>
+              <button type="button" class="btn btn-dark btn-sm fw-bold text-my-grey">VISUALIZZA ALTRO</button>
             </div>
             <div class="mb-4">
               <button type="button" class="btn btn-sm btn-light rounded-pill">Popular releases</button>
               <button type="button" class="btn btn-sm btn-dark rounded-pill">Singles and EPs</button>
             </div>
-            <div class="row g-3">
-              <div class="card col p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
+            <div class="row row-cols-4 row-cols-lg-5 row-cols-xl-6 g-3">
+              <div class="col">
+                <div class="card p-2">
+                  <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                  <div class="card-body">
+                    <h4>VAPO VAPO</h4>
+                    <p>Latest Release · Single</p>
+                  </div>
                 </div>
               </div>
-              <div class="card col p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
+              <div class="col">
+                <div class="card p-2">
+                  <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                  <div class="card-body">
+                    <h4>VAPO VAPO</h4>
+                    <p>Latest Release · Single</p>
+                  </div>
                 </div>
               </div>
-              <div class="card col p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
+              <div class="col">
+                <div class="card p-2">
+                  <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                  <div class="card-body">
+                    <h4>VAPO VAPO</h4>
+                    <p>Latest Release · Single</p>
+                  </div>
                 </div>
               </div>
-              <div class="card col p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
+              <div class="col">
+                <div class="card p-2">
+                  <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                  <div class="card-body">
+                    <h4>VAPO VAPO</h4>
+                    <p>Latest Release · Single</p>
+                  </div>
                 </div>
               </div>
-              <div class="card col d-none d-sm-flex p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
+              <div class="col d-none d-lg-block">
+                <div class="card p-2">
+                  <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                  <div class="card-body">
+                    <h4>VAPO VAPO</h4>
+                    <p>Latest Release · Single</p>
+                  </div>
                 </div>
               </div>
-              <div class="card col d-none d-md-flex p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
-                </div>
-              </div>
-              <div class="card col d-none d-lg-flex p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
-                </div>
-              </div>
-              <div class="card col d-none d-xl-flex p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
-                </div>
-              </div>
-              <div class="card col d-none d-xl-flex p-2">
-                <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
-                <div class="card-body">
-                  <h4>VAPO VAPO</h4>
-                  <p>Latest Release · Single</p>
+              <div class="col d-none d-xl-block">
+                <div class="card p-2">
+                  <img src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-19.jpg" alt="" />
+                  <div class="card-body">
+                    <h4>VAPO VAPO</h4>
+                    <p>Latest Release · Single</p>
+                  </div>
                 </div>
               </div>
             </div>
