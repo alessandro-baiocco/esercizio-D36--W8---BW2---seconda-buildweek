@@ -10822,12 +10822,16 @@ body main .link-artista {
   text-decoration: none;
   color: inherit;
 }
+body main .album-mobile,
 body main .card {
   cursor: pointer;
 }
-body main .card h4, body main .card .h4 {
+body main .album-mobile h4, body main .album-mobile .h4,
+body main .card h4,
+body main .card .h4 {
   font-size: 1rem;
 }
+body main .album-mobile p,
 body main .card p {
   font-size: 0.8rem;
   color: #8f8f8f;

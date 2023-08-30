@@ -6,6 +6,7 @@ const albumCanzoniPopolari = document.querySelectorAll(".album-canzoni-popolari"
 const riproduzioni = document.querySelectorAll(".numero-riproduzioni");
 const durateCanzoni = document.querySelectorAll(".durata-canzone");
 const albums = document.querySelectorAll(".album");
+const albumsMobile = document.querySelectorAll(".album-mobile");
 const artistaBanner = document.querySelector("#artista-banner");
 const aboutImg = document.querySelector(".about-inner");
 
@@ -91,6 +92,12 @@ window.onload = async () => {
   const albumListRe = await re.json();
   const albumList = albumListRe.data;
   albumList.forEach((album, index) => {
+    if (index < 5) {
+      albumsMobile[index].querySelector("img").src = album.album.cover;
+      albumsMobile[index].querySelector("h4").innerText = album.album.title;
+      albumsMobile[index].querySelector("h4+p").innerText = "Album";
+      albumsMobile[index].querySelector(".album-id").innerText = album.album.id;
+    }
     albums[index].querySelector("img").src = album.album.cover;
     albums[index].querySelector("h4").innerText = album.album.title;
     albums[index].querySelector("h4+p").innerText = "Album";
