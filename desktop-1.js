@@ -13,39 +13,20 @@ const aboutImg = document.querySelector(".about-inner");
 albums.forEach(album => [
   album.addEventListener("click", () => {
     const id = album.querySelector(".album-id").innerText;
-    window.location.assign("./desktop.html" + "?id=" + id);
+    window.location.assign("./album.html" + "?idAlbum=" + id);
   }),
 ]);
 albumsMobile.forEach(album => [
   album.addEventListener("click", () => {
     const id = album.querySelector(".album-id").innerText;
-    window.location.assign("./desktop.html" + "?id=" + id);
+    window.location.assign("./album.html" + "?idAlbum=" + id);
   }),
 ]);
 
 window.onload = async () => {
-  // const artistId = new URLSearchParams(window.location.search).get("artistId");
-  // const re = await fetch(serverUrl + "/" + artistId, {
-  //     method: "GET",
-  //     headers: {
-  //     Authorization: apiValue,
-  //     },
-  // });
-  // if (!re.ok) {
-  //     throw new Error("error");
-  // }
-  // const product = await re.json();
-  const artistId = 412;
-  //   const artistId = 847;
-  //   const fetchUrl = `https://api.deezer.com/artist/${artistId}/top?limit=6`;
-  const fetchUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`;
-  let re = await fetch(fetchUrl, {
-    method: "GET",
-    // headers: {
-    //   "X-RapidAPI-Key": "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe",
-    //   "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    // },
-  });
+  const idArtist = new URLSearchParams(window.location.search).get("idArtist");
+  const fetchUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${idArtist}`;
+  let re = await fetch(fetchUrl);
   if (!re.ok) {
     throw new Error("error");
   }
@@ -59,14 +40,8 @@ window.onload = async () => {
     span.innerText = fanNb;
   });
   document.querySelector(".immagine-artista").src = artistImg;
-  const trackListUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=5`;
-  re = await fetch(trackListUrl, {
-    method: "GET",
-    // headers: {
-    //   "X-RapidAPI-Key": "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe",
-    //   "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    // },
-  });
+  const trackListUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${idArtist}/top?limit=5`;
+  re = await fetch(trackListUrl);
   if (!re.ok) {
     throw new Error("error");
   }
@@ -89,15 +64,8 @@ window.onload = async () => {
     const durataMS = `${minuti}:${secondi}`;
     durateCanzoni[index].innerText = durataMS;
   });
-  const albumsUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=100`;
-  //   const albumsUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=18`;
-  re = await fetch(albumsUrl, {
-    method: "GET",
-    // headers: {
-    //   "X-RapidAPI-Key": "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe",
-    //   "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    // },
-  });
+  const albumsUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/${idArtist}/top?limit=100`;
+  re = await fetch(albumsUrl);
   if (!re.ok) {
     throw new Error("error");
   }
@@ -135,19 +103,17 @@ window.onload = async () => {
   });
   const albumsArr = Array.from(albums);
   albumsArr.splice(0, trueAlbumList.length);
-  console.log(albumsArr.length);
   albumsArr.forEach(album => {
     album.closest(".col").className = "d-none";
   });
   if (trueAlbumList.length < 18) {
-    if (trueAlbumList.length <= 12) {
-      document.querySelector(".piace:nth-of-type(4)").className = "d-none";
-    } else if (trueAlbumList.length <= 6) {
+    if (trueAlbumList.length <= 6) {
       document.querySelector(".piace:nth-of-type(3)").className = "d-none";
+      document.querySelector(".piace:nth-of-type(4)").className = "d-none";
+    } else if (trueAlbumList.length <= 12) {
       document.querySelector(".piace:nth-of-type(4)").className = "d-none";
     }
   }
-  //   console.log(albumsMobile);
 
   if (trueAlbumList.length < 5) {
     const albumsMobileArr = Array.from(albumsMobile);
