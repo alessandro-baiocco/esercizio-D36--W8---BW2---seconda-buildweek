@@ -10909,13 +10909,24 @@ body .up main div .row .casellaRicerca .row .col-11 .imgRicerca img {
 }
 
 .navHeartDiv {
-  background: rgb(38, 8, 185);
-  background: linear-gradient(133deg, rgb(38, 8, 185) 0%, rgb(121, 90, 142) 60%, rgb(255, 255, 255) 100%);
   min-width: 2vw;
   aspect-ratio: 1/1;
   color: white;
   font-size: 1vh;
   font-weight: bolder;
+}
+
+.heartDellaNav {
+  background: rgb(38, 8, 185);
+  background: linear-gradient(133deg, rgb(38, 8, 185) 0%, rgb(121, 90, 142) 60%, rgb(255, 255, 255) 100%);
+}
+
+.piuDellaNav {
+  background-color: #b2b2b2;
+}
+
+.segnaPostoDiv {
+  background: linear-gradient(37deg, rgb(16, 47, 4) 27%, rgb(20, 112, 25) 65%, rgb(0, 254, 16) 98%);
 }
 
 /*1st row (arrows)*/

@@ -157,13 +157,22 @@ body {
   text-overflow: ellipsis;
 }
 .navHeartDiv {
-  background: rgb(38, 8, 185);
-  background: linear-gradient(133deg, rgba(38, 8, 185, 1) 0%, rgba(121, 90, 142, 1) 60%, rgba(255, 255, 255, 1) 100%);
   min-width: 2vw;
   aspect-ratio: 1/1;
   color: white;
   font-size: 1vh;
   font-weight: bolder;
+}
+.heartDellaNav {
+  background: rgb(38, 8, 185);
+  background: linear-gradient(133deg, rgba(38, 8, 185, 1) 0%, rgba(121, 90, 142, 1) 60%, rgba(255, 255, 255, 1) 100%);
+}
+
+.piuDellaNav {
+  background-color: #b2b2b2;
+}
+.segnaPostoDiv {
+  background: linear-gradient(37deg, rgba(16, 47, 4, 1) 27%, rgba(20, 112, 25, 1) 65%, rgba(0, 254, 16, 1) 98%);
 }
 
 /*1st row (arrows)*/
