@@ -10804,8 +10804,6 @@ body {
 
 main {
   background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
-  max-height: calc(100vh - 92px);
-  overflow-y: auto;
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);
@@ -10973,7 +10971,7 @@ main footer ul {
 
 aside {
   background-color: #000000;
-  max-width: 300px;
+  width: 400px;
 }
 
 #player {
