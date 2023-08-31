@@ -64,6 +64,23 @@ body {
             }
         }
 
+        .dettagli-canzone {
+            width: 20rem;
+        }
+
+        .numero-popolari {
+            min-width: 1.5rem;
+            text-align: end;
+        }
+
+        .numero-riproduzioni {
+            width: 5rem;
+        }
+
+        .durata-canzone {
+            width: 3rem;
+        }
+
         // @media (min-width: 768px) {
         //     max-height: calc(100vh - 92px);
         //     overflow-y: auto;
@@ -78,6 +95,7 @@ body {
             color: inherit;
         }
 
+        .album-mobile,
         .card {
             cursor: pointer;
 
@@ -131,6 +149,7 @@ body {
 
         .titolo-canzone {
             line-height: 1.2;
+            cursor: pointer
         }
 
         .about {

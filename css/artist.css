@@ -10868,6 +10868,7 @@ body main .real-main {
 }
 body main .titolo-canzone {
   line-height: 1.2;
+  cursor: pointer;
 }
 body main .about .row div:first-of-type {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
@@ -10889,4 +10890,4 @@ body main .piace .row .card {
 
 .volume-bar {
   width: 5rem;
-}/*# sourceMappingURL=desktop-1.css.map */
+}/*# sourceMappingURL=artist.css.map */
