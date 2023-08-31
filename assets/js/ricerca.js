@@ -75,7 +75,7 @@ const noDef = async (e) => {
           const authorDiv = document.createElement("a");
           authorDiv.innerText = `${obj.data[0].artist.name}`;
           authorDiv.classList.add("authorCarRic");
-          authorDiv.href = `desktop-1.html?idArtist=${obj.data[0].album.id}`;
+          authorDiv.href = `artist.html?idArtist=${obj.data[0].artist.id}`;
           // --------------------------------
           searched.appendChild(sopraRic);
           cartaPrin.appendChild(imgCarRic);
