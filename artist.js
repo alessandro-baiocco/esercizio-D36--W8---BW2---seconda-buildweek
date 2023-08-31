@@ -22,6 +22,16 @@ albumsMobile.forEach(album => [
     window.location.assign("./album.html" + "?idAlbum=" + id);
   }),
 ]);
+document.querySelectorAll(".bi-shuffle").forEach(icon => {
+  icon.addEventListener("click", () => {
+    icon.classList.toggle("text-success");
+  });
+});
+document.querySelectorAll(".bi-arrow-clockwise").forEach(icon => {
+  icon.addEventListener("click", () => {
+    icon.classList.toggle("text-success");
+  });
+});
 
 window.onload = async () => {
   const idArtist = new URLSearchParams(window.location.search).get("idArtist");
