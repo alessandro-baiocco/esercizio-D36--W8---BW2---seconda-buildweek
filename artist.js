@@ -35,7 +35,7 @@ window.onload = async () => {
   const artistImg = artist.picture;
   const fanNb = artist.nb_fan;
   h1.innerText = artistName;
-  document.querySelector(".link-artista").innerText = artistName;
+  document.querySelectorAll(".link-artista").forEach(link => (link.innerText = artistName));
   document.querySelectorAll(".ascoltatori-mensili").forEach(span => {
     span.innerText = fanNb;
   });
