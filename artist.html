@@ -58,8 +58,10 @@
           <hr />
           <ul id="nav-2" class="navActions">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center" href="#">
-                <div class="creaPlaylistDiv d-flex justify-content-center align-items-center">
+              <a class="nav-link d-flex align-items-center ps-2" href="#">
+                <div
+                  class="navHeartDiv piuDellaNav my-2 creaPlaylistDiv d-flex justify-content-center align-items-center fs-5"
+                >
                   <i class="bi bi-plus"></i>
                 </div>
                 <span class="ps-2 navSpans">Crea playlist</span>
@@ -67,7 +69,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center ps-2" href="#">
-                <div class="navHeartDiv d-flex justify-content-center align-items-center">
+                <div class="navHeartDiv my-2 heartDellaNav d-flex justify-content-center align-items-center">
                   <i class="bi bi-heart-fill"></i>
                 </div>
                 <span class="ps-2 navSpans">Brani che ti piacciono</span>
@@ -75,7 +77,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center ps-2" href="#">
-                <div class="navHeartDiv d-flex justify-content-center align-items-center">
+                <div class="navHeartDiv my-2 segnaPostoDiv d-flex justify-content-center align-items-center">
                   <i class="bi bi-bookmark"></i>
                 </div>
                 <span class="ps-2 navSpans">I tuoi episodi</span>
@@ -720,61 +722,74 @@
           </footer>
         </div>
         <aside class="d-none d-lg-flex">
-          <div class="px-0 container m-0 d-lg-flex" id="friendsActivity">
-            <div>
-              <div class="container py-4">
-                <p class="text-light">Attività amici</p>
+          <div class="right container">
+            <div class="friends">
+              <h5>Attività amici</h5>
+              <div>
+                <i class="bi bi-person-add"></i>
+                <i class="bi bi-x-lg"></i>
               </div>
-              <div class="container py-3 d-flex align-items-start" id="friendsProfile">
-                <img
-                  src="/assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
-                  alt="foto profilo"
-                  class="img-fluid"
-                  id="friendsPicture"
-                  width="40px"
-                  height="40px"
-                />
-                <div class="text-light px-2 m-0 friendsInfo">
-                  <p class="para">
-                    Alessandro B.<br />
-                    BABY HELLO<br />
-                    Rauw Alejandro, Bizarrap
-                  </p>
+            </div>
+            <div class="container-friend">
+              <div class="card-friend">
+                <div class="mx-2">
+                  <img
+                    src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
+                    class="img-fluid rounded-circle"
+                    alt=""
+                    width="50px"
+                  />
                 </div>
+                <div class="body-card">
+                  <h5>Alessandro B.</h5>
+                  <p>canzoni - artista</p>
+                </div>
+                <p class="minuti">40 min</p>
               </div>
-              <div class="container py-3 d-flex align-items-start" id="friendsProfile">
-                <img
-                  src="/assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
-                  alt="foto profilo"
-                  class="img-fluid"
-                  id="friendsPicture"
-                  width="40px"
-                  height="40px"
-                />
-                <div class="text-light px-2 m-0 friendsInfo">
-                  <p class="para">
-                    Alessandro F.<br />
-                    K-POP <br />
-                    Travis Scott, Bad Bunny, The Weeknd
-                  </p>
+              <div class="card-friend">
+                <div class="mx-2">
+                  <img
+                    src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-11.jpg"
+                    class="img-fluid rounded-circle"
+                    alt=""
+                    width="50px"
+                  />
                 </div>
+                <div class="body-card">
+                  <h5>Alessandro F.</h5>
+                  <p>canzoni - artista</p>
+                </div>
+                <p class="minuti">20 min</p>
               </div>
-              <div class="container py-3 d-flex align-items-start" id="friendsProfile">
-                <img
-                  src="/assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
-                  alt="foto profilo"
-                  class="img-fluid"
-                  id="friendsPicture"
-                  width="40px"
-                  height="40px"
-                />
-                <div class="text-light px-2 m-0 friendsInfo">
-                  <p class="para">
-                    Davide<br />
-                    Mi Bello Angel<br />
-                    Natanael Cano
-                  </p>
+              <div class="card-friend">
+                <div class="mx-2">
+                  <img
+                    src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-12.jpg"
+                    class="img-fluid rounded-circle"
+                    width="50px"
+                    alt=""
+                  />
                 </div>
+                <div class="body-card">
+                  <h5>Andrea D. M.</h5>
+                  <p>canzoni - artista</p>
+                </div>
+                <p class="minuti">online</p>
+              </div>
+              <div class="card-friend">
+                <div class="mx-2">
+                  <img
+                    src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-13.jpg"
+                    class="img-fluid rounded-circle"
+                    width="50px"
+                    alt=""
+                  />
+                </div>
+                <div class="body-card">
+                  <h5>Manuele S.</h5>
+                  <p>canzoni - artista</p>
+                </div>
+                <p class="minuti">37 min</p>
               </div>
             </div>
           </div>
