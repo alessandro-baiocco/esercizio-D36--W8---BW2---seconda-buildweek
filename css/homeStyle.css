@@ -10773,20 +10773,17 @@ textarea.form-control-lg {
   background-color: black;
 }
 
-.albumSU,
-.albumGiu,
-.albumCentro {
+.artistHome div,
+.albumHome div {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
   border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
 }
-.albumSU a,
-.albumGiu a,
-.albumCentro a {
+.artistHome div a,
+.albumHome div a {
   text-decoration: none;
 }
-.albumSU img,
-.albumGiu img,
-.albumCentro img {
+.artistHome div img,
+.albumHome div img {
   border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
   padding-bottom: 5px;
 }
