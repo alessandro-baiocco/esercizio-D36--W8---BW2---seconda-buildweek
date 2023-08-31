@@ -27,7 +27,7 @@ $color-lGray: #727272;
 .artistHome div,
 .albumHome div {
   background: $bg-gradient-terziario;
-  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  padding-top: 4px;
   a {
     text-decoration: none;
   }
@@ -40,6 +40,7 @@ $color-lGray: #727272;
 .cardSeiSu {
   a {
     text-decoration: none;
+    color: white;
     p {
       font-size: 14px;
     }
@@ -57,6 +58,9 @@ main {
     overflow-y: auto;
     flex-grow: 1;
     padding-left: 3px;
+    a {
+      color: white;
+    }
   }
   .canzoneOra {
     background: $bg-gradient-quarto;

@@ -4,6 +4,17 @@ let requestedAlbum = [];
 let requestedArtist = [];
 let albumArtistId = [];
 
+const comeBack = document.querySelector(".bi-chevron-left");
+
+comeBack.addEventListener("click", () => {
+  history.back();
+});
+const goAheadFool = document.querySelector(".bi-chevron-right");
+
+goAheadFool.addEventListener("click", () => {
+  history.back();
+});
+
 fetch(url, {
   headers: {
     "X-RapidAPI-Key": "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe",
@@ -30,24 +41,23 @@ fetch(url, {
       seiSuCard.classList.add("col-6");
       seiSuCard.classList.add("col-md-4");
       seiSuCard.classList.add("pe-4");
-      seiSuCard.innerHTML = `<div class="card border border-0 p-0 consigliatiCard">
+      seiSuCard.innerHTML = `
+    <div class="card border border-0 p-0 consigliatiCard">
       <div class="row gap-0 m-0 d-flex align-items-center">
-      <div class="col-3 p-0">
-      <img
-      src="${requestedAlbum[i].cover_small}"
-      alt="${requestedAlbum[i].title}"
-      class="imgConsigliati img-fluid "
-      />
+        <div class="col-3 p-0">
+          <img
+          src="${requestedAlbum[i].cover_small}"
+          alt="${requestedAlbum[i].title}"
+          class="imgConsigliati img-fluid "
+          />
+        </div>
+        <div class="text-light nomeConsigliati d-flex align-self-center flex-wrap col-8 align-items-center">
+          <a href="album.html?idAlbum=${requestedAlbum[i].id}">
+            <p class="m-0">${requestedAlbum[i].title}</p>
+          </a>
+        </div>
       </div>
-      <div
-      class="text-light nomeConsigliati d-flex align-self-center flex-wrap col-8 align-items-center"
-      >
-      <a href="album.html/${requestedAlbum[i].id}"
-      ><p class="m-0">${requestedAlbum[i].title}</p></a
-      >
-      </div>
-      </div>
-      </div>`;
+    </div>`;
       seiSu.appendChild(seiSuCard);
     }
     let artistiHome = document.querySelector(".artistHome");
@@ -55,39 +65,43 @@ fetch(url, {
     for (let i = 0; i < 5; i++) {
       const artistHome = document.createElement("div");
       artistHome.classList.add("artistiEsposti");
-      artistHome.classList.add("col-12");
-      artistHome.classList.add("col-md-5");
-      artistHome.classList.add("col-lg-3");
-      artistHome.classList.add("col-xl-3");
+      artistHome.classList.add("col-md");
+      // artistHome.classList.add("col-md-5");
+      // artistHome.classList.add("col-lg-3");
+      // artistHome.classList.add("col-xl-3");
       artistHome.classList.add("flex-md-row");
       artistHome.classList.add("flex-column");
       artistHome.innerHTML = `
-                       </a><div class="d-flex flex-md-column">
-                       <div>
-                       <a href = "artist.html?idArtist=${requestedArtist[i].id}"><img src="${
-        requestedArtist[i].picture_medium
-      }" alt="" class="img-fluid"  /></a>
-                        </div>
-                        <div class="card-body ps-2">
-                        <p class="d-block d-md-none">Playlist</p>
-                        <a href = "artist.html?idArtist=${requestedArtist[i].id}"><h4 class = "fs-3">${
-        requestedArtist[i].name
-      }</h4></a>
-                        <a href = "artist.html?idArtist=${requestedArtist[i].id}"><p>il meglio di ${
-        requestedArtist[i].name
-      }</p></a>
-                        </div>
-                        </div>
-                        <div class="d-flex d-md-none">
-                        <div class="me-auto">
-                        <button class="heart btn"><i class="bi bi-heart text-light fs-3"></i></button>
-                        <button class="heart btn"><i class="bi bi-three-dots-vertical text-light fs-3"></i></button>
-                        </div>
-                        <div class="d-flex align-items-center">
-                        <p class="mb-0">${Math.floor(Math.random() * 30 + 10)} brani</p>
-                        <button class="heart btn"><i class="bi bi-play-circle text-light fs-3"></i></button>
-                        </div>
-                       </div>`;
+    <div class="d-flex flex-md-column">
+        <div>
+          <a href = "artist.html?idArtist=${requestedArtist[i].id}">
+            <img 
+            src="${requestedArtist[i].picture_medium}" 
+            alt="" 
+            class="img-fluid"  
+            />
+          </a>
+      </div>
+      <div class="card-body ps-2">
+        <p class="d-block d-md-none">Playlist</p>
+          <a href = "artist.html?idArtist=${requestedArtist[i].id}">
+            <h4 class = "fs-5">${requestedArtist[i].name}</h4>
+          </a>
+          <a href = "artist.html?idArtist=${requestedArtist[i].id}">
+            <p>il meglio di ${requestedArtist[i].name}</p>
+          </a>
+      </div>
+    </div>
+    <div class="d-flex d-md-none">
+      <div class="me-auto">
+          <button class="heart btn"><i class="bi bi-heart text-light fs-3"></i></button>
+          <button class="heart btn"><i class="bi bi-three-dots-vertical text-light fs-3"></i></button>
+      </div>
+        <div class="d-flex align-items-center">
+          <p class="mb-0">${Math.floor(Math.random() * 30 + 10)} brani</p>
+          <button class="heart btn"><i class="bi bi-play-circle text-light fs-3"></i></button>
+        </div>
+      </div>`;
       artistiHome.appendChild(artistHome);
     }
 
@@ -96,10 +110,10 @@ fetch(url, {
     for (let i = 5; i < 10; i++) {
       const albumHome = document.createElement("div");
       albumHome.classList.add("albumEsposti");
-      albumHome.classList.add("col-12");
-      albumHome.classList.add("col-md-5");
-      albumHome.classList.add("col-lg-3");
-      albumHome.classList.add("col-xl-3");
+      albumHome.classList.add("col-md");
+      // albumHome.classList.add("col-md-5");
+      // albumHome.classList.add("col-lg-3");
+      // albumHome.classList.add("col-xl-3");
       albumHome.classList.add("flex-md-row");
       albumHome.classList.add("flex-column");
       albumHome.innerHTML = `
@@ -111,13 +125,13 @@ fetch(url, {
        </div>
        <div class="card-body ps-2">
        <p class="d-block d-md-none">Playlist</p>
-       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><h4 class = "fs-3">${requestedAlbum[i].title}</h4></a>
-       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><p>il meglio di ${requestedAlbum[i].title}</p></a>
+       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><h4 class = "fs-5">${requestedAlbum[i].title}</h4></a>
+       <a href = "album.html?idAlbum=${requestedArtist[i].id}"><p>${requestedArtist[i].name}</p></a>
        </div>
        </div>
        <div class="d-flex d-md-none">
        <div class="me-auto">
-       <button class="heart btn"><i class="bi bi-heart text-light fs-3"></i></button>
+       <button class="heart btn"><i class="bi bi-heart text-light fs-5"></i></button>
        <button class="heart btn"><i class="bi bi-three-dots-vertical text-light fs-3"></i></button>
        </div>
        <div class="d-flex align-items-center">

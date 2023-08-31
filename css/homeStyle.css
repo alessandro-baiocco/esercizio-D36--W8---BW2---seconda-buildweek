@@ -10776,7 +10776,7 @@ textarea.form-control-lg {
 .artistHome div,
 .albumHome div {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
-  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+  padding-top: 4px;
 }
 .artistHome div a,
 .albumHome div a {
@@ -10790,6 +10790,7 @@ textarea.form-control-lg {
 
 .cardSeiSu a {
   text-decoration: none;
+  color: white;
 }
 .cardSeiSu a p {
   font-size: 14px;
@@ -10809,6 +10810,9 @@ main .centrale {
   overflow-y: auto;
   flex-grow: 1;
   padding-left: 3px;
+}
+main .centrale a {
+  color: white;
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);

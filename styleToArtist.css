@@ -38,6 +38,11 @@
   margin-bottom: 30px;
 }
 
+.right .container-friend .card-friend .body-card {
+  width: 121px;
+  overflow-x: hidden;
+}
+
 .right .container-friend .card-friend .body-card h5,
 .right .container-friend .card-friend .body-card p {
   margin: 0;
@@ -54,19 +59,14 @@
   font-size: small;
 }
 
-
-
 @media screen and (max-width: 1000px) {
   .right {
     display: none;
   }
-
 }
-
 
 @media screen and (max-width: 800px) {
   .right {
     display: none;
   }
-
 }
