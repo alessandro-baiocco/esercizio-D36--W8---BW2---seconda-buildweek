@@ -24,12 +24,12 @@ albumsMobile.forEach(album => [
 ]);
 document.querySelectorAll(".bi-shuffle").forEach(icon => {
   icon.addEventListener("click", () => {
-    icon.classList.toggle("text-success");
+    icon.classList.toggle("text-green");
   });
 });
 document.querySelectorAll(".bi-arrow-clockwise").forEach(icon => {
   icon.addEventListener("click", () => {
-    icon.classList.toggle("text-success");
+    icon.classList.toggle("text-green");
   });
 });
 
@@ -67,6 +67,15 @@ window.onload = async () => {
     titoliCanzone[index].innerText = track.title_short ? track.title_short : track.title;
     albumCanzoniPopolari[index].src = track.album.cover_small;
     albumCanzoniPopolari[index].src = track.album.cover_small;
+    // let rank = track.rank.toString().split("").reverse().join().replace(/.{3}/g, "$&.");
+    // console.log(rank);
+    // riproduzioni[index].innerText = track.rank
+    //   .toString()
+    //   .split("")
+    //   .reverse()
+    //   .replace(/\d{3}/g, "$&.")
+    //   .reverse()
+    //   .join("");
     riproduzioni[index].innerText = track.rank;
     const durata = track.duration;
     const minuti = Math.floor(durata / 60);
