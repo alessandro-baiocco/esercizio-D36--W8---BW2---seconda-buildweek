@@ -10769,6 +10769,14 @@ textarea.form-control-lg {
   font-size: 0.8rem;
 }
 
+.text-green {
+  color: #1ED760;
+}
+
+.bg-green {
+  background-color: #1ED760;
+}
+
 .p-no-margin-block p {
   margin-block: 0;
 }
