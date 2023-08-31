@@ -5,70 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify - Your favourite music is here</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dist/css/homeStyle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   </head>
   <body>
     <main>
-      <div class="left">
-        <div id="sidebar-left">
-          <ul>
-            <li id="icon-alone">
-              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-            </li>
-            <li class="icon-left">
-              <i class="bi bi-house-door"></i>
-              <!--a questo tag a bisogna linkare la homepage-->
-              <a href="/index.html">
-                <p>Home</p>
+      <div class="all d-flex">
+        <div id="first" class="d-none d-lg-flex flex-column">
+          <ul id="nav-1" class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link my-3" href="#">
+                <svg
+                  id="logo"
+                  viewBox="0 0 1134 340"
+                  class="spotify-logo--text img-fluid"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Spotify</title>
+                  <path
+                    fill="currentColor"
+                    d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
+                  ></path>
+                </svg>
               </a>
             </li>
-            <!--a questo tag a bisogna linkare la search page-->
-            <a href="ricerca.html">
-              <li class="icon-left">
-                <i class="bi bi-search"></i>
-                <p>Cerca</p>
-              </li>
-            </a>
-            <li class="icon-left">
-              <ion-icon name="library-outline"></ion-icon>
-              <p>La tua libreria</p>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="index.html">
+                <div class="navHomeDiv d-flex justify-content-center align-items-center">
+                  <i class="bi bi-house-door-fill"></i>
+                </div>
+                <span class="ps-2 navSpans">Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="ricerca.html">
+                <div class="navHomeDiv d-flex justify-content-center align-items-center">
+                  <i class="bi bi-search"></i>
+                </div>
+                <span class="ps-2 navSpans">Cerca</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">
+                <div class="navIconDivs d-flex justify-content-center align-items-center">
+                  <i class="bi bi-layout-three-columns"></i>
+                </div>
+                <span class="ps-2 navSpans">La tua libreria</span>
+              </a>
             </li>
           </ul>
-          <div class="two-icon">
-            <div class="icon-left">
-              <ion-icon name="add-circle-outline"></ion-icon>
-              <p>Crea playlist</p>
-            </div>
-            <div class="icon-left">
-              <ion-icon name="heart-outline"></ion-icon>
-              <p>Brani che ti piacciono</p>
-            </div>
-          </div>
           <hr />
-          <div class="playlists">
-            <ul>
-              <li>Neomelodico dance</li>
-              <li>Rock Party</li>
-              <li>La tua macchina del tempo</li>
-              <li>DJ Matrix</li>
-              <li>Hot Hits Italia</li>
-              <li>New Music Friday Italia</li>
-              <li>Esme</li>
-              <li>House Party 2023</li>
-              <li>Bachata Classics</li>
-              <li>The Weekend</li>
-              <li>Frenchcore Friday</li>
-              <li>Latino twerk</li>
-              <li>Emis Killa</li>
-              <li>Niko Pandetta</li>
-              <li>Deep House 2023 (Summer Edition)</li>
-              <li>Anime & Sleep Piano Playlist</li>
-              <li>Eminem</li>
-              <li>Disco Fever</li>
-              <li>Daniele De Martino</li>
-            </ul>
-          </div>
+          <ul id="nav-2" class="navActions">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center ps-2" href="#">
+                <div
+                  class="navHeartDiv piuDellaNav my-2 creaPlaylistDiv d-flex justify-content-center align-items-center fs-5"
+                >
+                  <i class="bi bi-plus"></i>
+                </div>
+                <span class="ps-2 navSpans">Crea playlist</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center ps-2" href="#">
+                <div class="navHeartDiv my-2 heartDellaNav d-flex justify-content-center align-items-center">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <span class="ps-2 navSpans">Brani che ti piacciono</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center ps-2" href="#">
+                <div class="navHeartDiv my-2 segnaPostoDiv d-flex justify-content-center align-items-center">
+                  <i class="bi bi-bookmark"></i>
+                </div>
+                <span class="ps-2 navSpans">I tuoi episodi</span>
+              </a>
+            </li>
+          </ul>
+          <hr style="border: solid 0.5px rgba(128, 128 128, 0.43)" />
+          <ul id="nav-3" class="navScroll">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Neomelodico dance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Rock Party</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">La tua macchina del tempo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">DJ Matrix</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Hot Hits Italia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">New Music Friday Italia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Esme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">House Party 2023</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Bachata Classics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">The Weekend</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Frenchcore Friday</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Latino twerk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Emis Killa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Niko Pandetta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Deep House 2023 (Summer Edition)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Anime & Sleep Piano Playlist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Eminem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Disco Fever</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Daniele De Martino</a>
+            </li>
+          </ul>
+          <ul id="nav-4" class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-arrow-down-circle"></i>
+                <span>Install App</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -116,14 +199,19 @@
         <div class="friends">
           <h5>Attività amici</h5>
           <div>
-            <ion-icon name="person-add-outline"></ion-icon>
-            <ion-icon name="close-outline"></ion-icon>
+            <i class="bi bi-person-add"></i>
+            <i class="bi bi-x-lg"></i>
           </div>
         </div>
         <div class="container-friend">
           <div class="card-friend">
             <div>
-              <ion-icon name="person-outline"></ion-icon>
+              <img
+                src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
+                class="img-fluid rounded-circle"
+                alt=""
+                width="50px"
+              />
             </div>
             <div class="body-card">
               <h5>Alessandro B.</h5>
@@ -133,7 +221,12 @@
           </div>
           <div class="card-friend">
             <div>
-              <ion-icon name="person-outline"></ion-icon>
+              <img
+                src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
+                class="img-fluid rounded-circle"
+                alt=""
+                width="50px"
+              />
             </div>
             <div class="body-card">
               <h5>Alessandro F.</h5>
@@ -143,7 +236,12 @@
           </div>
           <div class="card-friend">
             <div>
-              <ion-icon name="person-outline"></ion-icon>
+              <img
+                src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
+                class="img-fluid rounded-circle"
+                alt=""
+                width="50px"
+              />
             </div>
             <div class="body-card">
               <h5>Andrea D. M.</h5>
@@ -153,7 +251,12 @@
           </div>
           <div class="card-friend">
             <div>
-              <ion-icon name="person-outline"></ion-icon>
+              <img
+                src="assets/css/BW2-Spotify-assets/assets/imgs/main/image-10.jpg"
+                class="img-fluid rounded-circle"
+                alt=""
+                width="50px"
+              />
             </div>
             <div class="body-card">
               <h5>Manuele S.</h5>
