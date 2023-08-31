@@ -1,0 +1,72 @@
+.right {
+  background-color: aquamarine;
+  width: 18%;
+}
+
+.right {
+  background-color: black;
+  padding-top: 10px;
+}
+
+.right .friends {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right .friends h5 {
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+.right .friends ion-icon {
+  font-size: 22px;
+}
+
+.right .friends ion-icon:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.right .container-friend {
+  margin-top: 15px;
+}
+
+.right .container-friend .card-friend {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.right .container-friend .card-friend .body-card h5,
+.right .container-friend .card-friend .body-card p {
+  margin: 0;
+}
+
+.right .container-friend .card-friend .body-card h5:hover,
+.right .container-friend .card-friend .body-card p:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.right .container-friend .card-friend p {
+  margin: 0;
+  font-size: small;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .right {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 800px) {
+  .right {
+    display: none;
+  }
+
+}
