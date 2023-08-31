@@ -10774,16 +10774,19 @@ textarea.form-control-lg {
 }
 
 .artistHome div,
-.albumHome div {
+.albumHome div,
+.fisso div {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
   padding-top: 4px;
 }
 .artistHome div a,
-.albumHome div a {
+.albumHome div a,
+.fisso div a {
   text-decoration: none;
 }
 .artistHome div img,
-.albumHome div img {
+.albumHome div img,
+.fisso div img {
   border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
   padding-bottom: 5px;
 }

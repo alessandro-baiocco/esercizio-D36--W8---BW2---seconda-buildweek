@@ -1,20 +1,5 @@
 const ricercaObj = [
   {
-    titolo: "Nirvana",
-    bg: "#E13300",
-    img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-10.jpg",
-  },
-  {
-    titolo: "queen",
-    bg: "#7358FF",
-    img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-11.jpg",
-  },
-  {
-    titolo: "eminem",
-    bg: "#1E3264",
-    img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-12.jpg",
-  },
-  {
     titolo: "metal",
     bg: "#E8115B",
     img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-13.jpeg",
@@ -149,5 +134,20 @@ const ricercaObj = [
     titolo: "relax",
     bg: "#1E3264",
     img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-38.jpg",
+  },
+  {
+    titolo: "Nirvana",
+    bg: "#E13300",
+    img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-10.jpg",
+  },
+  {
+    titolo: "queen",
+    bg: "#7358FF",
+    img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-11.jpg",
+  },
+  {
+    titolo: "eminem",
+    bg: "#1E3264",
+    img: "assets/css/BW2-Spotify-assets/assets/imgs/search/image-12.jpg",
   },
 ];

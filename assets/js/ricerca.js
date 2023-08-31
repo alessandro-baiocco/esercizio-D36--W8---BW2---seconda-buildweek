@@ -18,7 +18,7 @@ window.onload = () => {
     cartaRicerca.innerHTML = ` 
     <div class = "row border-none">
     <div class = "col-11 rounded m-0" style = "background-color:${ricercaObj[i].bg}">
-    <span class="ricerca fs-2">${ricercaObj[i].titolo}</span>
+    <a href = "index.html?search?q=${ricercaObj[i].titolo}"<span class="ricerca fs-2">${ricercaObj[i].titolo}</span>
     <div class="imgRicerca">
     <img
     src="${ricercaObj[i].img}"
@@ -83,6 +83,11 @@ const noDef = async (e) => {
           cartaPrin.appendChild(authorDiv);
           searched.appendChild(cartaPrin);
         });
+    } else {
+      for (let i = 0; i < carteRicerca.length; i++) {
+        carteRicerca[i].classList.remove("d-none");
+      }
+      searched.innerHTML = ``;
     }
   } catch {
     (err) => console.log(err);

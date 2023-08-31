@@ -10765,6 +10765,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.ricerca {
+  color: white;
+  text-decoration: none;
+}
+
 body {
   font-family: "circular-font";
   background-color: black;
