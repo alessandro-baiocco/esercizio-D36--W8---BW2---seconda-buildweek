@@ -1,0 +1,149 @@
+body {
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.immagineSfondoAlbum {
+  position: absolute;
+  top: 30px;
+  width: 60%;
+  height: 50px;
+  background-position-y: center;
+  filter: blur(500px) brightness(100%) saturate(200%);
+}
+
+.center {
+  color: white;
+  overflow: auto;
+  height: 100%;
+  h2 {
+    margin: 1em 0.5em;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #121212;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+  }
+
+  &::-moz-scrollbar {
+    width: 10px;
+    background-color: #121212;
+  }
+
+  &::-moz-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+  }
+  // fine stile container
+
+  .titles {
+    margin: 40px 0 30px 20px;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.album-cont {
+  margin-left: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.containerAlbum {
+  display: flex;
+  margin-left: 30px;
+  color: white;
+}
+
+.paragrafoAlbum {
+  display: flex;
+  align-items: center;
+}
+.iconsAlbum {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  fill: green;
+  margin-top: 30px;
+  .bigger {
+    font-size: 4em;
+    &:hover {
+      color: green;
+    }
+  }
+  .heart {
+    transform: scale(1.3);
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+  .arrow {
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .dot {
+    &:hover {
+      color: white;
+    }
+  }
+}
+#tabellaAlbum {
+  width: 95% !important;
+  font-size: 0.8em;
+  td,
+  tr {
+    color: rgb(133, 125, 125);
+    border: none;
+    ion-icon {
+      font-size: 1.5em;
+    }
+  }
+}
+.thirdSectionAlbum {
+  justify-content: center;
+  width: 99%;
+  .cards {
+    cursor: pointer;
+    margin: 10px;
+    padding-bottom: 20px;
+    background-color: #2f2b2b;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    border-radius: 3px;
+    &:hover {
+      transform: scale(1.03);
+      color: white;
+      background-color: rgba(77, 71, 71, 0.882);
+    }
+    img {
+      border-radius: 5px;
+      margin: 10px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin-left: 5px;
+
+      h5 {
+        margin: 10px 5px;
+      }
+      p {
+        font-size: 12px;
+        margin: 0 5px;
+      }
+    }
+  }
+}

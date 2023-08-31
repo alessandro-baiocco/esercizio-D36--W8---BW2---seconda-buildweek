@@ -10773,8 +10773,45 @@ textarea.form-control-lg {
   background-color: black;
 }
 
+.albumSU,
+.albumGiu,
+.albumCentro {
+  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+}
+.albumSU a,
+.albumGiu a,
+.albumCentro a {
+  text-decoration: none;
+}
+.albumSU img,
+.albumGiu img,
+.albumCentro img {
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+  padding-bottom: 5px;
+}
+
+.cardSeiSu a {
+  text-decoration: none;
+}
+.cardSeiSu a p {
+  font-size: 14px;
+}
+
+body {
+  font-family: "circular-font";
+}
+
 main {
-  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 69%, rgb(24, 24, 24) 100%);
+  background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+}
+main .centrale {
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-left: 3px;
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);
@@ -10808,9 +10845,17 @@ main footer ul {
   color: rgba(0, 0, 0, 0);
 }
 
+.all {
+  max-height: calc(100vh - 92pxx);
+  overflow-y: auto;
+}
+
 #first {
   background-color: black;
   font-size: 2vh;
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+  max-width: 300px;
 }
 
 #logo {
@@ -10884,13 +10929,24 @@ main footer ul {
 }
 
 .navHeartDiv {
-  background: rgb(38, 8, 185);
-  background: linear-gradient(133deg, rgb(38, 8, 185) 0%, rgb(121, 90, 142) 60%, rgb(255, 255, 255) 100%);
   min-width: 2vw;
   aspect-ratio: 1/1;
   color: white;
   font-size: 1vh;
   font-weight: bolder;
+}
+
+.heartDellaNav {
+  background: rgb(38, 8, 185);
+  background: linear-gradient(133deg, rgb(38, 8, 185) 0%, rgb(121, 90, 142) 60%, rgb(255, 255, 255) 100%);
+}
+
+.piuDellaNav {
+  background-color: #b2b2b2;
+}
+
+.segnaPostoDiv {
+  background: linear-gradient(37deg, rgb(16, 47, 4) 27%, rgb(20, 112, 25) 65%, rgb(0, 254, 16) 98%);
 }
 
 /*1st row (arrows)*/
@@ -10939,6 +10995,15 @@ main footer ul {
   font-size: 1.5vh;
 }
 
+aside {
+  background-color: #000000;
+  min-width: 270px;
+}
+aside div {
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+}
+
 #player {
   background-color: #1f1f1f;
   color: white;
@@ -10969,6 +11034,12 @@ body {
   font-family: "Circular";
   color: white;
 }
+@media (min-width: 768px) {
+  body main {
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+  }
+}
 body main #artista-banner {
   background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
   height: 500px;
@@ -10992,6 +11063,10 @@ body main .about .row div:first-of-type {
 }
 body main .piace .row .card {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
+}
+
+#player {
+  background-color: #1f1f1f;
 }
 
 .flex-1 {
