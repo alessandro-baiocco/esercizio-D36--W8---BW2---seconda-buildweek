@@ -15,6 +15,7 @@ $color-black: black;
 //-----------------------classi applicate
 
 body {
+  font-family: "circular-font";
   background-color: $color-black;
   .up {
     nav {
@@ -42,6 +43,23 @@ body {
           }
         }
       }
+      .searchedRes {
+        width: fit-content;
+        .cartaRic {
+          width: fit-content;
+          background-color: $color-gray;
+          a {
+            display: block;
+            text-decoration: none;
+            color: white;
+          }
+          img {
+            max-width: 100px;
+            display: block;
+          }
+        }
+      }
+
       div {
         .row {
           .casellaRicerca {

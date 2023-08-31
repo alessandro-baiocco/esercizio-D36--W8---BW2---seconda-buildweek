@@ -10798,6 +10798,10 @@ textarea.form-control-lg {
   font-size: 14px;
 }
 
+body {
+  font-family: "circular-font";
+}
+
 main {
   background: linear-gradient(190deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
   max-height: calc(100vh - 92px);
