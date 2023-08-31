@@ -64,16 +64,16 @@ fetch(url, {
       artistHome.innerHTML = `
                        </a><div class="d-flex flex-md-column">
                        <div>
-                       <a href = "album.html?idAlbum=${requestedArtist[i].id}"><img src="${
+                       <a href = "artist.html?idArtist=${requestedArtist[i].id}"><img src="${
         requestedArtist[i].picture_medium
       }" alt="" class="img-fluid"  /></a>
                         </div>
                         <div class="card-body ps-2">
                         <p class="d-block d-md-none">Playlist</p>
-                        <a href = "album.html?idAlbum=${requestedArtist[i].id}"><h4 class = "fs-3">${
+                        <a href = "artist.html?idArtist=${requestedArtist[i].id}"><h4 class = "fs-3">${
         requestedArtist[i].name
       }</h4></a>
-                        <a href = "album.html?idAlbum=${requestedArtist[i].id}"><p>il meglio di ${
+                        <a href = "artist.html?idArtist=${requestedArtist[i].id}"><p>il meglio di ${
         requestedArtist[i].name
       }</p></a>
                         </div>
@@ -91,7 +91,7 @@ fetch(url, {
       artistiHome.appendChild(artistHome);
     }
 
-    let albumHome = document.querySelector(".albumHome");
+    let albumHomeSpace = document.querySelector(".albumHome");
 
     for (let i = 5; i < 10; i++) {
       const albumHome = document.createElement("div");
@@ -111,8 +111,8 @@ fetch(url, {
        </div>
        <div class="card-body ps-2">
        <p class="d-block d-md-none">Playlist</p>
-       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><h4 class = "fs-3">${requestedAlbum[i].name}</h4></a>
-       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><p>il meglio di ${requestedAlbum[i].name}</p></a>
+       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><h4 class = "fs-3">${requestedAlbum[i].title}</h4></a>
+       <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><p>il meglio di ${requestedAlbum[i].title}</p></a>
        </div>
        </div>
        <div class="d-flex d-md-none">
@@ -125,6 +125,7 @@ fetch(url, {
        <button class="heart btn"><i class="bi bi-play-circle text-light fs-3"></i></button>
        </div>
       </div>`;
+      albumHomeSpace.appendChild(albumHome);
     }
 
     // const leSeiCard = document.querySelectorAll(".cardSeiSu");
