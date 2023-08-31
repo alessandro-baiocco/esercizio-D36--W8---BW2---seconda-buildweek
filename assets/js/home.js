@@ -14,7 +14,7 @@ fetch(url, {
     const leCardGiu = document.querySelectorAll(".albumGiu");
 
     for (let i = 0; i < leSeiCard.length; i++) {
-      leSeiCard[i].innerHTML = `<a href="album.html/${albumObj.data[i].album.id}"
+      leSeiCard[i].innerHTML = `<a href="album.html?idAlbum=${albumObj.data[i].album.id}"
         ><div class="card border border-0 p-0 consigliatiCard">
         <div class="row gap-0 m-0 d-flex align-items-center">
         <div class="col-3 p-0">
@@ -37,16 +37,16 @@ fetch(url, {
         leCardSU[j].innerHTML = `
                     </a><div class="d-flex flex-md-column">
                     <div>       
-                    <a href = "album.html?idAlbum=${albumObj.data[j].artist.id}"><img src="${
+                    <a href = "artist.html?idArtist=${albumObj.data[j].artist.id}"><img src="${
           albumObj.data[j].artist.picture_medium
         }" alt="" class="img-fluid"  /></a>
                     </div>
                     <div class="card-body ps-2">
                     <p class="d-block d-md-none">Playlist</p>
-                    <a href = "album.html?idAlbum=${albumObj.data[j].artist.id}"><h4 class = "fs-3">${
+                    <a href = "album.html?idArtist=${albumObj.data[j].artist.id}"><h4 class = "fs-3">${
           albumObj.data[j].artist.name
         }</h4></a>
-                    <a href = "album.html?idAlbum=${albumObj.data[j].artist.id}"><p>il meglio di ${
+                    <a href = "album.html?idArtist=${albumObj.data[j].artist.id}"><p>il meglio di ${
           albumObj.data[j].artist.name
         }</p></a>
                     </div>
@@ -96,16 +96,16 @@ fetch(url, {
         leCardGiu[m - 8].innerHTML = `
             <div class="d-flex flex-md-column">
             <div>
-            <a href = "desktop-1.html?idArtist=${albumObj.data[m].album.id}"><img src="${
+            <a href = "artist.html?idArtist=${albumObj.data[m].artist.id}"><img src="${
           albumObj.data[m].album.cover_medium
         }" alt="" class="img-fluid"  /></a>
             </div>
               <div class="card-body ps-2">
               <p class="d-block d-md-none">Playlist</p>
-              <a href = "desktop-1.html?idArtist=${albumObj.data[m].album.id}"><h4 class = "fs-3">${
+              <a href = "artist.html?idArtist=${albumObj.data[m].artist.id}"><h4 class = "fs-3">${
           albumObj.data[m].album.title
         }</h4></a>
-              <a href = "desktop-1.html?idArtist=${albumObj.data[m].album.id}"><p>il meglio di ${
+              <a href = "artist.html?idArtist=${albumObj.data[m].artist.id}"><p>il meglio di ${
           albumObj.data[m].album.title
         }</p></a>
               </div>
