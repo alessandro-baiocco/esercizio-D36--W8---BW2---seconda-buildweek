@@ -10766,6 +10766,7 @@ textarea.form-control-lg {
   }
 }
 body {
+  font-family: "circular-font";
   background-color: black;
 }
 body .up nav {
@@ -10788,6 +10789,24 @@ body .up main header form button input {
 body .up main header form button input:focus, body .up main header form button input:hover {
   background-color: #2a2a2a;
   outline: none;
+}
+body .up main .searchedRes {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .up main .searchedRes .cartaRic {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #6a6a6a;
+}
+body .up main .searchedRes .cartaRic a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+body .up main .searchedRes .cartaRic img {
+  max-width: 100px;
+  display: block;
 }
 body .up main div .row .casellaRicerca {
   height: -moz-fit-content;
