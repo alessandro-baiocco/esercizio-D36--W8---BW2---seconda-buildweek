@@ -72,6 +72,12 @@ window.onload = async () => {
   }
   const trackListRe = await re.json();
   const trackList = trackListRe.data;
+  if (trackList.length < 5) {
+    const canzoniPolari = document.querySelectorAll(".canzoni-popolari-sezione");
+    const canzoniPolariArr = Array.from(canzoniPolari);
+    canzoniPolariArr.splice(0, trackList.length);
+    canzoniPolariArr.forEach(canzone => (canzone.className = "d-none"));
+  }
   trackList.forEach((track, index) => {
     titoliCanzone[index].innerText = track.title_short ? track.title_short : track.title;
     albumCanzoniPopolari[index].src = track.album.cover_small;
@@ -115,7 +121,6 @@ window.onload = async () => {
       }
     });
   } catch (error) {}
-
   trueAlbumList.forEach((album, index) => {
     if (index < 5) {
       albumsMobile[index].querySelector("img").src = album.album.cover;
@@ -128,6 +133,29 @@ window.onload = async () => {
     albums[index].querySelector("h4+p").innerText = "Album";
     albums[index].querySelector(".album-id").innerText = album.album.id;
   });
+  const albumsArr = Array.from(albums);
+  albumsArr.splice(0, trueAlbumList.length);
+  console.log(albumsArr.length);
+  albumsArr.forEach(album => {
+    album.closest(".col").className = "d-none";
+  });
+  if (trueAlbumList.length < 18) {
+    if (trueAlbumList.length <= 12) {
+      document.querySelector(".piace:nth-of-type(4)").className = "d-none";
+    } else if (trueAlbumList.length <= 6) {
+      document.querySelector(".piace:nth-of-type(3)").className = "d-none";
+      document.querySelector(".piace:nth-of-type(4)").className = "d-none";
+    }
+  }
+  //   console.log(albumsMobile);
+
+  if (trueAlbumList.length < 5) {
+    const albumsMobileArr = Array.from(albumsMobile);
+    albumsMobileArr.splice(0, trueAlbumList.length);
+    albumsMobileArr.forEach(album => {
+      album.className = "d-none";
+    });
+  }
   const artistBigImg = artist.picture_xl;
   artistaBanner.style.backgroundImage = `url(${artistBigImg})`;
   aboutImg.style.backgroundImage = `url(${artistBigImg})`;
