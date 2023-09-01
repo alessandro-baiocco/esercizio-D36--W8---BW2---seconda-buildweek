@@ -950,3 +950,16 @@ a {
   text-decoration: none;
   color: white;
 } /*# sourceMappingURL=style.css.map */
+
+volume-bar {
+  width: 5rem;
+}
+
+.my-small {
+  font-size: 0.7rem;
+}
+
+.song-time,
+.song-time + div + p {
+  min-width: 2rem;
+}
