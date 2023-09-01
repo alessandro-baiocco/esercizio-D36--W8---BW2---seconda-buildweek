@@ -65,12 +65,12 @@ body {
         width: fit-content;
         .cartaRic {
           width: fit-content;
-          background-color: $color-gray;
+          background-color: #282828;
           a {
             display: block;
             text-decoration: none;
             color: white;
-            &:hover {
+            a:hover {
               color: white;
             }
           }
@@ -80,7 +80,21 @@ body {
           }
         }
       }
-
+      .searchedResArtist {
+        width: fit-content;
+        .cartaRic {
+          width: fit-content;
+          background-color: #282828;
+          a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            a:hover {
+              color: white;
+            }
+          }
+        }
+      }
       div {
         .row {
           .casellaRicerca {

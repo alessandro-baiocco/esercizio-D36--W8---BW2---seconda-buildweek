@@ -10813,19 +10813,36 @@ body .up main .searchedRes {
 body .up main .searchedRes .cartaRic {
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #6a6a6a;
+  background-color: #282828;
 }
 body .up main .searchedRes .cartaRic a {
   display: block;
   text-decoration: none;
   color: white;
 }
-body .up main .searchedRes .cartaRic a:hover {
+body .up main .searchedRes .cartaRic a a:hover {
   color: white;
 }
 body .up main .searchedRes .cartaRic img {
   max-width: 100px;
   display: block;
+}
+body .up main .searchedResArtist {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .up main .searchedResArtist .cartaRic {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #282828;
+}
+body .up main .searchedResArtist .cartaRic a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+body .up main .searchedResArtist .cartaRic a a:hover {
+  color: white;
 }
 body .up main div .row .casellaRicerca {
   height: -moz-fit-content;
