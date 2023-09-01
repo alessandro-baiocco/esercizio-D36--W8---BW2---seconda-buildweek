@@ -20,6 +20,7 @@ const songTime = document.querySelector(".song-time");
 let activeTrackMp3 = null;
 let songInterval = null;
 let playing = false;
+let lapsedSeconds = 0;
 
 albums.forEach(album => [
   album.addEventListener("click", () => {
