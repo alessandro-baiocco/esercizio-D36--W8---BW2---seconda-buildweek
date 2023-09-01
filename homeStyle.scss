@@ -34,11 +34,12 @@ $color-lGray: #727272;
 .fisso div {
   background: $bg-gradient-terziario;
   padding-top: 4px;
+  border-radius: 4px;
   a {
     text-decoration: none;
   }
   img {
-    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+    border-radius: 4% 4% 4% 4% / 4% 4% 4% 4%;
     padding-bottom: 5px;
   }
 }
@@ -247,6 +248,18 @@ main {
 }
 .profileArrowDown {
   font-size: 1.5vh;
+}
+.body-card {
+  color: gray;
+}
+.friends h5 {
+  color: gray;
+}
+.minuti {
+  color: gray;
+}
+.colorIcon {
+  color: gray;
 }
 
 aside {

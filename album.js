@@ -32,7 +32,7 @@ window.onload = async () => {
     <h2>${album.title}</h2>
     <p class="paragrafoAlbum">
       <ion-icon name="person-circle-outline"></ion-icon>
-      <a href="./artists.html?idArtist=${album.artist.id}"> ${album.artist.name}</a> - ${new Date(
+      <a href="./artist.html?idArtist=${album.artist.id}"> ${album.artist.name}</a> - ${new Date(
       album.release_date
     ).getFullYear()} - Brani: ${album.nb_tracks}, Durata: ${Math.floor(album.duration / 60)}min
     </p>
@@ -79,7 +79,7 @@ window.onload = async () => {
       <div>
       <a href="./album.html?idAlbum=${album.id}">
       <h5 class="text-truncate">${album.title}</h5></a>
-      <a href="./artists.html?idArtist=${artist.id}">
+      <a href="./artist.html?idArtist=${artist.id}">
       <p class="text-truncate">${artist.name}</p></a>
       </div>
     </div>`;
