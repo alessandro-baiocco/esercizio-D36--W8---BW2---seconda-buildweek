@@ -163,7 +163,7 @@ fetch(url, {
        <div class="card-body ps-2">
        <p class="d-block d-md-none">Playlist</p>
        <a href = "album.html?idAlbum=${requestedAlbum[i].id}"><h4 class = "fs-5">${requestedAlbum[i].title}</h4></a>
-       <a href = "album.html?idAlbum=${requestedArtist[i].id}"><p>${requestedArtist[i].name}</p></a>
+       <a href = "artist.html?idArtist=${requestedArtist[i].id}"><p>${requestedArtist[i].name}</p></a>
        </div>
        </div>
        <div class="d-flex d-md-none">
