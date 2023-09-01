@@ -23,12 +23,12 @@ window.onload = async () => {
     let res = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id);
     let album = await res.json();
     console.log(album);
-    row.innerHTML += ` <img
+    row.innerHTML += `<div class ="imgAlbum d-flex d-md-block"> <img
     src="${album.cover_medium}"
     alt=""
-  />
+  /></div>
   <div class="album-cont">
-    <p>ALBUM</p>
+    <p class = d-none d-md-block>ALBUM</p>
     <h2>${album.title}</h2>
     <p class="paragrafoAlbum">
       <ion-icon name="person-circle-outline"></ion-icon>
@@ -49,10 +49,10 @@ window.onload = async () => {
     const songs = data.tracks.data;
     console.log(songs);
     for (let i = 0; i < songs.length; i++) {
-      row.innerHTML += `<td class="ms-5 col col-1" scope="row">${i + 1}</td>
+      row.innerHTML += `<td class="ms-5 col col-1 d-none d-md-table-cell" scope="row">${i + 1}</td>
       <td colspan="1" class="col col-5">${songs[i].title_short}</td>
-      <td class="col col-5">${songs[i].rank} </td>
-      <td class="col col-1" colspan="5">
+      <td class="col col-5 d-none d-md-table-cell">${songs[i].rank} </td>
+      <td class="col col-1 d-none d-md-table-cell" colspan="5">
         ${(songs[i].duration / 60).toFixed(2)} min
       </td>`;
     }
