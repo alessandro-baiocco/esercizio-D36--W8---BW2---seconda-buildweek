@@ -2,7 +2,6 @@ const apiKey = "X-RapidAPI-Key";
 const apiValue = "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe";
 const h1 = document.querySelector("h1");
 const titoliCanzone = document.querySelectorAll(".titolo-canzone");
-const mp3s = document.querySelectorAll(".track-mp3");
 const albumCanzoniPopolari = document.querySelectorAll(".album-canzoni-popolari");
 const riproduzioni = document.querySelectorAll(".numero-riproduzioni");
 const durateCanzoni = document.querySelectorAll(".durata-canzone");
@@ -21,6 +20,7 @@ let activeTrackMp3 = null;
 let songInterval = null;
 let playing = false;
 let lapsedSeconds = 0;
+const mp3s = document.querySelectorAll(".track-mp3");
 
 document.querySelectorAll(".bi-shuffle").forEach((icon) => {
   icon.addEventListener("click", () => {
