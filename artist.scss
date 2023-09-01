@@ -214,6 +214,10 @@ body {
     // color: pink;
 }
 
+.song-bar {
+    transition: none;
+}
+
 .progress,
 .albumCanzoniPopolari,
 .bi {
@@ -243,6 +247,5 @@ a {
 }
 
 a:hover {
-
     color: inherit;
 }

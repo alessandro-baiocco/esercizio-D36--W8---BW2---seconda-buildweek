@@ -15,7 +15,9 @@ const playBtn = document.querySelectorAll(".bi-play-circle-fill");
 const pauseBtn = document.querySelectorAll(".bi-pause-circle-fill");
 const playBtnMobile = document.querySelector(".bi-play-fill");
 const pauseBtnMobile = document.querySelector(".bi-pause-fill");
+const songBarTime = document.querySelector(".song-bar");
 let activeTrackMp3 = null;
+let songInterval = null;
 let playing = false;
 
 albums.forEach(album => [
@@ -164,6 +166,7 @@ window.onload = async () => {
 
   canzone.forEach(canzone => {
     canzone.addEventListener("click", () => {
+      lapsedSeconds = 0;
       realPlayer.src = canzone.querySelector(".track-mp3").innerText;
       if (playing) {
         pauseBtn.forEach(pageBtn => {
@@ -175,6 +178,8 @@ window.onload = async () => {
         });
         playBtnMobile.classList.remove("d-none");
       }
+      clearInterval(songInterval);
+      songBarTime.style.width = "0%";
       player.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
       playerMobile.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
       player.querySelector("p+p").innerText = document.querySelector("h1").innerText;
@@ -183,8 +188,20 @@ window.onload = async () => {
   });
 };
 
-playBtn.forEach(btn => {
-  btn.addEventListener("click", () => {
+const switchPlayPauseBtns = () => {
+  if (playing) {
+    playing = false;
+    pauseBtn.forEach(pageBtn => {
+      pageBtn.classList.add("d-none");
+    });
+    playBtn.forEach(pageBtn => {
+      pageBtn.classList.remove("d-none");
+    });
+    pauseBtnMobile.classList.add("d-none");
+    playBtnMobile.classList.remove("d-none");
+    clearInterval(songInterval);
+    realPlayer.pause();
+  } else {
     playing = true;
     playBtn.forEach(pageBtn => {
       pageBtn.classList.add("d-none");
@@ -194,47 +211,25 @@ playBtn.forEach(btn => {
       pageBtn.classList.remove("d-none");
     });
     pauseBtnMobile.classList.remove("d-none");
+    songInterval = setInterval(() => {
+      lapsedSeconds++;
+      songBarTime.style.width = `${(lapsedSeconds / 30) * 100}%`;
+      if (lapsedSeconds > 30) {
+        clearInterval(songInterval);
+      }
+    }, 1000);
     realPlayer.play();
-  });
+  }
+};
+
+playBtn.forEach(btn => {
+  btn.addEventListener("click", switchPlayPauseBtns);
 });
 
-playBtnMobile.addEventListener("click", () => {
-  playing = true;
-  playBtnMobile.classList.add("d-none");
-  playBtn.forEach(pageBtn => {
-    pageBtn.classList.add("d-none");
-  });
-  pauseBtnMobile.classList.remove("d-none");
-  pauseBtn.forEach(pageBtn => {
-    pageBtn.classList.remove("d-none");
-  });
-  realPlayer.play();
-});
+playBtnMobile.addEventListener("click", switchPlayPauseBtns);
 
 pauseBtn.forEach(btn => {
-  playing = false;
-  btn.addEventListener("click", () => {
-    pauseBtn.forEach(pageBtn => {
-      pageBtn.classList.add("d-none");
-    });
-    playBtn.forEach(pageBtn => {
-      pageBtn.classList.remove("d-none");
-    });
-    pauseBtnMobile.classList.add("d-none");
-    playBtnMobile.classList.remove("d-none");
-    realPlayer.pause();
-  });
+  btn.addEventListener("click", switchPlayPauseBtns);
 });
 
-pauseBtnMobile.addEventListener("click", () => {
-  playing = false;
-  pauseBtnMobile.classList.add("d-none");
-  playBtnMobile.classList.remove("d-none");
-  pauseBtn.forEach(pageBtn => {
-    pageBtn.classList.add("d-none");
-  });
-  playBtn.forEach(pageBtn => {
-    pageBtn.classList.remove("d-none");
-  });
-  realPlayer.pause();
-});
+pauseBtnMobile.addEventListener("click", switchPlayPauseBtns);

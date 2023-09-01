@@ -10910,6 +10910,10 @@ body main .piace .row .card {
   transform: scale(0.8);
 }
 
+.song-bar {
+  transition: none;
+}
+
 .progress,
 .albumCanzoniPopolari,
 .bi {
