@@ -10898,4 +10898,12 @@ body main .piace .row .card {
 
 .volume-bar {
   width: 5rem;
+}
+
+.friends {
+  color: gray;
+}
+
+.container-friend {
+  color: gray;
 }/*# sourceMappingURL=artist.css.map */
