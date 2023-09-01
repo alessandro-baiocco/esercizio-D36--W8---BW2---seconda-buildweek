@@ -22,19 +22,19 @@ let songInterval = null;
 let playing = false;
 let lapsedSeconds = 0;
 
-albums.forEach(album => [
+albums.forEach((album) => [
   album.addEventListener("click", () => {
     const id = album.querySelector(".album-id").innerText;
     window.location.assign("./album.html" + "?idAlbum=" + id);
   }),
 ]);
-albumsMobile.forEach(album => [
+albumsMobile.forEach((album) => [
   album.addEventListener("click", () => {
     const id = album.querySelector(".album-id").innerText;
     window.location.assign("./album.html" + "?idAlbum=" + id);
   }),
 ]);
-document.querySelectorAll(".bi-shuffle").forEach(icon => {
+document.querySelectorAll(".bi-shuffle").forEach((icon) => {
   icon.addEventListener("click", () => {
     icon.classList.toggle("text-green");
     const activeDot = icon.parentElement.querySelector(".bi-dot");
@@ -43,12 +43,23 @@ document.querySelectorAll(".bi-shuffle").forEach(icon => {
     }
   });
 });
-document.querySelectorAll(".bi-arrow-clockwise").forEach(icon => {
+document.querySelectorAll(".bi-arrow-clockwise").forEach((icon) => {
   icon.addEventListener("click", () => {
     icon.classList.toggle("text-green");
     icon.parentElement.querySelector(".bi-dot").classList.toggle("d-none");
   });
 });
+
+//----------------freccie per avanti e indietro
+const comeBack = document.querySelector(".bi-chevron-left");
+comeBack.addEventListener("click", () => {
+  history.back();
+});
+const goAheadFool = document.querySelector(".bi-chevron-right");
+goAheadFool.addEventListener("click", () => {
+  history.forward();
+});
+// ----------------------
 
 window.onload = async () => {
   const idArtist = new URLSearchParams(window.location.search).get("idArtist");
@@ -62,8 +73,8 @@ window.onload = async () => {
   const artistImg = artist.picture;
   const fanNb = artist.nb_fan;
   h1.innerText = artistName;
-  document.querySelectorAll(".link-artista").forEach(link => (link.innerText = artistName));
-  document.querySelectorAll(".ascoltatori-mensili").forEach(span => {
+  document.querySelectorAll(".link-artista").forEach((link) => (link.innerText = artistName));
+  document.querySelectorAll(".ascoltatori-mensili").forEach((span) => {
     span.innerText = fanNb;
   });
   document.querySelector(".immagine-artista").src = artistImg;
@@ -78,7 +89,7 @@ window.onload = async () => {
     const canzoniPolari = document.querySelectorAll(".canzoni-popolari-sezione");
     const canzoniPolariArr = Array.from(canzoniPolari);
     canzoniPolariArr.splice(0, trackList.length);
-    canzoniPolariArr.forEach(canzone => (canzone.className = "d-none"));
+    canzoniPolariArr.forEach((canzone) => (canzone.className = "d-none"));
   }
   trackList.forEach((track, index) => {
     titoliCanzone[index].innerText = track.title_short ? track.title_short : track.title;
@@ -109,7 +120,7 @@ window.onload = async () => {
   const albumList = albumListRe.data;
   const trueAlbumList = [];
   try {
-    albumList.forEach(album => {
+    albumList.forEach((album) => {
       let found = false;
       for (let i = 0; i < trueAlbumList.length; i++) {
         if (album.album.title === trueAlbumList[i].album.title) {
@@ -139,7 +150,7 @@ window.onload = async () => {
   });
   const albumsArr = Array.from(albums);
   albumsArr.splice(0, trueAlbumList.length);
-  albumsArr.forEach(album => {
+  albumsArr.forEach((album) => {
     album.closest(".col").className = "d-none";
   });
   if (trueAlbumList.length < 18) {
@@ -154,7 +165,7 @@ window.onload = async () => {
   if (trueAlbumList.length < 5) {
     const albumsMobileArr = Array.from(albumsMobile);
     albumsMobileArr.splice(0, trueAlbumList.length);
-    albumsMobileArr.forEach(album => {
+    albumsMobileArr.forEach((album) => {
       album.className = "d-none";
     });
   }
@@ -165,17 +176,17 @@ window.onload = async () => {
   const canzone = document.querySelectorAll(".dettagli-canzone");
   const player = document.querySelector("#player");
   const playerMobile = document.querySelector("#player-mobile");
-  canzone.forEach(canzone => {
+  canzone.forEach((canzone) => {
     canzone.addEventListener("click", () => {
       lapsedSeconds = 0;
       songTime.innerText = "0:00";
       realPlayer.src = canzone.querySelector(".track-mp3").innerText;
       if (playing) {
-        pauseBtn.forEach(pageBtn => {
+        pauseBtn.forEach((pageBtn) => {
           pageBtn.classList.add("d-none");
         });
         pauseBtnMobile.classList.add("d-none");
-        playBtn.forEach(pageBtn => {
+        playBtn.forEach((pageBtn) => {
           pageBtn.classList.remove("d-none");
         });
         playBtnMobile.classList.remove("d-none");
@@ -193,10 +204,10 @@ window.onload = async () => {
 const switchPlayPauseBtns = () => {
   if (playing) {
     playing = false;
-    pauseBtn.forEach(pageBtn => {
+    pauseBtn.forEach((pageBtn) => {
       pageBtn.classList.add("d-none");
     });
-    playBtn.forEach(pageBtn => {
+    playBtn.forEach((pageBtn) => {
       pageBtn.classList.remove("d-none");
     });
     pauseBtnMobile.classList.add("d-none");
@@ -205,11 +216,11 @@ const switchPlayPauseBtns = () => {
     realPlayer.pause();
   } else {
     playing = true;
-    playBtn.forEach(pageBtn => {
+    playBtn.forEach((pageBtn) => {
       pageBtn.classList.add("d-none");
     });
     playBtnMobile.classList.add("d-none");
-    pauseBtn.forEach(pageBtn => {
+    pauseBtn.forEach((pageBtn) => {
       pageBtn.classList.remove("d-none");
     });
     pauseBtnMobile.classList.remove("d-none");
@@ -227,13 +238,13 @@ const switchPlayPauseBtns = () => {
   }
 };
 
-playBtn.forEach(btn => {
+playBtn.forEach((btn) => {
   btn.addEventListener("click", switchPlayPauseBtns);
 });
 
 playBtnMobile.addEventListener("click", switchPlayPauseBtns);
 
-pauseBtn.forEach(btn => {
+pauseBtn.forEach((btn) => {
   btn.addEventListener("click", switchPlayPauseBtns);
 });
 
