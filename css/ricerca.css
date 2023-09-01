@@ -10765,6 +10765,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.bi-x-octagon::before {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.bi-chevron-left:hover,
+.bi-chevron-right:hover {
+  cursor: pointer;
+}
+
+.testoCubo {
+  color: white;
+  text-decoration: none;
+}
+
 body {
   font-family: "circular-font";
   background-color: black;
@@ -10802,6 +10818,9 @@ body .up main .searchedRes .cartaRic {
 body .up main .searchedRes .cartaRic a {
   display: block;
   text-decoration: none;
+  color: white;
+}
+body .up main .searchedRes .cartaRic a:hover {
   color: white;
 }
 body .up main .searchedRes .cartaRic img {

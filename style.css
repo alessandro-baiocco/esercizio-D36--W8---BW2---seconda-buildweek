@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: "lato", sans-serif;
+  font-family: "circular-font", sans-serif;
 }
 
 ion-icon {
@@ -180,6 +180,11 @@ footer .volume i:hover {
   justify-content: space-around;
   margin-bottom: 30px;
 }
+.right .container-friend .card-friend .body-card {
+  width: 121px;
+  overflow-x: hidden;
+}
+
 .right .container-friend .card-friend .body-card h5,
 .right .container-friend .card-friend .body-card p {
   margin: 0;

@@ -10773,26 +10773,27 @@ textarea.form-control-lg {
   background-color: black;
 }
 
-.albumSU,
-.albumGiu,
-.albumCentro {
+.artistHome div,
+.albumHome div,
+.fisso div {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
-  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+  padding-top: 4px;
 }
-.albumSU a,
-.albumGiu a,
-.albumCentro a {
+.artistHome div a,
+.albumHome div a,
+.fisso div a {
   text-decoration: none;
 }
-.albumSU img,
-.albumGiu img,
-.albumCentro img {
+.artistHome div img,
+.albumHome div img,
+.fisso div img {
   border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
   padding-bottom: 5px;
 }
 
 .cardSeiSu a {
   text-decoration: none;
+  color: white;
 }
 .cardSeiSu a p {
   font-size: 14px;
@@ -10800,6 +10801,7 @@ textarea.form-control-lg {
 
 body {
   font-family: "circular-font";
+  background-color: #232020;
 }
 
 main {
@@ -10812,6 +10814,9 @@ main .centrale {
   overflow-y: auto;
   flex-grow: 1;
   padding-left: 3px;
+}
+main .centrale a {
+  color: white;
 }
 main .canzoneOra {
   background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgb(10, 10, 10) 29%, rgb(32, 32, 32) 100%);

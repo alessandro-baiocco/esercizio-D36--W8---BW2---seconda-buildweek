@@ -24,11 +24,11 @@ $color-lGray: #727272;
 
 //----------------------classi applicate----------------------------
 
-.albumSU,
-.albumGiu,
-.albumCentro {
+.artistHome div,
+.albumHome div,
+.fisso div {
   background: $bg-gradient-terziario;
-  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  padding-top: 4px;
   a {
     text-decoration: none;
   }
@@ -41,6 +41,7 @@ $color-lGray: #727272;
 .cardSeiSu {
   a {
     text-decoration: none;
+    color: white;
     p {
       font-size: 14px;
     }
@@ -48,6 +49,7 @@ $color-lGray: #727272;
 }
 body {
   font-family: "circular-font";
+  background-color: #232020;
 }
 main {
   background: linear-gradient(190deg, rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 100%);
@@ -58,6 +60,9 @@ main {
     overflow-y: auto;
     flex-grow: 1;
     padding-left: 3px;
+    a {
+      color: white;
+    }
   }
   .canzoneOra {
     background: $bg-gradient-quarto;

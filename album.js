@@ -4,12 +4,23 @@ window.onload = async () => {
   if (!id) window.location.assign("/index.html");
   console.log(id);
 
+  //----------------freccie per avanti e indietro
+  const comeBack = document.querySelector(".bi-chevron-left");
+
+  comeBack.addEventListener("click", () => {
+    history.back();
+  });
+  const goAheadFool = document.querySelector(".bi-chevron-right");
+
+  goAheadFool.addEventListener("click", () => {
+    history.forward();
+  });
+  //----------------------------------------
+
   // prima sezione
   const firstSection = async () => {
     let row = document.querySelector(".containerAlbum");
-    let res = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/album/" + id
-    );
+    let res = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id);
     let album = await res.json();
     console.log(album);
     row.innerHTML += ` <img
@@ -21,11 +32,9 @@ window.onload = async () => {
     <h2>${album.title}</h2>
     <p class="paragrafoAlbum">
       <ion-icon name="person-circle-outline"></ion-icon>
-      <a href="./artists.html?idArtist=${album.artist.id}"> ${
-      album.artist.name
-    }</a> - ${new Date(album.release_date).getFullYear()} - Brani: ${
-      album.nb_tracks
-    }, Durata: ${Math.floor(album.duration / 60)}min
+      <a href="./artists.html?idArtist=${album.artist.id}"> ${album.artist.name}</a> - ${new Date(
+      album.release_date
+    ).getFullYear()} - Brani: ${album.nb_tracks}, Durata: ${Math.floor(album.duration / 60)}min
     </p>
   </div>`;
   };
@@ -34,9 +43,7 @@ window.onload = async () => {
   // seconda sezione
   const secondSection = async () => {
     let row = document.querySelector(".containerTabella");
-    let res = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/album/" + id
-    );
+    let res = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id);
     console.log(res);
     let data = await res.json();
     const songs = data.tracks.data;
@@ -55,28 +62,16 @@ window.onload = async () => {
   //terza sezione
   const thirdSection = async () => {
     let row = document.querySelector(".thirdSectionAlbum");
-    let res = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/album/" + id
-    );
+    let res = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id);
     let data = await res.json();
     console.log(data);
-    let res2 = await fetch(
-      `https://striveschool-api.herokuapp.com/api/deezer/search?q=${data.artist.name}`
-    );
+    let res2 = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${data.artist.name}`);
     let data2 = await res2.json();
     console.log(data2);
-    let myAlbums = [
-      data2.data[4],
-      data2.data[2],
-      data2.data[10],
-      data2.data[8],
-      data2.data[15],
-    ];
+    let myAlbums = [data2.data[4], data2.data[2], data2.data[10], data2.data[8], data2.data[15]];
     console.log(myAlbums);
     myAlbums.forEach(({ album, artist }, i) => {
-      row.innerHTML += `<div class="cards col col-5 col-md-2 ${
-        i == 4 ? 'nascondiCard' : ' '
-      }">
+      row.innerHTML += `<div class="cards col col-5 col-md-2 ${i == 4 ? "nascondiCard" : " "}">
       <img
         src="${album.cover_medium}"
         alt="${album.title}"
