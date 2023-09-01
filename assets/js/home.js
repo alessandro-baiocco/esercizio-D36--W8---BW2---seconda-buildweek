@@ -3,7 +3,7 @@ const parameter = new URLSearchParams(window.location.search).get("search?q");
 const url =
   parameter !== null
     ? `https://striveschool-api.herokuapp.com/api/deezer/search?q=${parameter}`
-    : `https://striveschool-api.herokuapp.com/api/deezer/search?q=ciao`;
+    : `https://striveschool-api.herokuapp.com/api/deezer/search?q=m`;
 let fetchedContentId = [];
 let requestedAlbum = [];
 let requestedArtist = [];
