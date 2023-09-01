@@ -14,7 +14,20 @@ $success2: #1ed760;
 $color-black: black;
 //-----------------------classi applicate
 
-.ricerca {
+.bi-x-octagon::before {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.bi-chevron-left,
+.bi-chevron-right {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.testoCubo {
   color: white;
   text-decoration: none;
 }
@@ -57,6 +70,9 @@ body {
             display: block;
             text-decoration: none;
             color: white;
+            &:hover {
+              color: white;
+            }
           }
           img {
             max-width: 100px;

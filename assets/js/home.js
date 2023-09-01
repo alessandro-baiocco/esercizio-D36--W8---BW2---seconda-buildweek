@@ -17,7 +17,7 @@ comeBack.addEventListener("click", () => {
 const goAheadFool = document.querySelector(".bi-chevron-right");
 
 goAheadFool.addEventListener("click", () => {
-  history.back();
+  history.forward();
 });
 
 fetch(url, {

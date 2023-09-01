@@ -4,6 +4,18 @@ let scrittaRicerca = [];
 let inputRicerca = document.querySelector("input");
 let ricerca = inputRicerca.value.toLowerCase();
 let searched = document.querySelector(".searchedRes");
+let crocePerEliminare = document.querySelector(".bi-x-octagon");
+
+const comeBack = document.querySelector(".bi-chevron-left");
+
+comeBack.addEventListener("click", () => {
+  history.back();
+});
+const goAheadFool = document.querySelector(".bi-chevron-right");
+
+goAheadFool.addEventListener("click", () => {
+  history.forward();
+});
 
 window.onload = () => {
   for (let i = 0; i < ricercaObj.length; i++) {
@@ -18,7 +30,7 @@ window.onload = () => {
     cartaRicerca.innerHTML = ` 
     <div class = "row border-none">
     <div class = "col-11 rounded m-0" style = "background-color:${ricercaObj[i].bg}">
-    <a href = "index.html?search?q=${ricercaObj[i].titolo}"<span class="ricerca fs-2">${ricercaObj[i].titolo}</span>
+    <a href = "index.html?search?q=${ricercaObj[i].titolo}"<span class="testoCubo fs-2">${ricercaObj[i].titolo}</span>
     <div class="imgRicerca">
     <img
     src="${ricercaObj[i].img}"
@@ -30,21 +42,21 @@ window.onload = () => {
     </div>
     </div> `;
     riga.appendChild(cartaRicerca);
+    scrittaRicerca = document.querySelectorAll(".testoCubo");
   }
 };
 
-const noDef = async (e) => {
-  e.preventDefault();
+const noDef = (e) => {
   ricerca = inputRicerca.value.toLowerCase();
   carteRicerca = document.querySelectorAll(".casellaRicerca");
-  scrittaRicerca = document.querySelectorAll(".ricerca");
   try {
-    if (ricerca !== "") {
+    if (ricerca !== "" && ricerca.length >= 3) {
+      crocePerEliminare.classList.remove("d-none");
       for (let i = 0; i < carteRicerca.length; i++) {
-        scrittaDaCont = scrittaRicerca[i].innerText.toLowerCase();
-        scrittaDaCont.includes(ricerca)
+        scrittaRicerca[i].innerText.toLowerCase().includes(ricerca)
           ? carteRicerca[i].classList.remove("d-none")
           : carteRicerca[i].classList.add("d-none");
+        console.log(scrittaRicerca[i].value, ricerca);
       }
       fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${ricerca}`, {
         headers: {
@@ -70,7 +82,7 @@ const noDef = async (e) => {
           titCarRic.classList.add("fs-5");
           titCarRic.classList.add("titCarRic");
           titCarRic.innerText = `${obj.data[0].title}`;
-          titCarRic.href = `desktop-1.html?idArtist=${obj.data[0].album.id}`;
+          titCarRic.href = `album.html?idAlbum=${obj.data[0].album.id}`;
           // --------------------------------
           const authorDiv = document.createElement("a");
           authorDiv.innerText = `${obj.data[0].artist.name}`;
@@ -88,8 +100,23 @@ const noDef = async (e) => {
         carteRicerca[i].classList.remove("d-none");
       }
       searched.innerHTML = ``;
+      crocePerEliminare.classList.add("d-none");
     }
   } catch {
     (err) => console.log(err);
   }
+};
+
+const toggleDef = (e) => {
+  e.preventDefault();
+  inputRicerca.value = "";
+  for (let i = 0; i < carteRicerca.length; i++) {
+    carteRicerca[i].classList.remove("d-none");
+  }
+  searched.innerHTML = ``;
+  crocePerEliminare.classList.add("d-none");
+};
+
+const toggleDef2 = (e) => {
+  e.preventDefault();
 };
