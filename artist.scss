@@ -203,6 +203,15 @@ body {
     width: 5rem
 }
 
+.my-small {
+    font-size: 0.7rem;
+}
+
+.song-time,
+.song-time+div+p {
+    min-width: 2rem;
+}
+
 .bi-play-circle-fill,
 .bi-pause-circle-fill {
     transition: all 0.3s ease;
@@ -216,6 +225,10 @@ body {
 
 .song-bar {
     transition: none;
+}
+
+.soundbar-container {
+    width: 100%;
 }
 
 .progress,
