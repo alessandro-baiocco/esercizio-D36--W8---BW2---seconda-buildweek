@@ -16,6 +16,7 @@ const pauseBtn = document.querySelectorAll(".bi-pause-circle-fill");
 const playBtnMobile = document.querySelector(".bi-play-fill");
 const pauseBtnMobile = document.querySelector(".bi-pause-fill");
 const songBarTime = document.querySelector(".song-bar");
+const songTime = document.querySelector(".song-time");
 let activeTrackMp3 = null;
 let songInterval = null;
 let playing = false;
@@ -163,10 +164,10 @@ window.onload = async () => {
   const canzone = document.querySelectorAll(".dettagli-canzone");
   const player = document.querySelector("#player");
   const playerMobile = document.querySelector("#player-mobile");
-
   canzone.forEach(canzone => {
     canzone.addEventListener("click", () => {
       lapsedSeconds = 0;
+      songTime.innerText = "0:00";
       realPlayer.src = canzone.querySelector(".track-mp3").innerText;
       if (playing) {
         pauseBtn.forEach(pageBtn => {
@@ -213,8 +214,10 @@ const switchPlayPauseBtns = () => {
     pauseBtnMobile.classList.remove("d-none");
     songInterval = setInterval(() => {
       lapsedSeconds++;
+      lapsedSecondsString = lapsedSeconds.toString().padStart(2, "0");
+      songTime.innerText = `0:${lapsedSecondsString}`;
       songBarTime.style.width = `${(lapsedSeconds / 30) * 100}%`;
-      if (lapsedSeconds > 30) {
+      if (lapsedSeconds >= 30) {
         clearInterval(songInterval);
         switchPlayPauseBtns();
       }
