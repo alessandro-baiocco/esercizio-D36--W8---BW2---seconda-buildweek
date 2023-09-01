@@ -1,9 +1,10 @@
-let riga = document.querySelector(".row");
+let riga = document.querySelector(".cubi");
 let carteRicerca = [];
 let scrittaRicerca = [];
 let inputRicerca = document.querySelector("input");
 let ricerca = inputRicerca.value.toLowerCase();
 let searched = document.querySelector(".searchedRes");
+let searchedArtist = document.querySelector(".searchedResArtist");
 let crocePerEliminare = document.querySelector(".bi-x-octagon");
 
 const comeBack = document.querySelector(".bi-chevron-left");
@@ -67,8 +68,9 @@ const noDef = (e) => {
         .then((reserchedObj) => reserchedObj.json())
         .then((obj) => {
           searched.innerHTML = ``;
+          searchedArtist.innerHTML = ``;
           const sopraRic = document.createElement("h2");
-          sopraRic.innerText = "risultato più rilevante";
+          sopraRic.innerText = "risultati più rilevanti";
           // ----------------------------
           const cartaPrin = document.createElement("div");
           cartaPrin.classList.add("cartaRic");
@@ -81,11 +83,11 @@ const noDef = (e) => {
           const titCarRic = document.createElement("a");
           titCarRic.classList.add("fs-5");
           titCarRic.classList.add("titCarRic");
-          titCarRic.innerText = `${obj.data[0].title}`;
+          titCarRic.innerText = `ALBUM : ${obj.data[0].title}`;
           titCarRic.href = `album.html?idAlbum=${obj.data[0].album.id}`;
           // --------------------------------
           const authorDiv = document.createElement("a");
-          authorDiv.innerText = `${obj.data[0].artist.name}`;
+          authorDiv.innerText = `ARTIST : ${obj.data[0].artist.name}`;
           authorDiv.classList.add("authorCarRic");
           authorDiv.href = `artist.html?idArtist=${obj.data[0].artist.id}`;
           // --------------------------------
@@ -94,12 +96,40 @@ const noDef = (e) => {
           cartaPrin.appendChild(titCarRic);
           cartaPrin.appendChild(authorDiv);
           searched.appendChild(cartaPrin);
+          //---------------------------------
+          let titArt = document.createElement("h2");
+          titArt.innerText = "ARTISTI";
+          titArt.classList.add("mt-5");
+          titArt.classList.add("mb-3");
+          searchedArtist.appendChild(titArt);
+          for (let i = 0; i < 3; i++) {
+            let artistRes = document.createElement("div");
+            artistRes.classList.add("col-3");
+            artistRes.classList.add("m-3");
+            artistRes.classList.add("cartaRic");
+            artistRes.style = "max-width:160px";
+            //--------------------------------
+            let artistImg = document.createElement("img");
+            artistImg.src = `${obj.data[i + 1].artist.picture_medium}`;
+            artistImg.classList.add("rounded-circle");
+            artistImg.classList.add("img-fluid");
+            //------------------------------------
+            let artistName = document.createElement("p");
+            artistName.innerHTML = `<a href=artist.html?idArtist=${obj.data[1 + i].artist.id}> 
+            ${obj.data[1 + i].artist.name}
+            </a>
+            ARTISTA`;
+            artistRes.appendChild(artistImg);
+            artistRes.appendChild(artistName);
+            searchedArtist.appendChild(artistRes);
+          }
         });
     } else {
       for (let i = 0; i < carteRicerca.length; i++) {
         carteRicerca[i].classList.remove("d-none");
       }
       searched.innerHTML = ``;
+      searchedArtist.innerHTML = ``;
       crocePerEliminare.classList.add("d-none");
     }
   } catch {
@@ -114,6 +144,7 @@ const toggleDef = (e) => {
     carteRicerca[i].classList.remove("d-none");
   }
   searched.innerHTML = ``;
+  searchedArtist.innerHTML = ``;
   crocePerEliminare.classList.add("d-none");
 };
 
