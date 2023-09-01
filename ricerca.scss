@@ -363,3 +363,74 @@ body {
   border-radius: 0px;
   border: 0px solid #000000;
 }
+.volume-bar {
+  width: 5rem;
+}
+
+.my-small {
+  font-size: 0.7rem;
+}
+
+.song-time,
+.song-time + div + p {
+  min-width: 2rem;
+}
+.bi-play-circle-fill,
+.bi-pause-circle-fill {
+  transition: all 0.3s ease;
+}
+
+.bi-play-circle-fill:active,
+.bi-pause-circle-fill:active {
+  transform: scale(0.8);
+  // color: pink;
+}
+
+.song-bar {
+  transition: none;
+}
+
+.soundbar-container {
+  width: 100%;
+}
+
+.progress,
+.albumCanzoniPopolari,
+.bi {
+  cursor: pointer;
+}
+
+.titolo-canzone:hover {
+  text-decoration: underline;
+}
+
+.dot-abs-shuffle {
+  top: 13px;
+}
+
+.dot-abs-repeat {
+  top: 17px;
+  left: 2px;
+}
+$spotify-green: #1ed760;
+
+.bi-dot {
+  color: $spotify-green;
+}
+
+.text-green {
+  color: $spotify-green;
+}
+
+.bg-green {
+  background-color: $spotify-green;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
