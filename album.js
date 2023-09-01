@@ -82,27 +82,29 @@ window.onload = async () => {
     }
     let songDiNuovo = document.querySelectorAll(".songTitle");
     const mp3s = document.querySelectorAll(".track-mp3");
-    songDiNuovo.forEach((canzone) => {
+    const player = document.querySelector("#player");
+    const playerMobile = document.querySelector("#player-mobile");
+    songDiNuovo.forEach((canzone, index) => {
       canzone.addEventListener("click", () => {
         lapsedSeconds = 0;
         songTime.innerText = "0:00";
-        realPlayer.src = document.querySelector(".track-mp3").innerText;
+        realPlayer.src = mp3s[index];
         if (playing) {
-          pauseBtn.forEach((pageBtn) => {
+          pauseBtn.forEach(pageBtn => {
             pageBtn.classList.add("d-none");
           });
           pauseBtnMobile.classList.add("d-none");
-          playBtn.forEach((pageBtn) => {
+          playBtn.forEach(pageBtn => {
             pageBtn.classList.remove("d-none");
           });
           playBtnMobile.classList.remove("d-none");
         }
         clearInterval(songInterval);
         songBarTime.style.width = "0%";
-        player.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
-        playerMobile.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
-        player.querySelector("p+p").innerText = document.querySelector("h1").innerText;
-        player.querySelector("img").src = canzone.querySelector("img").src;
+        player.querySelector("p").innerText = document.querySelector(".songTitle").innerText;
+        playerMobile.querySelector("p").innerText = document.querySelector(".songTitle").innerText;
+        player.querySelector("p+p").innerText = document.querySelector(".paragrafoAlbum").querySelector("a").innerText;
+        player.querySelector("img").src = document.querySelector(".imgAlbum").querySelector("img").src;
       });
     });
   };
@@ -134,7 +136,7 @@ window.onload = async () => {
   thirdSection();
 };
 
-document.querySelectorAll(".bi-shuffle").forEach((icon) => {
+document.querySelectorAll(".bi-shuffle").forEach(icon => {
   icon.addEventListener("click", () => {
     icon.classList.toggle("text-green");
     const activeDot = icon.parentElement.querySelector(".bi-dot");
@@ -143,7 +145,7 @@ document.querySelectorAll(".bi-shuffle").forEach((icon) => {
     }
   });
 });
-document.querySelectorAll(".bi-arrow-clockwise").forEach((icon) => {
+document.querySelectorAll(".bi-arrow-clockwise").forEach(icon => {
   icon.addEventListener("click", () => {
     icon.classList.toggle("text-green");
     icon.parentElement.querySelector(".bi-dot").classList.toggle("d-none");
@@ -153,10 +155,10 @@ document.querySelectorAll(".bi-arrow-clockwise").forEach((icon) => {
 const switchPlayPauseBtns = () => {
   if (playing) {
     playing = false;
-    pauseBtn.forEach((pageBtn) => {
+    pauseBtn.forEach(pageBtn => {
       pageBtn.classList.add("d-none");
     });
-    playBtn.forEach((pageBtn) => {
+    playBtn.forEach(pageBtn => {
       pageBtn.classList.remove("d-none");
     });
     pauseBtnMobile.classList.add("d-none");
@@ -165,11 +167,11 @@ const switchPlayPauseBtns = () => {
     realPlayer.pause();
   } else {
     playing = true;
-    playBtn.forEach((pageBtn) => {
+    playBtn.forEach(pageBtn => {
       pageBtn.classList.add("d-none");
     });
     playBtnMobile.classList.add("d-none");
-    pauseBtn.forEach((pageBtn) => {
+    pauseBtn.forEach(pageBtn => {
       pageBtn.classList.remove("d-none");
     });
     pauseBtnMobile.classList.remove("d-none");
@@ -187,13 +189,13 @@ const switchPlayPauseBtns = () => {
   }
 };
 
-playBtn.forEach((btn) => {
+playBtn.forEach(btn => {
   btn.addEventListener("click", switchPlayPauseBtns);
 });
 
 playBtnMobile.addEventListener("click", switchPlayPauseBtns);
 
-pauseBtn.forEach((btn) => {
+pauseBtn.forEach(btn => {
   btn.addEventListener("click", switchPlayPauseBtns);
 });
 
