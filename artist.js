@@ -216,6 +216,7 @@ const switchPlayPauseBtns = () => {
       songBarTime.style.width = `${(lapsedSeconds / 30) * 100}%`;
       if (lapsedSeconds > 30) {
         clearInterval(songInterval);
+        switchPlayPauseBtns();
       }
     }, 1000);
     realPlayer.play();
