@@ -10778,6 +10778,7 @@ textarea.form-control-lg {
 .fisso div {
   background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(20, 20, 20) 50%, rgb(24, 24, 24) 100%);
   padding-top: 4px;
+  border-radius: 4px;
 }
 .artistHome div a,
 .albumHome div a,
@@ -10787,7 +10788,7 @@ textarea.form-control-lg {
 .artistHome div img,
 .albumHome div img,
 .fisso div img {
-  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+  border-radius: 4% 4% 4% 4%/4% 4% 4% 4%;
   padding-bottom: 5px;
 }
 
@@ -10998,6 +10999,22 @@ main footer ul {
 
 .profileArrowDown {
   font-size: 1.5vh;
+}
+
+.body-card {
+  color: gray;
+}
+
+.friends h5, .friends .h5 {
+  color: gray;
+}
+
+.minuti {
+  color: gray;
+}
+
+.colorIcon {
+  color: gray;
 }
 
 aside {
