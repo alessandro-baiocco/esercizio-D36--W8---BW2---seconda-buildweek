@@ -163,7 +163,7 @@
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </div>
           <div class="container my-2">
-            <div class="container d-flex">
+            <div class="container d-md-flex d-none">
               <div class="me-2"><i class="bi bi-chevron-left text-light rounded-circle bg-dark p-2"></i></div>
               <div><i class="bi bi-chevron-right text-light rounded-circle bg-dark p-2"></i></div>
               <div class="d-flex ms-auto rounded-pill bg-black">
@@ -199,7 +199,7 @@
           </div>
         </div>
         <div class="immagineSfondoAlbum"></div>
-        <div class="containerAlbum"></div>
+        <div class="containerAlbum d-flex flex-column flex-md-row"></div>
         <div class="iconsAlbum">
           <ion-icon class="bigger" name="play-circle-outline"></ion-icon>
           <ion-icon class="heart" name="heart-outline"></ion-icon>
@@ -207,18 +207,23 @@
           <ion-icon class="dot" name="ellipsis-vertical-outline"></ion-icon>
         </div>
         <div>
-          <div>
-            <i class="avvia_song bi bi-play-circle-fill fs-1 mx-3 color-success" style="color: #1ed760"></i>
+          <div class="d-flex align-items-center px-3 gap-3">
+            <i
+              class="avvia_song bi bi-play-circle-fill mx-3 color-success order-last order-md-first display-3"
+              style="color: #1ed760"
+            ></i>
             <i class="bi bi-heart fs-3 mx-2"></i>
             <a href="https://www.spotify.com/it/download/other/"><i class="bi bi-arrow-down-circle fs-3 mx-2"></i></a>
-            <button class="btn text-light rounded-pill text-muted fw-bold pb-2">. . .</button>
+            <i class="bi bi-three-dots-vertical text-light rounded-pill fw-bold pb-2 me-auto d-md-none fs-2"></i>
+            <i class="bi bi-three-dots text-light rounded-pill fw-bold pb-2 me-auto d-none d-md-block fs-2"></i>
+            <i class="bi bi-shuffle d-md-none fs-2 text-muted"></i>
           </div>
           <table id="tabellaAlbum" class="table ms-3">
             <thead>
-              <th class="ms-5 col col-1" scope="row">#</th>
+              <th class="ms-5 col col-1 d-none d-md-table-cell" scope="row">#</th>
               <th colspan="1" class="col col-5">TITOLO</th>
-              <th class="col col-4">RIPRODUZIONI</th>
-              <th class="col col-1 text-center"><i class="bi bi-clock"></i></th>
+              <th class="col col-4 d-none d-md-table-cell">RIPRODUZIONI</th>
+              <th class="col col-1 text-center d-none d-md-table-cell"><i class="bi bi-clock"></i></th>
               <th class="col col-1" colspan="5">
                 <ion-icon name="time-outline"></ion-icon>
               </th>
