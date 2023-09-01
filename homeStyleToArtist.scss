@@ -23,11 +23,11 @@ $color-lGray: #727272;
 
 //----------------------classi applicate----------------------------
 
-.albumSU,
-.albumGiu,
-.albumCentro {
+.artistHome div,
+.albumHome div,
+.fisso div {
   background: $bg-gradient-terziario;
-  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  padding-top: 4px;
 
   a {
     text-decoration: none;
@@ -42,6 +42,7 @@ $color-lGray: #727272;
 .cardSeiSu {
   a {
     text-decoration: none;
+    color: white;
 
     p {
       font-size: 14px;
@@ -51,6 +52,7 @@ $color-lGray: #727272;
 
 body {
   font-family: "circular-font";
+  background-color: #232020;
 }
 
 main {
@@ -58,12 +60,17 @@ main {
   // max-height: calc(100vh - 92px);
   // overflow-y: auto;
 
-  // .centrale {
-  //   max-height: calc(100vh - 92px);
-  //   overflow-y: auto;
-  //   flex-grow: 1;
-  //   padding-left: 3px;
-  // }
+  .centrale {
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-left: 3px;
+
+    a {
+      color: white;
+    }
+  }
+
   .canzoneOra {
     background: $bg-gradient-quarto;
 
@@ -120,17 +127,18 @@ main {
   }
 }
 
-// .all {
-//   max-height: calc(100vh - 92pxx);
-//   overflow-y: auto;
-// }
+.all {
+  max-height: calc(100vh - 92pxx);
+  overflow-y: auto;
+}
+
 //-------------------nav
 #first {
   background-color: black;
   font-size: 2vh;
   max-height: calc(100vh - 92px);
-  // overflow-y: auto;
-  // max-width: 300px;
+  overflow-y: auto;
+  max-width: 300px;
 }
 
 #logo {
@@ -204,13 +212,24 @@ main {
 }
 
 .navHeartDiv {
-  background: rgb(38, 8, 185);
-  background: linear-gradient(133deg, rgba(38, 8, 185, 1) 0%, rgba(121, 90, 142, 1) 60%, rgba(255, 255, 255, 1) 100%);
   min-width: 2vw;
   aspect-ratio: 1/1;
   color: white;
   font-size: 1vh;
   font-weight: bolder;
+}
+
+.heartDellaNav {
+  background: rgb(38, 8, 185);
+  background: linear-gradient(133deg, rgba(38, 8, 185, 1) 0%, rgba(121, 90, 142, 1) 60%, rgba(255, 255, 255, 1) 100%);
+}
+
+.piuDellaNav {
+  background-color: #b2b2b2;
+}
+
+.segnaPostoDiv {
+  background: linear-gradient(37deg, rgba(16, 47, 4, 1) 27%, rgba(20, 112, 25, 1) 65%, rgba(0, 254, 16, 1) 98%);
 }
 
 /*1st row (arrows)*/
@@ -261,11 +280,12 @@ main {
 
 aside {
   background-color: #000000;
-  width: 400px;
-  // div {
-  //   max-height: calc(100vh - 92px);
-  //   overflow-y: auto;
-  // }
+  min-width: 270px;
+
+  div {
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+  }
 }
 
 // -----------------------------player
@@ -302,10 +322,10 @@ body {
   color: white;
 
   main {
-    // @media (min-width: 768px) {
-    //   max-height: calc(100vh - 92px);
-    //   overflow-y: auto;
-    // }
+    @media (min-width: 768px) {
+      max-height: calc(100vh - 92px);
+      overflow-y: auto;
+    }
 
     #artista-banner {
       background-image: url(https://www.rollingstone.com/wp-content/uploads/2022/12/TNMRollingStone_FrontLine-3.jpg);
@@ -351,9 +371,9 @@ body {
   }
 }
 
-// #player {
-//   background-color: #1f1f1f;
-// }
+#player {
+  background-color: #1f1f1f;
+}
 
 .flex-1 {
   flex: 1;

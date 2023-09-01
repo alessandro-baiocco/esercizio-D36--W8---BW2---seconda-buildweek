@@ -10898,4 +10898,50 @@ body main .piace .row .card {
 
 .volume-bar {
   width: 5rem;
+}
+
+.bi-play-circle-fill,
+.bi-pause-circle-fill {
+  transition: all 0.3s ease;
+}
+
+.bi-play-circle-fill:active,
+.bi-pause-circle-fill:active {
+  transform: scale(0.8);
+}
+
+.song-bar {
+  transition: none;
+}
+
+.progress,
+.albumCanzoniPopolari,
+.bi {
+  cursor: pointer;
+}
+
+.titolo-canzone:hover {
+  text-decoration: underline;
+}
+
+.dot-abs-shuffle {
+  top: 13px;
+}
+
+.dot-abs-repeat {
+  top: 17px;
+  left: 2px;
+}
+
+.bi-dot {
+  color: #1ED760;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
 }/*# sourceMappingURL=artist.css.map */

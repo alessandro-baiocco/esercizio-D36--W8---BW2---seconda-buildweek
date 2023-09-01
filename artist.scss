@@ -1,5 +1,6 @@
 @import "assets/bootstrap-5.2.3/scss/bootstrap";
 
+$spotify-green: #1ED760;
 $my-grey: #8f8f8f;
 $bg-gradient-terziario: linear-gradient(180deg,
         rgba(24, 24, 24, 1) 0%,
@@ -15,11 +16,11 @@ $bg-gradient-terziario: linear-gradient(180deg,
 }
 
 .text-green {
-    color: #1ED760;
+    color: $spotify-green;
 }
 
 .bg-green {
-    background-color: #1ED760;
+    background-color: $spotify-green;
 }
 
 .p-no-margin-block {
@@ -177,6 +178,8 @@ body {
 
         }
 
+
+
         .piace {
             .row {
                 .card {
@@ -198,4 +201,51 @@ body {
 
 .volume-bar {
     width: 5rem
+}
+
+.bi-play-circle-fill,
+.bi-pause-circle-fill {
+    transition: all 0.3s ease;
+}
+
+.bi-play-circle-fill:active,
+.bi-pause-circle-fill:active {
+    transform: scale(0.8);
+    // color: pink;
+}
+
+.song-bar {
+    transition: none;
+}
+
+.progress,
+.albumCanzoniPopolari,
+.bi {
+    cursor: pointer;
+}
+
+.titolo-canzone:hover {
+    text-decoration: underline;
+}
+
+.dot-abs-shuffle {
+    top: 13px;
+}
+
+.dot-abs-repeat {
+    top: 17px;
+    left: 2px;
+}
+
+.bi-dot {
+    color: $spotify-green;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: inherit;
 }
