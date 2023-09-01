@@ -2,6 +2,7 @@ const apiKey = "X-RapidAPI-Key";
 const apiValue = "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe";
 const h1 = document.querySelector("h1");
 const titoliCanzone = document.querySelectorAll(".titolo-canzone");
+const mp3s = document.querySelectorAll(".track-mp3");
 const albumCanzoniPopolari = document.querySelectorAll(".album-canzoni-popolari");
 const riproduzioni = document.querySelectorAll(".numero-riproduzioni");
 const durateCanzoni = document.querySelectorAll(".durata-canzone");
@@ -9,6 +10,13 @@ const albums = document.querySelectorAll(".album");
 const albumsMobile = document.querySelectorAll(".album-mobile");
 const artistaBanner = document.querySelector("#artista-banner");
 const aboutImg = document.querySelector(".about-inner");
+const realPlayer = document.querySelector("audio");
+const playBtn = document.querySelectorAll(".bi-play-circle-fill");
+const pauseBtn = document.querySelectorAll(".bi-pause-circle-fill");
+const playBtnMobile = document.querySelector(".bi-play-fill");
+const pauseBtnMobile = document.querySelector(".bi-pause-fill");
+let activeTrackMp3 = null;
+let playing = false;
 
 albums.forEach(album => [
   album.addEventListener("click", () => {
@@ -25,11 +33,16 @@ albumsMobile.forEach(album => [
 document.querySelectorAll(".bi-shuffle").forEach(icon => {
   icon.addEventListener("click", () => {
     icon.classList.toggle("text-green");
+    const activeDot = icon.parentElement.querySelector(".bi-dot");
+    if (activeDot) {
+      activeDot.classList.toggle("d-none");
+    }
   });
 });
 document.querySelectorAll(".bi-arrow-clockwise").forEach(icon => {
   icon.addEventListener("click", () => {
     icon.classList.toggle("text-green");
+    icon.parentElement.querySelector(".bi-dot").classList.toggle("d-none");
   });
 });
 
@@ -65,7 +78,7 @@ window.onload = async () => {
   }
   trackList.forEach((track, index) => {
     titoliCanzone[index].innerText = track.title_short ? track.title_short : track.title;
-    albumCanzoniPopolari[index].src = track.album.cover_small;
+    mp3s[index].innerText = track.preview;
     albumCanzoniPopolari[index].src = track.album.cover_small;
     // let rank = track.rank.toString().split("").reverse().join().replace(/.{3}/g, "$&.");
     // console.log(rank);
@@ -151,6 +164,17 @@ window.onload = async () => {
 
   canzone.forEach(canzone => {
     canzone.addEventListener("click", () => {
+      realPlayer.src = canzone.querySelector(".track-mp3").innerText;
+      if (playing) {
+        pauseBtn.forEach(pageBtn => {
+          pageBtn.classList.add("d-none");
+        });
+        pauseBtnMobile.classList.add("d-none");
+        playBtn.forEach(pageBtn => {
+          pageBtn.classList.remove("d-none");
+        });
+        playBtnMobile.classList.remove("d-none");
+      }
       player.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
       playerMobile.querySelector("p").innerText = canzone.querySelector(".titolo-canzone").innerText;
       player.querySelector("p+p").innerText = document.querySelector("h1").innerText;
@@ -158,3 +182,59 @@ window.onload = async () => {
     });
   });
 };
+
+playBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    playing = true;
+    playBtn.forEach(pageBtn => {
+      pageBtn.classList.add("d-none");
+    });
+    playBtnMobile.classList.add("d-none");
+    pauseBtn.forEach(pageBtn => {
+      pageBtn.classList.remove("d-none");
+    });
+    pauseBtnMobile.classList.remove("d-none");
+    realPlayer.play();
+  });
+});
+
+playBtnMobile.addEventListener("click", () => {
+  playing = true;
+  playBtnMobile.classList.add("d-none");
+  playBtn.forEach(pageBtn => {
+    pageBtn.classList.add("d-none");
+  });
+  pauseBtnMobile.classList.remove("d-none");
+  pauseBtn.forEach(pageBtn => {
+    pageBtn.classList.remove("d-none");
+  });
+  realPlayer.play();
+});
+
+pauseBtn.forEach(btn => {
+  playing = false;
+  btn.addEventListener("click", () => {
+    pauseBtn.forEach(pageBtn => {
+      pageBtn.classList.add("d-none");
+    });
+    playBtn.forEach(pageBtn => {
+      pageBtn.classList.remove("d-none");
+    });
+    pauseBtnMobile.classList.add("d-none");
+    playBtnMobile.classList.remove("d-none");
+    realPlayer.pause();
+  });
+});
+
+pauseBtnMobile.addEventListener("click", () => {
+  playing = false;
+  pauseBtnMobile.classList.add("d-none");
+  playBtnMobile.classList.remove("d-none");
+  pauseBtn.forEach(pageBtn => {
+    pageBtn.classList.add("d-none");
+  });
+  playBtn.forEach(pageBtn => {
+    pageBtn.classList.remove("d-none");
+  });
+  realPlayer.pause();
+});

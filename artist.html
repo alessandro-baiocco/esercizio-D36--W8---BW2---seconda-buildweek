@@ -214,10 +214,12 @@
               </div>
               <div class="d-flex align-items-center gap-4">
                 <i class="bi bi-shuffle"></i>
+                <i class="d-none bi bi-pause-circle-fill display-4 text-green"></i>
                 <i class="bi bi-play-circle-fill display-4 text-green"></i>
               </div>
             </div>
             <div class="d-none d-md-flex align-items-center gap-4 mb-3">
+              <i class="d-none bi bi-pause-circle-fill display-4 text-green"></i>
               <i class="bi bi-play-circle-fill display-4 text-green"></i>
               <button type="button" class="btn btn-outline-light btn-sm fw-bold px-3">FOLLOWING</button>
               <i class="bi bi-three-dots fs-4 text-my-grey"></i>
@@ -263,7 +265,9 @@
                           alt="Album cover"
                           class="album-canzoni-popolari"
                         />
+
                         <p class="titolo-canzone"></p>
+                        <p class="d-none track-mp3"></p>
                       </div>
                       <div class="d-none d-xxl-block text-end numero-riproduzioni text-my-grey"></div>
                       <div class="d-none d-md-block text-end durata-canzone text-my-grey"></div>
@@ -280,7 +284,9 @@
                           alt="Album cover"
                           class="album-canzoni-popolari"
                         />
+
                         <p class="titolo-canzone"></p>
+                        <p class="d-none track-mp3"></p>
                       </div>
 
                       <div class="d-none d-xxl-block text-end numero-riproduzioni text-my-grey"></div>
@@ -298,7 +304,9 @@
                           alt="Album cover"
                           class="album-canzoni-popolari"
                         />
+
                         <p class="titolo-canzone"></p>
+                        <p class="d-none track-mp3"></p>
                       </div>
 
                       <div class="d-none d-xxl-block text-end numero-riproduzioni text-my-grey"></div>
@@ -316,7 +324,9 @@
                           alt="Album cover"
                           class="album-canzoni-popolari"
                         />
+
                         <p class="titolo-canzone"></p>
+                        <p class="d-none track-mp3"></p>
                       </div>
 
                       <div class="d-none d-xxl-block text-end numero-riproduzioni text-my-grey"></div>
@@ -334,7 +344,9 @@
                           alt="Album cover"
                           class="album-canzoni-popolari"
                         />
+
                         <p class="titolo-canzone"></p>
+                        <p class="d-none track-mp3"></p>
                       </div>
 
                       <div class="d-none d-xxl-block text-end numero-riproduzioni text-my-grey"></div>
@@ -797,7 +809,7 @@
         </aside>
       </div>
     </main>
-
+    <audio class="d-none" src=""></audio>
     <section id="player" class="d-none d-md-flex justify-content-between align-items-center py-3 ps-2 pe-3">
       <div class="d-flex align-items-center flex-1">
         <img
@@ -814,11 +826,18 @@
       </div>
       <div class="d-flex flex-1 flex-column">
         <div class="align-self-center d-flex gap-2 align-items-center mb-2">
-          <i class="bi bi-shuffle"></i>
+          <div class="d-flex flex-column position-relative">
+            <i class="bi bi-shuffle"></i>
+            <i class="d-none bi bi-dot position-absolute dot-abs-shuffle"></i>
+          </div>
           <i class="bi bi-skip-start-fill fs-4"></i>
+          <i class="bi bi-pause-circle-fill fs-3 d-none"></i>
           <i class="bi bi-play-circle-fill fs-3"></i>
           <i class="bi bi-skip-end-fill fs-4"></i>
-          <i class="bi bi-arrow-clockwise fs-5"></i>
+          <div class="d-flex flex-column position-relative">
+            <i class="bi bi-arrow-clockwise fs-5"></i>
+            <i class="d-none bi bi-dot position-absolute dot-abs-repeat"></i>
+          </div>
         </div>
         <div
           class="progress bg-secondary"
@@ -856,28 +875,35 @@
       <div class="px-2">
         <div style="background: #282828" class="container-fluid p-2 rounded">
           <div id="player-mobile" class="row align-items-center px-2">
-            <div class="col"><p class="mb-0">Titolo canzone</p></div>
+            <div class="col"><p class="mb-0"></p></div>
             <div class="col-3 d-flex justify-content-end gap-3">
               <i class="bi bi-speaker fs-1"></i>
               <i class="bi bi-heart fs-1"></i>
+              <i class="d-none bi bi-pause-fill fs-1"></i>
               <i class="bi bi-play-fill fs-1"></i>
             </div>
           </div>
         </div>
       </div>
       <div class="d-flex px-5 py-2 bg-shadow">
-        <div class="d-flex flex-column align-items-center flex-1">
-          <i class="bi bi-house-door-fill fs-1"></i>
-          <p class="my-0 small-p">Home</p>
-        </div>
-        <div class="d-flex flex-column align-items-center flex-1">
-          <i class="bi bi-search fs-1"></i>
-          <p class="my-0 small-p">Cerca</p>
-        </div>
-        <div class="d-flex flex-column align-items-center flex-1">
-          <i class="bi bi-collection fs-1"></i>
-          <p class="my-0 small-p">La tua libreria</p>
-        </div>
+        <a href="./index.html" class="flex-1">
+          <div class="d-flex flex-column align-items-center">
+            <i class="bi bi-house-door-fill fs-1"></i>
+            <p class="my-0 small-p">Home</p>
+          </div>
+        </a>
+        <a href="./ricerca.html" class="flex-1">
+          <div class="d-flex flex-column align-items-center">
+            <i class="bi bi-search fs-1"></i>
+            <p class="my-0 small-p">Cerca</p>
+          </div>
+        </a>
+        <a href="./index.html" class="flex-1">
+          <div class="d-flex flex-column align-items-center">
+            <i class="bi bi-collection fs-1"></i>
+            <p class="my-0 small-p">La tua libreria</p>
+          </div>
+        </a>
       </div>
     </section>
 
