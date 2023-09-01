@@ -10820,7 +10820,7 @@ body .up main .searchedRes .cartaRic a {
   text-decoration: none;
   color: white;
 }
-body .up main .searchedRes .cartaRic a:hover {
+body .up main .searchedRes .cartaRic a a:hover {
   color: white;
 }
 body .up main .searchedRes .cartaRic img {

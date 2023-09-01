@@ -10773,6 +10773,10 @@ textarea.form-control-lg {
   background-color: black;
 }
 
+.canzoneOra a {
+  text-decoration: none;
+}
+
 .artistHome div,
 .albumHome div,
 .fisso div {
