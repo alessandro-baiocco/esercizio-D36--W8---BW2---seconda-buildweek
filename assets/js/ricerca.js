@@ -19,32 +19,38 @@ goAheadFool.addEventListener("click", () => {
 });
 
 window.onload = () => {
-  for (let i = 0; i < ricercaObj.length; i++) {
-    let cartaRicerca = document.createElement("div");
-    cartaRicerca.classList.add("card");
-    cartaRicerca.classList.add("col-xl-2");
-    cartaRicerca.classList.add("col-lg-3");
-    cartaRicerca.classList.add("col-md-4");
-    cartaRicerca.classList.add("col-6");
-    cartaRicerca.classList.add("casellaRicerca");
-    cartaRicerca.classList.add("border-0");
-    cartaRicerca.innerHTML = ` 
-    <div class = "row border-none">
-    <div class = "col-11 rounded m-0" style = "background-color:${ricercaObj[i].bg}">
-    <a href = "index.html?search?q=${ricercaObj[i].titolo}"<span class="testoCubo fs-2">${ricercaObj[i].titolo}</span>
-    <div class="imgRicerca">
-    <img
-    src="${ricercaObj[i].img}"
-    alt=""
-    width="132px"
-    height="132px"
-    />
-    </div>
-    </div>
-    </div> `;
-    riga.appendChild(cartaRicerca);
-    scrittaRicerca = document.querySelectorAll(".testoCubo");
-  }
+  cubiDaMostare();
+};
+
+const cubiDaMostare = () => {
+  riga.innerHTML = "";
+  ricercaObj
+    .filter((item) => item.titolo.includes(ricerca))
+    .map((item) => {
+      let cartaRicerca = document.createElement("div");
+      cartaRicerca.classList.add("card");
+      cartaRicerca.classList.add("col-xl-2");
+      cartaRicerca.classList.add("col-lg-3");
+      cartaRicerca.classList.add("col-md-4");
+      cartaRicerca.classList.add("col-6");
+      cartaRicerca.classList.add("p-0");
+      cartaRicerca.classList.add("border-0");
+      cartaRicerca.innerHTML = ` 
+  <div class = "rounded m-0 p-0 casellaRicerca " style = "background-color:${item.bg}">
+  <a href = "index.html?search?q=${item.titolo}"<span class="testoCubo fs-2">${item.titolo}</span>
+  <div class="imgRicerca">
+  <img
+  src="${item.img}"
+  alt=""
+  width="132px"
+  height="132px"
+  />
+
+  </div>
+  </div> `;
+      riga.appendChild(cartaRicerca);
+      scrittaRicerca = document.querySelectorAll(".testoCubo");
+    });
 };
 
 const noDef = (e) => {
@@ -52,13 +58,14 @@ const noDef = (e) => {
   carteRicerca = document.querySelectorAll(".casellaRicerca");
   try {
     if (ricerca !== "" && ricerca.length >= 3) {
-      crocePerEliminare.classList.remove("d-none");
-      for (let i = 0; i < carteRicerca.length; i++) {
-        scrittaRicerca[i].innerText.toLowerCase().includes(ricerca)
-          ? carteRicerca[i].classList.remove("d-none")
-          : carteRicerca[i].classList.add("d-none");
-        console.log(scrittaRicerca[i].value, ricerca);
-      }
+      // crocePerEliminare.classList.remove("d-none");
+      // for (let i = 0; i < carteRicerca.length; i++) {
+      //   scrittaRicerca[i].innerText.toLowerCase().includes(ricerca)
+      //     ? carteRicerca[i].classList.remove("d-none")
+      //     : carteRicerca[i].classList.add("d-none");
+      //   console.log(scrittaRicerca[i].value, ricerca);
+      // }
+      cubiDaMostare();
       fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${ricerca}`, {
         headers: {
           "X-RapidAPI-Key": "c39ea51001msh0b48f18ff7528dfp178bb6jsnbcb227f7b0fe",
@@ -125,12 +132,12 @@ const noDef = (e) => {
           }
         });
     } else {
-      for (let i = 0; i < carteRicerca.length; i++) {
-        carteRicerca[i].classList.remove("d-none");
-      }
-      searched.innerHTML = ``;
-      searchedArtist.innerHTML = ``;
-      crocePerEliminare.classList.add("d-none");
+      // for (let i = 0; i < carteRicerca.length; i++) {
+      //   carteRicerca[i].classList.remove("d-none");
+      // }
+      // searched.innerHTML = ``;
+      // searchedArtist.innerHTML = ``;
+      // crocePerEliminare.classList.add("d-none");
     }
   } catch {
     (err) => console.log(err);
@@ -139,13 +146,14 @@ const noDef = (e) => {
 
 const toggleDef = (e) => {
   e.preventDefault();
-  inputRicerca.value = "";
-  for (let i = 0; i < carteRicerca.length; i++) {
-    carteRicerca[i].classList.remove("d-none");
-  }
-  searched.innerHTML = ``;
-  searchedArtist.innerHTML = ``;
-  crocePerEliminare.classList.add("d-none");
+  cubiDaMostare();
+  // inputRicerca.value = "";
+  // for (let i = 0; i < carteRicerca.length; i++) {
+  //   carteRicerca[i].classList.remove("d-none");
+  // }
+  // searched.innerHTML = ``;
+  // searchedArtist.innerHTML = ``;
+  // crocePerEliminare.classList.add("d-none");
 };
 
 const toggleDef2 = (e) => {

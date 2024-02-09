@@ -10781,6 +10781,12 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+.cubi {
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  justify-content: center;
+}
+
 body {
   font-family: "circular-font";
   background-color: black;
@@ -10847,21 +10853,16 @@ body .up main .searchedResArtist .cartaRic a a:hover {
 body .up main div .row .casellaRicerca {
   height: -moz-fit-content;
   height: fit-content;
+  overflow: hidden;
+  height: 156px;
 }
 body .up main div .row .casellaRicerca span {
   color: white;
 }
-body .up main div .row .casellaRicerca .row {
-  background-color: #121212;
-}
-body .up main div .row .casellaRicerca .row .col-11 {
-  overflow: hidden;
-  height: 156px;
-}
-body .up main div .row .casellaRicerca .row .col-11 .imgRicerca {
+body .up main div .row .casellaRicerca .imgRicerca {
   position: relative;
 }
-body .up main div .row .casellaRicerca .row .col-11 .imgRicerca img {
+body .up main div .row .casellaRicerca .imgRicerca img {
   transform: rotateZ(41deg);
   position: absolute;
   right: -62px;

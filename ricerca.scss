@@ -32,6 +32,11 @@ $color-black: black;
   text-decoration: none;
 }
 
+.cubi {
+  column-gap: 30px;
+  justify-content: center;
+}
+
 body {
   font-family: "circular-font";
   background-color: $color-black;
@@ -102,20 +107,16 @@ body {
             span {
               color: white;
             }
-            .row {
-              background-color: #121212;
-              .col-11 {
-                overflow: hidden;
-                height: 156px;
-                .imgRicerca {
-                  position: relative;
-                  img {
-                    transform: rotateZ(41deg);
-                    position: absolute;
-                    right: -62px;
-                    bottom: -147px;
-                  }
-                }
+
+            overflow: hidden;
+            height: 156px;
+            .imgRicerca {
+              position: relative;
+              img {
+                transform: rotateZ(41deg);
+                position: absolute;
+                right: -62px;
+                bottom: -147px;
               }
             }
           }
